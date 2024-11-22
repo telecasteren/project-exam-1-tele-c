@@ -1,0 +1,46 @@
+/*- DEFAULT COLOR MODE: DARK -*/
+:root {
+  --background: #1c201b;
+  --text: #ffffff;
+  --primary: #252d26;
+  --secondary: ;
+  --tertiary: #91fdc7;
+  --hover-color: #91fdc7;
+
+  /*- Button color-map -*/
+  --color-btn-one: #2cde88;
+  --color-btn-two: #612cde;
+  --color-btn-three: #dea32c;
+  --color-btn-four: #2ca6de;
+
+  /*- alert messages -*/
+  --alert-box-shadow: rgba(0, 0, 0, 0.3);
+  --alert-info: rgba(0, 0, 0, 0.5);
+  --alert-success: rgba(19, 72, 17, 0.367);
+  --alert-warning: rgba(131, 100, 0, 0.523);
+  --alert-error: rgba(139, 0, 0, 0.302);
+
+  /*- footer -*/
+  --footer-text: #7c817d;
+  --footer-grey: #2d332e;
+
+  font-size: calc(1rem + 0.25vw);
+}
+
+/*- COLOR MODE: LIGHT -*/
+/* body.light {
+  --faded: ;
+  --primary: ;
+  --secondary: ;
+  --tertiary: ;
+  --background: ;
+}
+
+/*- COLOR MODE:
+body.dark {
+  --faded: ;
+  --primary: ;
+  --secondary: ;
+  --tertiary: ;
+  --background: ;
+} */

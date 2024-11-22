@@ -1,0 +1,21 @@
+.loader {
+  border: 16px solid var(--color-btn-one);
+  border-top: 16px solid var(--tertiary);
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+  margin-top: 20%;
+  margin-bottom: 5%;
+  justify-self: center;
+  align-self: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,62 @@
+/*- UTILS -*/
+@import url("/css/imports/utils/variables.css");
+@import url("/css/imports/utils/loader/loader.css");
+
+/*- COMPONENTS -*/
+@import url("/css/imports/components/static/lightBulb-icon.css");
+@import url("/css/imports/components/static/navBar.css");
+@import url("/css/imports/components/static/footer.css");
+
+/* PAGES */
+@import url("/css/imports/pages/landing.css");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+}
+
+main.main-section {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+/*- COMMON STYLES -*/
+
+.container {
+  background-color: var(--primary);
+  border-radius: 2%;
+}
+
+.topContent {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2%;
+}
+
+/*--
+Media queries for topContent
+---------------------------------*/
+
+@media screen and (max-width: 1100px) {
+  .topContent {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+@media screen and (min-width: 1101px) {
+  .topContent {
+    grid-template-columns: 1fr auto;
+    padding: 1.5%;
+  }
+}

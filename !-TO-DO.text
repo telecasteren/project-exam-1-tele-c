@@ -1,0 +1,17 @@
+
+
+## TO DO LIST:
+
+* WEBSITE STRUCTURE
+- About, Contact, BlogList, BlogPost page framework
+- ContactForm + form validation
+- Error handling and messages
+
+* API CALLS
+- WP API request setup
+- Call API to fetch posts and display in BlogList
+- Call API to fetch specific posts and display at BlogPost page
+
+* ADDITIONAL
+- Add Hotjar script
+- Document work and write report
