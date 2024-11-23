@@ -6,6 +6,7 @@
 - About, Contact, BlogList -- framework
 - ContactForm + form validation
 - Error handling and messages
+- Correct footer links
 
 * API CALLS
 - WP API request setup

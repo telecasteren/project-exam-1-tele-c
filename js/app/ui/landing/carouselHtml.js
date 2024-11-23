@@ -1,4 +1,5 @@
 import { loader, homeContainer } from "/js/utils/general/constants.js";
+import { goToPost } from "/js/app/eventListeners/goToPost.js";
 
 export function carouselHtml() {
   loader.style.display = "none";
@@ -30,15 +31,20 @@ export function carouselHtml() {
   blogTitle.innerText = `const TECHnically =
   "i'm a developer now"`; // set dynamically with api
 
+  // Local EventListeners
+  container.addEventListener("click", (event) => {
+    if (event.target === blogTitle || event.target === carouselIMG) {
+      goToPost();
+    }
+  });
+
+  // Initial hierarchy
   slideShowDiv.appendChild(slideLeft);
   slideShowDiv.appendChild(slideRight);
   carousel.appendChild(slideShowDiv);
   carousel.appendChild(carouselIMG);
-
-  // Initial hierarchy
   container.appendChild(carousel);
   container.appendChild(blogTitle);
-
   homeContainer.appendChild(container);
 
   // If screen size <= 1100px, reorder container hierarchy
