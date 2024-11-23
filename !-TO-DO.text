@@ -3,7 +3,7 @@
 ## TO DO LIST:
 
 * WEBSITE STRUCTURE
-- About, Contact, BlogList, BlogPost page framework
+- About, Contact, BlogList -- framework
 - ContactForm + form validation
 - Error handling and messages
 

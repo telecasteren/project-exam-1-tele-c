@@ -6,6 +6,10 @@ import { footerOnScroll } from "/js/app/ui/components/footer/footer.js";
 import { homeContainer } from "/js/utils/general/constants.js";
 import { carouselHtml } from "/js/app/ui/landing/carouselHtml.js";
 
+// BLOG CONTENT IMPORTS
+import { postContainer } from "./utils/general/constants.js";
+import { createPostHtml } from "/js/app/ui/blogs/createPostHtml.js";
+
 // RENDER FOOTER
 document.addEventListener("scroll", () => {
   footerOnScroll();
@@ -18,5 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (homeContainer) {
     carouselHtml();
+  }
+
+  if (postContainer) {
+    createPostHtml();
   }
 });

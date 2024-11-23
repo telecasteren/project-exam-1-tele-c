@@ -9,6 +9,7 @@
 
 /* PAGES */
 @import url("/css/imports/pages/landing.css");
+@import url("/css/imports/pages/blogPost.css");
 
 html,
 body {

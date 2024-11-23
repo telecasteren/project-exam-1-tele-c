@@ -33,6 +33,7 @@ export function carouselHtml() {
   slideShowDiv.appendChild(slideLeft);
   slideShowDiv.appendChild(slideRight);
   carousel.appendChild(slideShowDiv);
+  carousel.appendChild(carouselIMG);
 
   // Initial hierarchy
   container.appendChild(carousel);
