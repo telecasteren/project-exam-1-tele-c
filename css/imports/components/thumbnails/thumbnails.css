@@ -1,0 +1,8 @@
+.thumb-container {
+  display: grid;
+}
+
+.thumbContent {
+  width: 700px;
+  height: 700px;
+}

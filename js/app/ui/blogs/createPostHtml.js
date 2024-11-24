@@ -31,12 +31,15 @@ export function createPostHtml() {
   try {
     const container = document.createElement("div");
     container.classList.add("container", "postContent");
+    container.setAttribute("role", "region");
+    container.setAttribute("aria-labelledby", "contentTitle");
 
     const textContainer = document.createElement("div");
     textContainer.classList.add("textContainer");
 
     const contentTitle = document.createElement("h1");
     contentTitle.classList.add("contentTitle");
+    contentTitle.id = "contentTitle";
     contentTitle.innerText = `const TECHnically = “i'm a developer now”;`; // SET DYNAMICALLY WITH API
 
     const contentText = document.createElement("p");
@@ -49,7 +52,7 @@ export function createPostHtml() {
     
     Well would you look at me know! Grinding the gears with my keyboard and what not.
     
-    I hope you read this.
+    Dear stranger, I hope you read this.
     Yours sincerely,
     Tele
     
@@ -62,6 +65,7 @@ export function createPostHtml() {
 
     const blogImg = document.createElement("img");
     blogImg.classList.add("blogImg");
+    blogImg.setAttribute("role", "img");
     blogImg.src = "/IMAGES/code-snippet.png"; // SET DYNAMICALLY WITH API
     blogImg.alt = "BLOG IMAGE ALT"; // SET DYNAMICALLY WITH API
 
@@ -76,6 +80,8 @@ export function createPostHtml() {
 
     // If screen size <= 1100px, reorder container hierarchy
     function smallerScreens(changeEvent) {
+      container.setAttribute("aria-live", "polite");
+
       const smallScreens = changeEvent
         ? changeEvent.matches
         : window.matchMedia("(max-width: 1100px)").matches;
@@ -101,6 +107,6 @@ export function createPostHtml() {
     smallerScreens();
   } catch (error) {
     console.log("Error occurred fetching post", error);
-    // insert error handling here
+    // Insert error handling here
   }
 }

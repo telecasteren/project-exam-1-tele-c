@@ -1,0 +1,24 @@
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2% 5%;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 1300px;
+  height: 700px;
+}
+
+.aboutImg {
+  justify-self: center;
+  align-self: center;
+}
+
+.textContent {
+  color: var(--text);
+  text-align: end;
+  justify-self: center;
+  align-self: center;
+}

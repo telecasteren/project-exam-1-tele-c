@@ -7,8 +7,12 @@ import { homeContainer } from "/js/utils/general/constants.js";
 import { carouselHtml } from "/js/app/ui/landing/carouselHtml.js";
 
 // BLOG CONTENT IMPORTS
-import { postContainer } from "./utils/general/constants.js";
+import { postContainer } from "/js/utils/general/constants.js";
 import { createPostHtml } from "/js/app/ui/blogs/createPostHtml.js";
+
+// ABOUT CONTENT IMPORTS
+import { aboutContainer } from "/js/utils/general/constants.js";
+import { aboutHtml } from "/js/app/ui/about/aboutHtml.js";
 
 // RENDER FOOTER
 document.addEventListener("scroll", () => {
@@ -22,9 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (homeContainer) {
     carouselHtml();
+    thumbnailHtml();
   }
 
   if (postContainer) {
     createPostHtml();
+  }
+
+  if (aboutContainer) {
+    aboutHtml();
   }
 });

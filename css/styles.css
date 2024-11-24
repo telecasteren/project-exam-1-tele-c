@@ -6,10 +6,16 @@
 @import url("/css/imports/components/static/lightBulb-icon.css");
 @import url("/css/imports/components/static/navBar.css");
 @import url("/css/imports/components/static/footer.css");
+@import url("/css/imports/components/thumbnails/thumbnails.css");
 
 /* PAGES */
 @import url("/css/imports/pages/landing.css");
 @import url("/css/imports/pages/blogPost.css");
+@import url("/css/imports/pages/about.css");
+
+/*---------
+ GLOBAL STYLES
+ ---------------*/
 
 html,
 body {
@@ -17,6 +23,7 @@ body {
   padding: 0;
   height: 100%;
   box-sizing: border-box;
+  line-height: 1.5;
   font-family: Arial, Helvetica, sans-serif;
   background-color: var(--background);
 }
@@ -28,7 +35,9 @@ main.main-section {
   height: 100%;
 }
 
-/*- COMMON STYLES -*/
+/*---------
+COMMON STYLES
+---------------*/
 
 .container {
   background-color: var(--primary);

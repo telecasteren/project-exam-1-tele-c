@@ -19,6 +19,7 @@ Media queries for colorMode toggle
 @media screen and (max-width: 1100px) {
   .lightBulb {
     position: absolute;
+    cursor: pointer;
     top: 30px;
     right: 10px;
     z-index: 2;
@@ -28,6 +29,7 @@ Media queries for colorMode toggle
 @media screen and (min-width: 1101px) {
   .lightBulb {
     position: absolute;
+    cursor: pointer;
     top: 30px;
     right: 2%;
     z-index: 2;
