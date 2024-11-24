@@ -1,8 +1,55 @@
 .thumb-container {
   display: grid;
+  margin: 5% 0;
 }
 
 .thumbContent {
-  width: 700px;
-  height: 700px;
+  max-width: 1300px;
+  min-height: 600px;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.thumbnails {
+  display: inline-flex;
+  width: 200px;
+  height: 152px;
+  justify-self: center;
+  align-self: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  filter: drop-shadow(0.5rem 0.5rem 1rem #000000);
+  background: url("/IMAGES/pickingThumb.png"); /* Will be set with API */
+}
+
+.thumbnails:hover {
+  transform: scale(1.1);
+}
+
+.titleBlob {
+  pointer-events: none;
+  font-size: 0.6rem;
+  color: var(--text);
+  margin-top: 50%;
+  margin-left: 5%;
+}
+
+.titleImg {
+}
+
+@media screen and (max-width: 1100px) {
+  .thumbContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: auto;
+    height: auto;
+  }
+
+  .thumbnails {
+    justify-self: center;
+    align-self: center;
+    margin-top: 10%;
+  }
 }

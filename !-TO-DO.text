@@ -3,13 +3,13 @@
 ## TO DO LIST:
 
 * WEBSITE STRUCTURE
-- Contact, BlogList, + thumbnails on landing -- framework
+- Contact page content
 - ContactForm + form validation
 - Error handling and messages
 
 * API CALLS
 - WP API request setup
-- Call API to fetch posts and display in BlogList
+- Call API to fetch posts and display in BlogList/Thumbnails
 - Call API to fetch specific posts and display at BlogPost page
 
 * ADDITIONAL

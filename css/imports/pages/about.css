@@ -7,13 +7,14 @@
 .aboutContent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 1300px;
-  height: 700px;
+  max-width: 1300px;
+  min-height: 700px;
 }
 
 .aboutImg {
   justify-self: center;
   align-self: center;
+  max-width: 100%;
 }
 
 .textContent {
@@ -21,4 +22,23 @@
   text-align: end;
   justify-self: center;
   align-self: center;
+  margin: 2%;
+}
+
+@media screen and (max-width: 1100px) {
+  .aboutContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: auto;
+    height: auto;
+  }
+
+  .aboutImg {
+    margin-top: 5%;
+  }
+
+  .textContent {
+    text-align: start;
+    margin-left: 5%;
+  }
 }

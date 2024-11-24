@@ -1,0 +1,23 @@
+.blogList-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 2% 5%;
+}
+
+.blogListContent {
+  width: 1300px;
+  height: 600px;
+  margin-bottom: 5%;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+@media screen and (max-width: 1100px) {
+  .blogListContent {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: auto;
+    height: auto;
+  }
+}

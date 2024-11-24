@@ -7,3 +7,4 @@ export const topContent = document.querySelector(".topContent");
 export const homeContainer = document.querySelector(".home-container");
 export const aboutContainer = document.querySelector(".about-container");
 export const postContainer = document.querySelector(".post-container");
+export const blogListContainer = document.querySelector(".blogList-container");
