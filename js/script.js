@@ -14,12 +14,16 @@ import { blogListHtml } from "/js/app/ui/blogs/blogListHtml.js";
 // ABOUT IMPORTS
 import { aboutHtml } from "/js/app/ui/about/aboutHtml.js";
 
+// CONTACT IMPORTS
+import { contactForm } from "/js/app/ui/components/contactForm/contactForm.js";
+
 // Constants
 import {
   homeContainer,
   postContainer,
   blogListContainer,
   aboutContainer,
+  contactContainer,
 } from "/js/utils/general/constants.js";
 
 // RENDER FOOTER
@@ -48,5 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (aboutContainer) {
     aboutHtml();
+  }
+
+  if (contactContainer) {
+    contactForm();
   }
 });

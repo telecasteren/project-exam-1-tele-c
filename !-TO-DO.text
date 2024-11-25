@@ -3,8 +3,8 @@
 ## TO DO LIST:
 
 * WEBSITE STRUCTURE
-- Contact page content
-- ContactForm + form validation
+- Form validation
+- Expand more posts in thumbnails
 - Error handling and messages
 
 * API CALLS

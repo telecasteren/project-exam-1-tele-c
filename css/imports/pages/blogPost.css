@@ -13,6 +13,7 @@
   grid-template-columns: repeat(2, 1fr);
   justify-self: center;
   justify-content: center;
+  margin-bottom: 5%;
   width: 1300px;
   height: 700px;
 }

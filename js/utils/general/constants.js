@@ -8,3 +8,4 @@ export const homeContainer = document.querySelector(".home-container");
 export const aboutContainer = document.querySelector(".about-container");
 export const postContainer = document.querySelector(".post-container");
 export const blogListContainer = document.querySelector(".blogList-container");
+export const contactContainer = document.querySelector(".contact-container");
