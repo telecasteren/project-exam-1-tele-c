@@ -1,6 +1,6 @@
 .loader {
   border: 16px solid var(--color-btn-one);
-  border-top: 16px solid var(--tertiary);
+  border-top: 16px solid var(--tertiary-color);
   border-radius: 100%;
   width: 100px;
   height: 100px;

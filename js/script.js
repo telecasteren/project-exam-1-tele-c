@@ -1,7 +1,7 @@
 import { colorModeIcon } from "/js/app/ui/components/colorMode/colorModeIcon.js";
 import { navBar } from "/js/app/ui/components/navigation/navbar.js";
 import { footerOnScroll } from "/js/app/ui/components/footer/footer.js";
-import { setPageTitles } from "/js/utils/helpers/setPageTitles.js";
+import { setPageTitles } from "/js/utils/helpers/ui-helpers/setPageTitles.js";
 
 // LANDING IMPORTS
 import { carouselHtml } from "/js/app/ui/landing/carouselHtml.js";

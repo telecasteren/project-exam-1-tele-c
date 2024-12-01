@@ -1,0 +1,60 @@
+/*- Alert message component-*/
+.alert-message {
+  display: block;
+  position: fixed;
+  z-index: 500;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.alert-info {
+  background-color: var(--alert-info);
+}
+
+.alert-success {
+  background-color: var(--alert-success);
+}
+
+.alert-warning {
+  background-color: var(--alert-warning);
+}
+
+.alert-error {
+  background-color: var(--alert-error);
+}
+
+.alert-content {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-text);
+  padding: 50px;
+  border-radius: 22px;
+  box-shadow: 0 5px 20px var(--alert-box-shadow);
+  width: 30%;
+  min-width: 250px;
+  height: auto;
+  text-align: center;
+  z-index: 600;
+}
+
+.messageContent {
+  font-size: 145%;
+  font-weight: 600;
+}
+
+.close-alert {
+  color: var(--primary-background);
+  margin-left: 1%;
+  float: right;
+  font-size: 42px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.close-alert:hover {
+  color: var(--tertiary-color);
+}

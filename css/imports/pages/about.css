@@ -19,7 +19,7 @@
 }
 
 .textContent {
-  color: var(--text);
+  color: var(--primary-text);
   text-align: end;
   justify-self: center;
   align-self: center;

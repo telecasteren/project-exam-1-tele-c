@@ -10,8 +10,9 @@ textarea {
   box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid var(--alert-box-shadow);
-  background-color: var(--text);
-  color: var(--background);
+  background-color: var(--secondary-background);
+  filter: brightness(0.8);
+  color: var(--primary-text);
   cursor: pointer;
   transition: filter 0.3s ease-in-out;
 }
@@ -20,19 +21,19 @@ input[type="text"]:hover,
 input[type="email"]:hover,
 select:hover,
 textarea:hover {
-  filter: brightness(0.8);
+  filter: brightness(1);
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 select:focus,
 textarea:focus {
-  filter: brightness(0.8);
+  filter: brightness(1);
 }
 
 input[type="submit"] {
-  background-color: var(--color-btn-two);
-  color: var(--text);
+  background-color: var(--lightbulb);
+  color: #ffffff;
   padding: 12px 20px;
   border: none;
   border-radius: 6px;
@@ -40,7 +41,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: var(--color-btn-one);
+  background-color: var(--hover-color);
 }
 
 .form-container {

@@ -1,5 +1,5 @@
 import { topContent } from "/js/utils/general/constants.js";
-import { uniqueHoverColors } from "/js/utils/helpers/uniqueHoverColors.js";
+import { uniqueHoverColors } from "/js/utils/helpers/ui-helpers/uniqueHoverColors.js";
 
 export function navBar() {
   const nav = document.createElement("nav");

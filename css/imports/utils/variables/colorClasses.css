@@ -1,0 +1,47 @@
+/*- LIGHT -*/
+body.light {
+  --primary-background: #ffffff;
+  --secondary-background: #cef5e1;
+  --primary-text: #222222;
+  --secondary-text: #ffffff;
+  --primary-color: #cef5e1;
+  --secondary-color: ;
+  --tertiary-color: #2cde88;
+  --lightbulb: #016a50;
+}
+
+/*- DARK -*/
+body.dark {
+  --primary-background: #1c201b;
+  --secondary-background: #ffffff;
+  --primary-text: #ffffff;
+  --secondary-text: #1c201b;
+  --primary-color: #252d26;
+  --secondary-color: ;
+  --tertiary-color: #91fdc7;
+  --lightbulb: #02cd88;
+}
+
+/*- RED & BLUE -*/
+body.rb {
+  --primary-background: #f9f1dc;
+  --secondary-background: #193039;
+  --primary-text: #ffffff;
+  --secondary-text: #193039;
+  --primary-color: #193039;
+  --secondary-color: ;
+  --tertiary-color: #e24d28;
+  --lightbulb: #193039;
+}
+
+/*- BLUE & RED -*/
+body.br {
+  --primary-background: #193039;
+  --secondary-background: #f9f1dc;
+  --primary-text: #193039;
+  --secondary-text: #ffffff;
+  --primary-color: #f9f1dc;
+  --secondary-color: ;
+  --tertiary-color: #e24d28;
+  --lightbulb: #e24d28;
+}

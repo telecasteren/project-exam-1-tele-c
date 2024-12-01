@@ -109,6 +109,7 @@ export function contactForm() {
 
   const submitButton = document.createElement("input");
   submitButton.type = "submit";
+  submitButton.id = "submitBtn";
   submitButton.value = "Send";
   form.appendChild(submitButton);
 

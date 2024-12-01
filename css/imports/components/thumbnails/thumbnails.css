@@ -32,7 +32,7 @@
 .titleBlob {
   pointer-events: none;
   font-size: 0.6rem;
-  color: var(--text);
+  color: #ffffff;
   margin-top: 50%;
   margin-left: 5%;
 }

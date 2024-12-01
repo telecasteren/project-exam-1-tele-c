@@ -1,6 +1,9 @@
 // General
 export const loader = document.querySelector(".loader");
 
+// Color modes
+export const colorModes = ["dark", "light", "rb", "br"];
+
 // Containers
 export const mainSection = document.querySelector(".main-section");
 export const topContent = document.querySelector(".topContent");

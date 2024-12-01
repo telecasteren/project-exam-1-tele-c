@@ -1,4 +1,9 @@
 import { topContent } from "/js/utils/general/constants.js";
+import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
+import {
+  setUpColorModes,
+  toggleColorModes,
+} from "/js/app/ui/components/colorMode/colorModeEvents.js";
 
 export function colorModeIcon() {
   const lightBulbDiv = document.createElement("div");
@@ -7,8 +12,17 @@ export function colorModeIcon() {
 
   const lightBulbIcon = document.createElement("i");
   lightBulbIcon.classList.add("fa-regular", "fa-lightbulb", "fa-2xl");
-  lightBulbIcon.style.color = "#02cd88";
+
+  if (!lightBulbIcon) {
+    alertMessage("Couldn't change colors right now :'(", "info");
+  }
+
+  lightBulbIcon.addEventListener("click", () => {
+    toggleColorModes();
+  });
 
   lightBulbDiv.prepend(lightBulbIcon);
   topContent.prepend(lightBulbDiv);
+
+  setUpColorModes();
 }

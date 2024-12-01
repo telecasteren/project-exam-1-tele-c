@@ -10,7 +10,7 @@ export function blogListHtml() {
 
   const expandPosts = document.createElement("h3");
   expandPosts.classList.add("expandPosts");
-  expandPosts.innerText = "View more >";
+  expandPosts.innerText = "View more";
 
   const num = 10;
 
