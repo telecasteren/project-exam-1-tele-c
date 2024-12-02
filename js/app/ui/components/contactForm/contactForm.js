@@ -1,4 +1,9 @@
 import { contactContainer, loader } from "/js/utils/general/constants.js";
+import { displayFormErrorMessage } from "/js/app/ui/components/messages/formErrors.js";
+import {
+  emailValidation,
+  MinLengthValidation,
+} from "/js/app/ui/components/contactForm/formValidation.js";
 
 export function contactForm() {
   const contactSection = document.createElement("div");
@@ -19,7 +24,8 @@ export function contactForm() {
     disabled = false,
     selected = false,
     required = false,
-    autocomplete = ""
+    autocomplete = "",
+    minLength = ""
   ) {
     const input = document.createElement("input");
     input.type = type;
@@ -30,6 +36,7 @@ export function contactForm() {
     if (selected) input.selected = true;
     if (required) input.required = true;
     if (autocomplete) input.autocomplete = autocomplete;
+    if (minLength) input.minLength = minLength;
     return input;
   }
 
@@ -41,79 +48,76 @@ export function contactForm() {
     return label;
   }
 
-  form.appendChild(
-    createInput(
-      "text",
-      "fname",
-      "fullname",
-      "your name",
-      false,
-      false,
-      true,
-      "name"
-    )
+  const nameInput = createInput(
+    "text",
+    "fname",
+    "fullname",
+    "Your name",
+    false,
+    false,
+    true,
+    "name",
+    5
   );
 
-  form.appendChild(
-    createInput(
-      "email",
-      "email",
-      "email",
-      "your email address",
-      false,
-      false,
-      true,
-      "email"
-    )
+  const emailInput = createInput(
+    "email",
+    "email",
+    "email",
+    "Your email address",
+    false,
+    false,
+    true,
+    "email"
   );
 
-  const inquiryLabel = createLabel("inquiry", "Subject");
-  form.appendChild(inquiryLabel);
+  const subjectLabel = createLabel("subject", "Subject");
 
-  const inquirySelect = document.createElement("select");
-  inquirySelect.id = "inquiry";
-  inquirySelect.name = "inquiry";
-  inquirySelect.required = true;
-
-  const options = [
-    {
-      value: "inquiry",
-      selected: true,
-      disabled: true,
-      text: "Subject",
-    },
-    { value: "projects", text: "Talk about projects" },
-    { value: "work", text: "Hire me" },
-    { value: "other", text: "Other" },
-  ];
-
-  options.forEach((opt) => {
-    const option = document.createElement("option");
-    option.className = "selectOption";
-    option.value = opt.value;
-    option.textContent = opt.text;
-    if (opt.selected) option.selected = true;
-    if (opt.disabled) option.disabled = true;
-    inquirySelect.appendChild(option);
-  });
-  form.appendChild(inquirySelect);
-  form.appendChild(createLabel("message", "Message"));
+  const subjectInput = document.createElement("input");
+  subjectInput.type = "text";
+  subjectInput.id = "subject";
+  subjectInput.name = "subject";
+  subjectInput.placeholder = "Subject";
+  subjectInput.minLength = 15;
+  subjectInput.required = true;
 
   const messageTextarea = document.createElement("textarea");
   messageTextarea.id = "message";
   messageTextarea.name = "message";
-  messageTextarea.placeholder = "your message here..";
   messageTextarea.style.height = "200px";
+  messageTextarea.placeholder = "Your message here..";
+  messageTextarea.minLength = 25;
   messageTextarea.required = true;
-  form.appendChild(messageTextarea);
 
   const submitButton = document.createElement("input");
   submitButton.type = "submit";
   submitButton.id = "submitBtn";
   submitButton.value = "Send";
+
+  // Append everything in order
+  form.appendChild(nameInput);
+  form.appendChild(emailInput);
+  form.appendChild(subjectLabel);
+  form.appendChild(subjectInput);
+  form.appendChild(createLabel("message", "Message"));
+  form.appendChild(messageTextarea);
   form.appendChild(submitButton);
 
   formContainer.appendChild(form);
   contactSection.appendChild(formContainer);
   contactContainer.appendChild(contactSection);
+
+  // Validate input values
+  emailValidation(emailInput);
+  MinLengthValidation(nameInput, 5, "Name must be at least 5 characters.");
+  MinLengthValidation(
+    subjectInput,
+    15,
+    "Subject must be at least 15 characters."
+  );
+  MinLengthValidation(
+    messageTextarea,
+    25,
+    "Message must be at least 25 characters."
+  );
 }

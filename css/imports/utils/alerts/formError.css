@@ -1,0 +1,7 @@
+.formError {
+  color: red;
+  font-size: 12px;
+  margin-left: 5px;
+  margin-bottom: 8px;
+  font-style: italic;
+}
