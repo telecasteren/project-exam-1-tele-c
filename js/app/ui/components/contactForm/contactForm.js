@@ -1,5 +1,4 @@
 import { contactContainer, loader } from "/js/utils/general/constants.js";
-import { displayFormErrorMessage } from "/js/app/ui/components/messages/formErrors.js";
 import {
   emailValidation,
   MinLengthValidation,

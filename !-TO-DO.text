@@ -5,8 +5,10 @@
 * WEBSITE STRUCTURE
 - Expand more posts in thumbnails
 - Error handling and messages
-- Update nav buttons with their respective color scheme
 - Dynamic page title on post page
+- Landing slider logic
+- Update nav buttons with their respective color scheme
+
 
 * API CALLS
 - WP API request setup

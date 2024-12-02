@@ -1,15 +1,15 @@
 export function setPageTitles() {
-  let pageTitle = "Home | Blog";
+  let pageTitle = "Home | unwired";
   const postTitle = "POST TITLE GOES HERE"; // Set dynamically with API
 
   if (window.location.pathname.includes("/about/")) {
-    pageTitle = "About | Blog";
+    pageTitle = "About | unwired";
   } else if (window.location.pathname.includes("/stories/")) {
-    pageTitle = "Stories | Blog";
+    pageTitle = "Stories | unwired";
   } else if (window.location.pathname.includes("/contact/")) {
-    pageTitle = "Contact | Blog";
+    pageTitle = "Contact | unwired";
   } else if (window.location.pathname.includes("/post/")) {
-    pageTitle = `${postTitle} | Blog`;
+    pageTitle = `${postTitle} | unwired`;
   }
 
   document.title = pageTitle;
