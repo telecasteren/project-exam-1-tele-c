@@ -15,7 +15,10 @@
 .aboutImg {
   justify-self: center;
   align-self: center;
-  max-width: 100%;
+  width: 80%;
+  height: auto;
+  opacity: 0.8;
+  border-radius: 8px;
 }
 
 .textContent {

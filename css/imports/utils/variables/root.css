@@ -1,14 +1,14 @@
 /*- DEFAULT COLOR MODE: DARK -*/
 :root {
   /*- Default color mode: Dark -*/
-  --primary-background: #1c201b;
+  /* --primary-background: #1c201b;
   --secondary-background: #ffffff;
   --primary-text: #ffffff;
   --secondary-text: #1c201b;
   --primary-color: #252d26;
   --secondary-color: ;
   --tertiary-color: #91fdc7;
-  --lightbulb: #02cd88;
+  --lightbulb: #02cd88; */
 
   /*- Button color-map -*/
   --button-color: ;
@@ -19,7 +19,7 @@
 
   /*- alert messages -*/
   --alert-box-shadow: rgba(0, 0, 0, 0.3);
-  --alert-info: rgba(0, 0, 0, 0.5);
+  --alert-info: rgba(0, 0, 0, 0.6);
   --alert-success: rgba(19, 72, 17, 0.367);
   --alert-warning: rgba(131, 100, 0, 0.523);
   --alert-error: rgba(139, 0, 0, 0.302);

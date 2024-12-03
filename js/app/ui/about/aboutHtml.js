@@ -26,7 +26,7 @@ export function aboutHtml() {
 
   const aboutImg = document.createElement("img");
   aboutImg.classList.add("aboutImg");
-  aboutImg.src = "/IMAGES/teleAtBaliBeach-opacity80.png";
+  aboutImg.src = "/IMAGES/T-bali-beach.jpeg";
   aboutImg.alt =
     "Image of the blog author Tele Caster Nilsen at a beach in Bali.";
 
