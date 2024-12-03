@@ -11,8 +11,7 @@
 
 
 * API CALLS
-- Call API to fetch posts and display in BlogList/Thumbnails
-- Call API to fetch specific posts and display at BlogPost page
+- Search params for sorting and filtering
 
 * ADDITIONAL
 - Add Hotjar script

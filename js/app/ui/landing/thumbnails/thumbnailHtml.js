@@ -1,11 +1,11 @@
-import { fetchPostsWithImages } from "/js/utils/helpers/api/fetchPosts.js";
+import { fetchPostsWithInfo } from "/js/utils/helpers/api/fetchPosts.js";
 import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
 import { thumbnailContainer, loader } from "/js/utils/general/constants.js";
 import { thumbnailClicks } from "/js/app/eventListeners/thumbnailEvents.js";
 
 export async function thumbnailHtml() {
   try {
-    const posts = await fetchPostsWithImages();
+    const posts = await fetchPostsWithInfo();
 
     loader.style.display = "none";
 
@@ -15,6 +15,7 @@ export async function thumbnailHtml() {
     posts.forEach((post) => {
       const thumbnails = document.createElement("div");
       thumbnails.classList.add("thumbnails");
+      thumbnails.dataset.postId = post.id;
 
       const titleBlob = document.createElement("p");
       titleBlob.classList.add("titleBlob");

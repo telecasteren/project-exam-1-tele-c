@@ -5,7 +5,12 @@ export function thumbnailClicks() {
 
   thumbnails.forEach((thumb) => {
     thumb.addEventListener("click", () => {
-      goToPost();
+      const postID = thumb.dataset.postId;
+      if (postID) {
+        goToPost(postID);
+      } else {
+        console.error("Post ID is missing on the thumbnail");
+      }
     });
   });
 }
