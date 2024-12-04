@@ -17,10 +17,8 @@
 
 .thumbnails {
   display: grid;
-  max-width: 150px;
-  max-height: 150px;
-  width: 100%;
-  height: auto;
+  width: 150px;
+  height: 150px;
   justify-self: center;
   align-self: center;
   cursor: pointer;
