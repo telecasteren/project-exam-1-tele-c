@@ -54,7 +54,7 @@
 }
 
 .expandPosts {
-  color: var(--primary-text);
+  color: var(--secondary-text);
   grid-column: 5;
   margin-left: 20%;
   align-self: center;
