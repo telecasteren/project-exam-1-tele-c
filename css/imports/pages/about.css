@@ -35,6 +35,7 @@
     grid-template-columns: 1fr;
     width: auto;
     height: auto;
+    margin-bottom: 25%;
   }
 
   .aboutImg {
