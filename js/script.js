@@ -1,4 +1,6 @@
 import { colorModeIcon } from "/js/app/ui/components/colorMode/colorModeIcon.js";
+import { setSpecificColors } from "/js/app/ui/components/colorMode/setSpecificColors.js";
+import { setUpColorModes } from "/js/app/ui/components/colorMode/colorModeEvents.js";
 import { navBar } from "/js/app/ui/components/navigation/navbar.js";
 import { footerOnScroll } from "/js/app/ui/components/footer/footer.js";
 import { setPageTitles } from "/js/utils/helpers/ui-helpers/setPageTitles.js";
@@ -36,6 +38,8 @@ document.addEventListener("DOMContentLoaded", function () {
   setPageTitles();
   navBar();
   colorModeIcon();
+  setUpColorModes();
+  setSpecificColors();
 
   if (homeContainer) {
     carouselHtml();

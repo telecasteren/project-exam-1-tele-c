@@ -31,7 +31,5 @@ export function toggleColorModes() {
 
   window.localStorage.setItem("colorMode", nextColor);
 
-  if (nextColor === "rb" || nextColor === "br") {
-    setSpecificColors();
-  }
+  setSpecificColors();
 }

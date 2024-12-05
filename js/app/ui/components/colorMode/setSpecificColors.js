@@ -4,24 +4,24 @@ export function setSpecificColors() {
   const navLinks = document.querySelectorAll(".navLinks");
 
   if (submitBtn) {
-    // Set color on submit button based on colorMode
-    submitBtn.style.backgroundColor =
-      currentMode === "rb" || currentMode === "br"
-        ? "var(--tertiary-color)"
-        : "";
+    // Set or reset color on submit button based on colorMode
+    if (currentMode === "rb" || currentMode === "br") {
+      submitBtn.style.backgroundColor = "var(--tertiary-color)";
+    } else {
+      submitBtn.style.backgroundColor = "";
+    }
   }
 
   if (!navLinks.length) {
     console.warn("No navLinks found.");
   } else {
-    // Set color on nav buttons based on colorMode
-    const specificColor =
-      currentMode === "rb" || currentMode === "br"
-        ? "var(--tertiary-color)"
-        : "";
-
+    // Set or reset color on nav buttons based on colorMode
     navLinks.forEach((link) => {
-      link.style.backgroundColor = specificColor;
+      if (currentMode === "rb" || currentMode === "br") {
+        link.style.backgroundColor = "var(--tertiary-color)";
+      } else {
+        link.style.backgroundColor = "";
+      }
     });
   }
 }

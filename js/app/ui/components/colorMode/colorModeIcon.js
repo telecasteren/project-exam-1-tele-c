@@ -1,5 +1,6 @@
 import { topContent } from "/js/utils/general/constants.js";
 import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
+import { setSpecificColors } from "/js/app/ui/components/colorMode/setSpecificColors.js";
 import {
   setUpColorModes,
   toggleColorModes,
@@ -19,6 +20,7 @@ export function colorModeIcon() {
 
   lightBulbIcon.addEventListener("click", () => {
     toggleColorModes();
+    setSpecificColors();
   });
 
   lightBulbDiv.prepend(lightBulbIcon);
