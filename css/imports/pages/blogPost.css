@@ -16,7 +16,7 @@
 .contentText,
 .postFooter {
   justify-self: center;
-  color: var(--primary-text);
+  color: var(--secondary-text);
 }
 
 .contentTitle {
