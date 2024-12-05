@@ -33,10 +33,5 @@ export function toggleColorModes() {
 
   if (nextColor === "rb" || nextColor === "br") {
     setSpecificColors();
-  } else {
-    const submitBtn = document.querySelector("#submitBtn");
-    if (submitBtn) {
-      submitBtn.style.backgroundColor = "";
-    }
   }
 }

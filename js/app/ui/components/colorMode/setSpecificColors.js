@@ -1,16 +1,29 @@
 export function setSpecificColors() {
+  const currentMode = window.localStorage.getItem("colorMode");
   const submitBtn = document.querySelector("#submitBtn");
   const navLinks = document.querySelectorAll(".navLinks");
-  const currentMode = window.localStorage.getItem("colorMode");
 
   if (!submitBtn) {
-    console.error("Couldn't set unique color, submit button not found");
+    console.error("Couldn't set unique color, submitBtn not found");
   } else {
-    // Set submit button color based on if rb or br is colorMode
-    if (currentMode === "rb" || currentMode === "br") {
-      submitBtn.style.backgroundColor = "var(--tertiary-color)";
-    } else {
-      submitBtn.style.backgroundColor = "";
-    }
+    // Set color on submit button based on colorMode
+    submitBtn.style.backgroundColor =
+      currentMode === "rb" || currentMode === "br"
+        ? "var(--tertiary-color)"
+        : "";
+  }
+
+  if (!navLinks.length) {
+    console.warn("No navLinks found.");
+  } else {
+    // Set color on nav buttons based on colorMode
+    const specificColor =
+      currentMode === "rb" || currentMode === "br"
+        ? "var(--tertiary-color)"
+        : "";
+
+    navLinks.forEach((link) => {
+      link.style.backgroundColor = specificColor;
+    });
   }
 }
