@@ -3,9 +3,7 @@ export function setSpecificColors() {
   const submitBtn = document.querySelector("#submitBtn");
   const navLinks = document.querySelectorAll(".navLinks");
 
-  if (!submitBtn) {
-    console.error("Couldn't set unique color, submitBtn not found");
-  } else {
+  if (submitBtn) {
     // Set color on submit button based on colorMode
     submitBtn.style.backgroundColor =
       currentMode === "rb" || currentMode === "br"
