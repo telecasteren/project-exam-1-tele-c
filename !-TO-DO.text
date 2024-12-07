@@ -3,10 +3,13 @@
 ## TO DO LIST:
 
 * WEBSITE STRUCTURE
+- Make correct title in focus when user hovers another post than focusedPost
+- Pop up modal when user clicks post image, clicking outside the modal == display: none
+- Dynamic page title on post page
 - Expand more posts in thumbnails
 - Error handling and messages
-- Dynamic page title on post page
-- Landing slider logic
+
+
 
 
 * API CALLS

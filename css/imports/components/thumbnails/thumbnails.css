@@ -17,8 +17,8 @@
 
 .thumbnails {
   display: grid;
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   justify-self: center;
   align-self: center;
   cursor: pointer;
@@ -30,7 +30,8 @@
 
 .thumbnails:hover {
   transform: scale(1.1);
-  filter: brightness(1.2);
+  filter: brightness(1.1);
+  outline: 2px dashed var(--tertiary-color);
 }
 
 .thumbnails img {

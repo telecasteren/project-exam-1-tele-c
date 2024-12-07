@@ -22,7 +22,7 @@
 }
 
 .textContent {
-  color: var(--primary-text);
+  color: var(--secondary-text);
   text-align: end;
   justify-self: center;
   align-self: center;

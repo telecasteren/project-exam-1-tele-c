@@ -1,4 +1,4 @@
-import { fetchPostsWithInfo } from "/js/utils/helpers/api/fetchPosts.js";
+import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
 import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
 import { blogListContainer, loader } from "/js/utils/general/constants.js";
 import { thumbnailClicks } from "/js/app/eventListeners/thumbnailEvents.js";

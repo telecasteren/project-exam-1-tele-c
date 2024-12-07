@@ -1,4 +1,4 @@
-import { fetchPostsWithInfo } from "/js/utils/helpers/api/fetchPosts.js";
+import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
 import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
 import { thumbnailContainer, loader } from "/js/utils/general/constants.js";
 import { thumbnailClicks } from "/js/app/eventListeners/thumbnailEvents.js";
@@ -36,10 +36,10 @@ export async function thumbnailHtml() {
     expandPosts.classList.add("expandPosts");
     expandPosts.innerText = "View more";
 
-    thumbnailContainer.appendChild(container);
-    container.appendChild(expandPosts);
+    // thumbnailContainer.appendChild(container);
+    // container.appendChild(expandPosts);
 
-    thumbnailClicks();
+    // thumbnailClicks();
   } catch (error) {
     alertMessage("Couldn't fetch bloglist right now", "error");
     throw error;

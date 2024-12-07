@@ -1,5 +1,5 @@
 import { loader, postContainer } from "/js/utils/general/constants.js";
-import { fetchPostsWithInfo } from "/js/utils/helpers/api/fetchPosts.js";
+import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
 import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
 
 export async function createPostHtml() {
