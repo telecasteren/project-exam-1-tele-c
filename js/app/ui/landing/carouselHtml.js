@@ -92,6 +92,7 @@ import { carouselClickEvents } from "/js/app/eventListeners/carouselClickEvents.
 import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
 import { hoverFocusHandler } from "/js/app/eventListeners/hoverFocusHandler.js";
 import { scrollHandler } from "/js/app/ui/landing/scrollHandler.js";
+import { setSpecificColors } from "/js/app/ui/components/colorMode/setSpecificColors.js";
 
 export async function carouselHtml() {
   try {
@@ -197,6 +198,7 @@ export async function carouselHtml() {
     const screenSizeChanges = window.matchMedia("(max-width: 1100px)");
     screenSizeChanges.addEventListener("change", smallerScreens);
 
+    setSpecificColors();
     smallerScreens();
     updateTitleInFocus();
     carouselClickEvents();
