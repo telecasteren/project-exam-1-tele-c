@@ -112,14 +112,14 @@ export async function carouselHtml() {
     const latestPosts = posts
       .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
       .slice(0, 6);
-    const allItems = [...latestPosts, ...latestPosts, ...latestPosts];
+    console.log("Latest Posts:", latestPosts);
 
     const blogTitle = document.createElement("h1");
     blogTitle.classList.add("carouselTitle");
     blogTitle.id = "carouselTitle";
-    blogTitle.innerText = posts[0].title || "Unknown title";
+    blogTitle.innerText = latestPosts[0].title || "Unknown title"; // posts[0].title || "Unknown title";
 
-    allItems.forEach((post, index) => {
+    latestPosts.forEach((post, index) => {
       const carouselIMG = document.createElement("img");
       carouselIMG.className = "carouselIMG";
       carouselIMG.src = post.imgSrc || NO_IMAGE_FOUND_IMG;
@@ -136,12 +136,12 @@ export async function carouselHtml() {
     homeContainer.appendChild(container);
 
     // Handling hover and focus events here
-    hoverFocusHandler();
+    hoverFocusHandler(blogTitle, latestPosts);
     // Handling scroll events here
     scrollHandler();
 
     // // Track the focused post
-    function updateTitleInFocus() {
+    function initialFocusedPost() {
       const carouselImgs = Array.from(
         carousel.querySelectorAll(".carouselIMG")
       );
@@ -157,11 +157,13 @@ export async function carouselHtml() {
       });
 
       // Display the correct title
-      // Visually show user what post is in focus by adding a style class
+      // Show user what post is in focus by adding a style class
       if (focusedPost) {
         const focusedIndex = focusedPost.dataset.index;
-        blogTitle.innerText = allItems[focusedIndex].title || "Title unknown";
-        blogTitle.dataset.postId = allItems[focusedIndex].id;
+        blogTitle.innerText =
+          latestPosts[focusedIndex].title || "Title unknown";
+        blogTitle.dataset.postId = latestPosts[focusedIndex].id;
+
         focusedPost.classList.add("focusedPost");
 
         carouselImgs.forEach((img) => {
@@ -175,7 +177,7 @@ export async function carouselHtml() {
     }
 
     carousel.addEventListener("scroll", () => {
-      setTimeout(updateTitleInFocus, 100);
+      setTimeout(initialFocusedPost, 100);
     });
 
     // If screen size <= 1100px, reorder container hierarchy
@@ -200,7 +202,7 @@ export async function carouselHtml() {
 
     setSpecificColors();
     smallerScreens();
-    updateTitleInFocus();
+    initialFocusedPost();
     carouselClickEvents();
   } catch (error) {
     alertMessage("Woops! Couldn't load carousel right now 😬");

@@ -8,14 +8,14 @@ function getQueryParams(param) {
 export async function setPageTitles() {
   const path = window.location.pathname;
   const pageTitles = {
-    "/about/": "About | unwired",
-    "/stories/": "Stories | unwired",
-    "/contact/": "Contact | unwired",
+    "/about/": "unwired | About",
+    "/stories/": "unwired | Stories",
+    "/contact/": "unwired | Contact",
   };
 
   let pageTitle = Object.keys(pageTitles).find((key) => path.includes(key))
     ? pageTitles[Object.keys(pageTitles).find((key) => path.includes(key))]
-    : "Home | unwired";
+    : "unwired | Home";
 
   if (path.includes("/post/")) {
     const postId = getQueryParams("postId");
@@ -27,9 +27,9 @@ export async function setPageTitles() {
       const post = posts.find((p) => p.id === numericPostId);
 
       if (post) {
-        pageTitle = `${post.title} | unwired` || "Blog post | unwired";
+        pageTitle = `unwired | ${post.title}` || "unwired | Blog post";
       } else {
-        pageTitle = "Blog post | unwired";
+        pageTitle = "unwired | Blog post";
         console.warn(`Post with ID ${postId} not found`);
       }
     }
