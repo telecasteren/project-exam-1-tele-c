@@ -112,12 +112,11 @@ export async function carouselHtml() {
     const latestPosts = posts
       .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
       .slice(0, 6);
-    console.log("Latest Posts:", latestPosts);
 
     const blogTitle = document.createElement("h1");
     blogTitle.classList.add("carouselTitle");
     blogTitle.id = "carouselTitle";
-    blogTitle.innerText = latestPosts[0].title || "Unknown title"; // posts[0].title || "Unknown title";
+    blogTitle.innerText = latestPosts[0].title || "Unknown title";
 
     latestPosts.forEach((post, index) => {
       const carouselIMG = document.createElement("img");
@@ -137,8 +136,16 @@ export async function carouselHtml() {
 
     // Handling hover and focus events here
     hoverFocusHandler(blogTitle, latestPosts);
+
     // Handling scroll events here
-    scrollHandler();
+    let scrollTimeout;
+    // Bounce back to start
+    carousel.addEventListener("scroll", () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(() => {
+        scrollHandler();
+      }, 1000);
+    });
 
     // // Track the focused post
     function initialFocusedPost() {

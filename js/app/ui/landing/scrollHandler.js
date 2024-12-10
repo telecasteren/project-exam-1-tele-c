@@ -8,7 +8,7 @@ export function scrollHandler() {
   carousel.scrollLeft = 0;
   let isScrolling = false;
 
-  if (carousel.scrollLeft >= maxLeftScroll) {
+  if (carousel.scrollLeft >= maxLeftScroll - 1) {
     blogTitle.style.visibility = "hidden";
     carousel.scrollTo({
       left: 0,
