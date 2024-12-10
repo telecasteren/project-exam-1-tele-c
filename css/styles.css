@@ -10,6 +10,7 @@
 @import url("/css/imports/components/static/navBar.css");
 @import url("/css/imports/components/static/footer.css");
 @import url("/css/imports/components/thumbnails/thumbnails.css");
+@import url("/css/imports/components/modal/modal.css");
 
 /* PAGES */
 @import url("/css/imports/pages/landing.css");

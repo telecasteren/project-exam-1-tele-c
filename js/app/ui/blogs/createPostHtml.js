@@ -1,6 +1,7 @@
 import { loader, postContainer } from "/js/utils/general/constants.js";
 import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
 import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
+import { displayPostImageInModal } from "/js/app/eventListeners/blogModalEvents.js";
 
 export async function createPostHtml() {
   try {
@@ -77,6 +78,7 @@ export async function createPostHtml() {
     screenSizeChanges.addEventListener("change", smallerScreens);
 
     smallerScreens();
+    displayPostImageInModal();
   } catch (error) {
     console.error("Error creating post HTML:", error);
     alertMessage("Woops! Can't show post. Try again later", "warning");

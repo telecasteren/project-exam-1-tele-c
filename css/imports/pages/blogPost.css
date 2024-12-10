@@ -22,12 +22,14 @@
 .contentTitle {
   font-size: 1.2rem;
   margin: 10% 0 8% 0;
+  text-align: center;
 }
 
 .contentText {
   text-align: justify;
   font-size: 0.9rem;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   margin: 4% 0 4% 0;
 }
 
@@ -43,6 +45,7 @@
   border-radius: 8px;
   justify-self: center;
   align-self: center;
+  cursor: pointer;
 }
 
 /*-----
@@ -53,6 +56,7 @@ MEDIA SCREENS FOR POST CONTENT
   .postContent {
     display: grid;
     grid-template-columns: 1fr;
+    gap: 20px;
     width: auto;
     height: auto;
   }
@@ -65,7 +69,19 @@ MEDIA SCREENS FOR POST CONTENT
   .contentText {
     text-align: justify;
     font-size: 0.8rem;
-    width: 500px;
-    margin: 0;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .blogImg {
+    margin: 5%;
+    max-width: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .textContainer {
+    margin: 5%;
   }
 }

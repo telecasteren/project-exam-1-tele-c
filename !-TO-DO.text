@@ -3,10 +3,9 @@
 ## TO DO LIST:
 
 * WEBSITE STRUCTURE
-- Make correct title in focus when user hovers another post than focusedPost
-- Pop up modal when user clicks post image, clicking outside the modal == display: none
 - Expand more posts in thumbnails
 - Error handling and messages
+- Add slideLeft/Right at carousel
 
 
 
