@@ -1,0 +1,123 @@
+/*- CAROUSEL WITH SCROLL -*/
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carouselTitle {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  text-align: center;
+  color: var(--secondary-text);
+  cursor: pointer;
+
+  background-color: var(--alert-info);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px;
+  width: 100%;
+  justify-content: flex-start;
+  max-width: none;
+  margin: 0 auto;
+}
+
+.carouselIMG {
+  flex: 0 0 calc((100% - 32px) / 3);
+  width: calc((100% - 32px) / 3);
+  height: auto;
+  max-width: 300px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px var(--alert-box-shadow);
+  transition: transform 0.3s ease;
+  scroll-snap-align: start;
+  cursor: pointer;
+}
+
+.carouselTitle:hover,
+.carousel-scrolling,
+.focusedPost {
+  outline: 2px dashed var(--tertiary-color);
+}
+
+.slideShowDiv {
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.slideLeft,
+.slideRight {
+  font-size: 85px;
+  color: var(--tertiary-color);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.slideLeft {
+  margin-left: 15px;
+  align-self: center;
+}
+
+.slideRight {
+  margin-right: 15px;
+  align-self: center;
+}
+
+.slideLeft:hover,
+.slideRight:hover {
+  transform: scale(1.8);
+  color: var(--hover-color);
+}
+
+@media screen and (max-width: 400px) {
+  .slideShowDiv {
+    align-self: center;
+    position: absolute;
+    top: 25vw;
+  }
+
+  .slideLeft,
+  .slideRight {
+    font-size: 85px;
+  }
+}
+
+/*--
+Media queries for home page content
+---------------------------------*/
+
+@media screen and (max-width: 375px) {
+  .slideLeft,
+  .slideRight {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .carouselTitle {
+    font-size: 1.5rem;
+  }
+}

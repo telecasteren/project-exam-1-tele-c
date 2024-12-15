@@ -49,5 +49,7 @@ export function alertMessage(text, type = "info") {
   closeAlert.addEventListener("click", onCloseClick);
   window.addEventListener("click", onClickOutside);
 
+  container.style.display = "block";
+
   return alertMessage;
 }

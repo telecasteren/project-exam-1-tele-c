@@ -1,0 +1,26 @@
+.filtersContainer {
+  display: inline-table;
+  gap: 20px;
+}
+
+.options {
+  text-align: center;
+  font-size: 0.9rem;
+  width: 230px;
+  height: 45px;
+  border-radius: 8px;
+  padding: 0;
+  margin-bottom: 2%;
+  margin-right: 2%;
+  cursor: pointer;
+
+  color: var(--primary-text);
+  border: 2px solid var(--primary-background);
+  background-color: var(--primary-color);
+  transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.options:hover {
+  transform: scale(1.01);
+  border: 2px dashed var(--alert-success);
+}

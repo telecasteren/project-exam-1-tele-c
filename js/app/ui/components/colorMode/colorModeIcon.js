@@ -1,5 +1,5 @@
 import { topContent } from "/js/utils/general/constants.js";
-import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
+import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { setSpecificColors } from "/js/app/ui/components/colorMode/setSpecificColors.js";
 import {
   setUpColorModes,

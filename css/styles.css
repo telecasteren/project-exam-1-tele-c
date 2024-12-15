@@ -4,6 +4,8 @@
 @import url("/css/imports/utils/loader/loader.css");
 @import url("/css/imports/utils/alerts/alertMessage.css");
 @import url("/css/imports/utils/alerts/formError.css");
+@import url("/css/imports/utils/alerts/noResults.css");
+@import url("/css/imports/utils/alerts/errorWrapper.css");
 
 /*- COMPONENTS -*/
 @import url("/css/imports/components/static/lightBulb-icon.css");
@@ -11,11 +13,12 @@
 @import url("/css/imports/components/static/footer.css");
 @import url("/css/imports/components/thumbnails/thumbnails.css");
 @import url("/css/imports/components/modal/modal.css");
+@import url("/css/imports/components/carousel/carousel.css");
+@import url("/css/imports/components/search/options.css");
 
 /* PAGES */
 @import url("/css/imports/pages/landing.css");
 @import url("/css/imports/pages/blogPost.css");
-/* @import url("/css/imports/pages/blogList.css"); */
 @import url("/css/imports/pages/about.css");
 @import url("/css/imports/components/forms/contactForm.css");
 

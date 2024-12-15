@@ -1,4 +1,8 @@
 /*- Alert message component-*/
+.alert-container {
+  display: none;
+}
+
 .alert-message {
   display: block;
   position: fixed;

@@ -49,7 +49,7 @@ Media queries for nav menu
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 460px) {
   .navBar {
     margin: 2% auto;
     gap: 10px;

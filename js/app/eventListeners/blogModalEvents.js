@@ -1,13 +1,3 @@
-// import { popUpModal } from "/js/app/ui/components/modal.js";
-
-// export function displayPostImageInModal(imageSrc) {
-//   const postImage = document.querySelector(".blogImg");
-
-//   postImage.addEventListener("click", () => {
-//     popUpModal(imageSrc);
-//   });
-// }
-
 import { popUpModal } from "/js/app/ui/components/modal.js";
 
 export function displayPostImageInModal() {

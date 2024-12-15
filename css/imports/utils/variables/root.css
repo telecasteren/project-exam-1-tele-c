@@ -24,6 +24,10 @@
   --alert-warning: rgba(131, 100, 0, 0.523);
   --alert-error: rgba(139, 0, 0, 0.302);
 
+  /*- Error message -*/
+  --error-red-front: rgb(159, 16, 17);
+  --error-red-back: rgba(255, 0, 0, 0.1);
+
   /*- footer -*/
   --footer-text: #7c817d;
   --footer-grey: #2d332e;

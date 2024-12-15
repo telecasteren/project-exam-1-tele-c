@@ -4,6 +4,12 @@ export const colorModes = ["dark", "light", "rb", "br"];
 // General
 export const loader = document.querySelector(".loader");
 
+// Filters
+export const selectArrow = (color) =>
+  `url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="${encodeURIComponent(
+    color
+  )}" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>')`;
+
 // Informative
 export const NO_IMAGE_FOUND_IMG = "/IMAGES/no_image_found.jpg";
 export const POST_NOT_FOUND = "No blog post found";

@@ -1,6 +1,6 @@
 import { loader, postContainer } from "/js/utils/general/constants.js";
 import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
-import { alertMessage } from "/js/app/ui/components/messages/alertMessage.js";
+import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { displayPostImageInModal } from "/js/app/eventListeners/blogModalEvents.js";
 
 export async function createPostHtml() {

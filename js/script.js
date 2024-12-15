@@ -6,12 +6,14 @@ import { footerOnScroll } from "/js/app/ui/components/footer/footer.js";
 import { setPageTitles } from "/js/utils/helpers/setPageTitles.js";
 
 // LANDING IMPORTS
-import { carouselHtml } from "/js/app/ui/landing/carouselHtml.js";
-import { thumbnailHtml } from "/js/app/ui/landing/thumbnails/thumbnailHtml.js";
+import { carouselHtml } from "/js/app/ui/carousel/carouselHtml.js";
 
 // BLOG IMPORTS
 import { createPostHtml } from "/js/app/ui/blogs/createPostHtml.js";
-import { blogListHtml } from "/js/app/ui/blogs/blogListHtml.js";
+import { initialiseBlogList } from "/js/app/ui/blogs/blogListHtml.js";
+import { setFilterOptions } from "/js/app/ui/components/search/options.js";
+import { onSortChange } from "/js/app/ui/components/search/onSortChange.js";
+import { onFilterChange } from "/js/app/ui/components/search/onFilterChange.js";
 
 // ABOUT IMPORTS
 import { aboutHtml } from "/js/app/ui/about/aboutHtml.js";
@@ -19,7 +21,7 @@ import { aboutHtml } from "/js/app/ui/about/aboutHtml.js";
 // CONTACT IMPORTS
 import { contactForm } from "/js/app/ui/components/contactForm/contactForm.js";
 
-// Constants
+// CONSTANTS
 import {
   homeContainer,
   postContainer,
@@ -43,11 +45,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (homeContainer) {
     carouselHtml();
-    thumbnailHtml();
   }
 
   if (blogListContainer) {
-    blogListHtml();
+    initialiseBlogList();
+    setTimeout(() => {
+      setFilterOptions(onSortChange, onFilterChange);
+    }, 200);
   }
 
   if (postContainer) {

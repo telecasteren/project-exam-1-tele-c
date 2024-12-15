@@ -1,0 +1,15 @@
+.errorWrapper {
+  display: grid;
+  text-align: center;
+  justify-self: center;
+  align-items: center;
+  min-width: 300px;
+  max-width: 1000px;
+  height: 80px;
+  padding: 1rem;
+  margin: 2%;
+  color: var(--error-red-front);
+  border: 2px solid var(--error-red-front);
+  border-radius: 12px;
+  background: var(--error-red-back);
+}

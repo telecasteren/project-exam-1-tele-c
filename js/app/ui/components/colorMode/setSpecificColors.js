@@ -1,8 +1,14 @@
+import { selectArrow } from "/js/utils/general/constants.js";
+
 export function setSpecificColors() {
   const currentMode = window.localStorage.getItem("colorMode");
+
+  // Elements getting specific colors
   const submitBtn = document.querySelector("#submitBtn");
   const navLinks = document.querySelectorAll(".navLinks");
   const carouselTitle = document.querySelector(".carouselTitle");
+  const filterOptions = document.querySelectorAll(".options");
+  const FilterSelect = document.querySelectorAll("select");
 
   if (carouselTitle) {
     switch (currentMode) {
@@ -42,5 +48,18 @@ export function setSpecificColors() {
       currentMode === "rb" || currentMode === "br"
         ? "var(--tertiary-color)"
         : "";
+  }
+
+  if (filterOptions.length || FilterSelect.length) {
+    const filterOptionColor =
+      currentMode === "dark" ? "var(--secondary-text)" : "";
+
+    filterOptions.forEach((option) => {
+      option.style.color = filterOptionColor;
+    });
+
+    FilterSelect.forEach((select) => {
+      select.style.backgroundImage = selectArrow(filterOptionColor);
+    });
   }
 }

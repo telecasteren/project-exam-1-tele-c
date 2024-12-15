@@ -6,11 +6,15 @@ import {
 const baseUrl =
   "https://unwired.telecasternilsen.com/wp-json/wp/v2/posts?_embed";
 
-export async function fetchPostsWithInfo(id) {
+export async function fetchPostsWithInfo(
+  id,
+  sortOrder = "asc",
+  sortBy = "date"
+) {
   try {
     const url = id
       ? `https://unwired.telecasternilsen.com/wp-json/wp/v2/posts/${id}?_embed`
-      : baseUrl;
+      : `${baseUrl}&order=${sortOrder}&orderby=${sortBy}`;
 
     const response = await fetch(url);
     if (!response.ok) {
@@ -28,10 +32,10 @@ export async function fetchPostsWithInfo(id) {
         id: post.id,
         title: post.title.rendered,
         textContent: post.content.rendered,
-        publishDate: post.date,
+        publishDate: new Date(post.date),
         postCategory: categories
           ? categories.map((cat) => cat.name).join(", ")
-          : "Uncategorized",
+          : "Uncategorised",
         imgSrc: featuredMedia?.source_url || NO_IMAGE_FOUND_IMG,
         imgAlt: featuredMedia?.alt_text || ALT_NOT_FOUND,
       };
@@ -42,7 +46,23 @@ export async function fetchPostsWithInfo(id) {
       return handlePost(data);
     } else {
       // Multiple posts
-      return data.map(handlePost);
+      // return data.map(handlePost);
+      const posts = data.map(handlePost);
+
+      // Sort default from newest to oldest
+      posts.sort((a, b) => {
+        if (sortBy === "date") {
+          return sortOrder === "desc"
+            ? new Date(a.publishDate) - new Date(b.publishDate)
+            : new Date(b.publishDate) - new Date(a.publishDate);
+        } else if (sortBy === "title") {
+          return sortOrder === "asc"
+            ? a.title.localeCompare(b.title)
+            : b.title.localeCompare(a.title);
+        }
+      });
+
+      return posts;
     }
   } catch (error) {
     console.error("Error fetching posts with images:", error);

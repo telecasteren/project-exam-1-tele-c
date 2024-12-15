@@ -5,13 +5,13 @@
 * WEBSITE STRUCTURE
 - Expand more posts in thumbnails
 - Error handling and messages
-- Add slideLeft/Right at carousel
+---- colorMode adjustments
 
 
 
 
 * API CALLS
-- Search params for sorting and filtering
+- Search params for filtering by title/category
 
 * ADDITIONAL
 - Document work and write report
