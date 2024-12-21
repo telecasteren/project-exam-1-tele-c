@@ -3,11 +3,8 @@
 ## TO DO LIST:
 
 * WEBSITE STRUCTURE
-- Expand more posts in thumbnails
-- Error handling and messages
----- colorMode adjustments
-
-
+- Expand more ERROR HANDLING when no more posts
+- Error handling and colors of alert messages
 
 
 * API CALLS

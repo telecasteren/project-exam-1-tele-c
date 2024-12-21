@@ -79,8 +79,7 @@ export function setFilterOptions(onSortChange, onFilterChange) {
         const selectedOption = event.target.value;
         if (selectedOption === "asc" || selectedOption === "desc") {
           const sortOrder = selectedOption;
-          const sortBy = "date";
-          onSortChange(sortOrder, sortBy);
+          onSortChange(sortOrder);
         }
       });
     }

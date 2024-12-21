@@ -1,8 +1,6 @@
-import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
-import { blogListHtml } from "/js/app/ui/blogs/blogListHtml.js";
 import { ErrorWrapper } from "/js/utils/messages/errorWrapper.js";
 
-export async function onSortChange(sortOrder) {
+export function onSortChange(sortOrder) {
   const blogListContent = document.querySelector(".blogListContent");
   const filtersContainer = document.querySelector(".filtersContainer");
 
@@ -12,10 +10,39 @@ export async function onSortChange(sortOrder) {
   }
 
   try {
-    const sortedPosts = await fetchPostsWithInfo(null, sortOrder);
+    const posts = Array.from(blogListContent.children);
+
+    if (posts.length === 0) {
+      errorMessage.innerHTML = `<div class="error">No posts to sort</div>`;
+      if (!filtersContainer.contains(errorMessage)) {
+        filtersContainer.appendChild(errorMessage);
+      }
+      return;
+    }
+
+    // Sort the posts on publish date
+    const sortedPosts = posts.sort((a, b) => {
+      const dateA = a.querySelector(".thumbnails")
+        ? new Date(a.querySelector(".thumbnails").dataset.publishDate).getTime()
+        : null;
+      const dateB = b.querySelector(".thumbnails")
+        ? new Date(b.querySelector(".thumbnails").dataset.publishDate).getTime()
+        : null;
+
+      if (dateA === null || dateB === null) return 0;
+
+      if (sortOrder === "asc") {
+        return dateA - dateB;
+      } else if (sortOrder === "desc") {
+        return dateB - dateA;
+      }
+    });
 
     blogListContent.innerHTML = "";
-    blogListHtml(sortedPosts);
+
+    sortedPosts.forEach((post) => {
+      blogListContent.appendChild(post);
+    });
 
     errorMessage.innerHTML = "";
   } catch (error) {
@@ -24,6 +51,6 @@ export async function onSortChange(sortOrder) {
       errorMessage.innerHTML = `<div class="error">Couldn't sort the posts ${sortOrder}</div>`;
     }
 
-    throw error;
+    throw new error();
   }
 }

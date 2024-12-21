@@ -42,7 +42,7 @@ export async function carouselHtml() {
     // Display only the 6 latest posts
     const latestPosts = posts
       .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
-      .slice(0, 6);
+      .slice(0, 8);
 
     const blogTitle = document.createElement("h1");
     blogTitle.classList.add("carouselTitle");

@@ -1,7 +1,9 @@
 import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { blogListContainer, loader } from "/js/utils/general/constants.js";
-import { thumbnailClicks } from "/js/app/eventListeners/thumbnailEvents.js";
+import { createThumbnails } from "/js/app/ui/thumbnails/thumbnails.js";
+import { thumbnailClicks } from "/js/app/eventListeners/blogs/thumbnailEvents.js";
+import { expandMorePosts } from "/js/app/eventListeners/blogs/expandMore.js";
 
 // Initialise blogList
 export async function initialiseBlogList() {
@@ -13,7 +15,7 @@ export async function initialiseBlogList() {
   }
 }
 
-export async function blogListHtml(posts) {
+export async function blogListHtml(posts, append = false) {
   try {
     loader.style.display = "none";
 
@@ -22,40 +24,31 @@ export async function blogListHtml(posts) {
       container = document.createElement("div");
       container.classList.add("container", "blogListContent");
       blogListContainer.appendChild(container);
-    } else {
+    }
+
+    if (!append) {
       container.innerHTML = "";
     }
 
     posts.forEach((post) => {
-      const thumbnails = document.createElement("div");
-      thumbnails.classList.add("thumbnails");
-      thumbnails.dataset.postId = post.id;
+      const thumbnails = createThumbnails(post);
 
-      const titleBlob = document.createElement("p");
-      titleBlob.classList.add("titleBlob");
-      titleBlob.innerText = post.title;
-
-      const thumbImg = document.createElement("img");
-      thumbImg.classList.add("thumbImg");
-      thumbImg.src = post.imgSrc;
-      thumbImg.alt = post.imgAlt;
-
-      thumbnails.appendChild(titleBlob);
-      thumbnails.appendChild(thumbImg);
-
-      container.appendChild(thumbnails);
+      const thumbnailContainer = document.createElement("div");
+      thumbnailContainer.appendChild(thumbnails);
+      container.appendChild(thumbnailContainer);
     });
 
-    const expandPosts = document.createElement("h3");
-    expandPosts.classList.add("expandPosts");
-    expandPosts.innerText = "View more";
+    if (!append && !document.querySelector(".expandPosts")) {
+      const expandPosts = document.createElement("h3");
+      expandPosts.classList.add("expandPosts");
+      expandPosts.innerText = "View more";
 
-    blogListContainer.appendChild(container);
-    container.appendChild(expandPosts);
+      container.appendChild(expandPosts);
 
-    expandPosts.addEventListener("click", () => {
-      console.log("expandPosts clicked");
-    });
+      expandPosts.addEventListener("click", () => {
+        expandMorePosts();
+      });
+    }
 
     thumbnailClicks();
   } catch (error) {

@@ -8,13 +8,15 @@ const baseUrl =
 
 export async function fetchPostsWithInfo(
   id,
-  sortOrder = "asc",
-  sortBy = "date"
+  sortOrder = "desc",
+  sortBy = "date",
+  perPage = 10,
+  page = 1
 ) {
   try {
     const url = id
       ? `https://unwired.telecasternilsen.com/wp-json/wp/v2/posts/${id}?_embed`
-      : `${baseUrl}&order=${sortOrder}&orderby=${sortBy}`;
+      : `${baseUrl}&per_page=${perPage}&page=${page}&order=${sortOrder}&orderby=${sortBy}`;
 
     const response = await fetch(url);
     if (!response.ok) {
