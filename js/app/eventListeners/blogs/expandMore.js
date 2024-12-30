@@ -39,7 +39,7 @@ export async function expandMorePosts() {
     }
   } catch (error) {
     alertMessage("No more posts to display now");
-    throw new Error("Failed to fetch additional posts");
+    throw new Error("Failed to fetch additional posts", error);
   } finally {
     loader.style.display = "none";
   }

@@ -11,7 +11,7 @@ export async function initialiseBlogList() {
     const posts = await fetchPostsWithInfo();
     blogListHtml(posts);
   } catch (error) {
-    console.error("Error loading initial posts", error);
+    throw new Error(`Error occurred loading initial posts: ${error.message}`);
   }
 }
 
@@ -47,12 +47,13 @@ export async function blogListHtml(posts, append = false) {
 
       expandPosts.addEventListener("click", () => {
         expandMorePosts();
+        expandPosts.style.display = "none";
       });
     }
 
     thumbnailClicks();
   } catch (error) {
     alertMessage("Couldn't fetch the list of blogs right now", "error");
-    throw error;
+    throw new Error(`Error occurred creating BlogList: ${error.message}`);
   }
 }

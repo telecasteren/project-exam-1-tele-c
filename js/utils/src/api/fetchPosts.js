@@ -28,6 +28,15 @@ export async function fetchPostsWithInfo(
     const handlePost = (post) => {
       const featuredMedia = post._embedded?.["wp:featuredmedia"]?.[0];
       const categories = post._embedded?.["wp:term"]?.[0];
+      const tags = post._embedded?.["wp:term"]?.[1];
+
+      const postCategories = categories
+        ? categories.map((cat) => cat.name).join(", ")
+        : "Uncategorised";
+
+      const postTags = tags
+        ? tags.map((tag) => tag.name).join(", ")
+        : "No Tags";
 
       // Returning everything we need in relation to the posts
       return {
@@ -35,9 +44,8 @@ export async function fetchPostsWithInfo(
         title: post.title.rendered,
         textContent: post.content.rendered,
         publishDate: new Date(post.date),
-        postCategory: categories
-          ? categories.map((cat) => cat.name).join(", ")
-          : "Uncategorised",
+        postCategory: postCategories,
+        postTag: postTags,
         imgSrc: featuredMedia?.source_url || NO_IMAGE_FOUND_IMG,
         imgAlt: featuredMedia?.alt_text || ALT_NOT_FOUND,
       };
@@ -48,7 +56,6 @@ export async function fetchPostsWithInfo(
       return handlePost(data);
     } else {
       // Multiple posts
-      // return data.map(handlePost);
       const posts = data.map(handlePost);
 
       // Sort default from newest to oldest
@@ -68,6 +75,6 @@ export async function fetchPostsWithInfo(
     }
   } catch (error) {
     console.error("Error fetching posts with images:", error);
-    throw error;
+    throw new Error(`Error occurred in API call: ${error.message}`);
   }
 }

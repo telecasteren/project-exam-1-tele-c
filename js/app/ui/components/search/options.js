@@ -1,5 +1,6 @@
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { selectArrow } from "/js/utils/general/constants.js";
+// import { createCheckboxDropdown } from "/js/app/ui/components/search/checkboxes.js";
 
 export function setFilterOptions(onSortChange, onFilterChange) {
   try {
@@ -40,19 +41,20 @@ export function setFilterOptions(onSortChange, onFilterChange) {
 
       const sortAscending = document.createElement("option");
       sortAscending.value = "asc";
-      sortAscending.innerText = "Sort by date ascending";
+      sortAscending.innerText = "Date ascending";
 
       const sortDescending = document.createElement("option");
       sortDescending.value = "desc";
-      sortDescending.innerText = "Sort by date descending";
+      sortDescending.innerText = "Date descending";
 
       const filterByTitle = document.createElement("option");
       filterByTitle.value = "filter_title";
       filterByTitle.innerText = "Filter by title";
 
-      const filterByCategory = document.createElement("option");
-      filterByCategory.value = "filter_category";
-      filterByCategory.innerText = "Filter by category";
+      // const filterByCategory = document.createElement("option");
+      // filterByCategory.className = "filterByCategory";
+      // filterByCategory.value = "filter_category";
+      // filterByCategory.innerText = "Filter by category";
 
       SortOptions.appendChild(defaultSortOption);
       SortOptions.appendChild(sortAscending);
@@ -60,7 +62,7 @@ export function setFilterOptions(onSortChange, onFilterChange) {
 
       FilterOptions.appendChild(defaultFilterOption);
       FilterOptions.appendChild(filterByTitle);
-      FilterOptions.appendChild(filterByCategory);
+      // FilterOptions.appendChild(filterByCategory);
 
       optionsContainer.appendChild(FilterOptions);
       optionsContainer.appendChild(SortOptions);
@@ -69,10 +71,12 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       FilterOptions.addEventListener("change", (event) => {
         const selectedOption = event.target.value;
         if (selectedOption === "filter_title") {
-          onFilterChange("title");
-        } else if (selectedOption === "filter_category") {
-          onFilterChange("category");
+          onFilterChange("filter_title");
         }
+        // else if (selectedOption === "filter_category") {
+        //   onFilterChange("filter_category");
+        //   // createCheckboxDropdown();
+        // }
       });
 
       SortOptions.addEventListener("change", (event) => {
@@ -85,6 +89,6 @@ export function setFilterOptions(onSortChange, onFilterChange) {
     }
   } catch (error) {
     alertMessage("Couldn't display filters");
-    throw new Error();
+    throw new Error(`Error occurred: ${error.message}`);
   }
 }

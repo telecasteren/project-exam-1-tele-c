@@ -80,7 +80,7 @@ export async function createPostHtml() {
     smallerScreens();
     displayPostImageInModal();
   } catch (error) {
-    console.error("Error creating post HTML:", error);
     alertMessage("Woops! Can't show post. Try again later", "warning");
+    throw new Error(`Error occurred creating post: ${error.message}`);
   }
 }

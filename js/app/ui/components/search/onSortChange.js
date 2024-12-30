@@ -51,6 +51,6 @@ export function onSortChange(sortOrder) {
       errorMessage.innerHTML = `<div class="error">Couldn't sort the posts ${sortOrder}</div>`;
     }
 
-    throw new error();
+    throw new Error(`Error occurred whilst sorting: ${error.message}`);
   }
 }

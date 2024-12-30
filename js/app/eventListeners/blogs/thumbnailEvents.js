@@ -10,6 +10,9 @@ export function thumbnailClicks() {
         goToPost(postID);
       } else {
         console.error("Post ID is missing on the thumbnail");
+        throw new Error(
+          `Error, post ID is missing on the thumbnail: ${error.message}`
+        );
       }
     });
   });

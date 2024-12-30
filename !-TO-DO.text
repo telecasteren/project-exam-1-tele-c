@@ -3,12 +3,13 @@
 ## TO DO LIST:
 
 * WEBSITE STRUCTURE
-- Expand more ERROR HANDLING when no more posts
-- Error handling and colors of alert messages
+- VIEW MORE BTN disappear when filtering
+- Expand more ERROR HANDLING when no more posts in API
+- Colors of alert messages
 
 
 * API CALLS
-- Search params for filtering by title/category
+- Logic for filtering by category
 
 * ADDITIONAL
 - Document work and write report

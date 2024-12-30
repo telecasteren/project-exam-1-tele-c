@@ -127,6 +127,6 @@ export async function carouselHtml() {
     carouselClickEvents();
   } catch (error) {
     alertMessage("Woops! Couldn't load carousel right now 😬");
-    throw Error;
+    throw new Error(`Error occurred loading carousel: ${error.message}`);
   }
 }
