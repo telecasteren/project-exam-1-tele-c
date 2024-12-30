@@ -30,7 +30,10 @@ export function setSpecificColors() {
   } else {
     // Set or reset color on nav buttons based on colorMode
     const navLinkColors =
-      currentMode === "rb" || currentMode === "br"
+      currentMode === "rb" ||
+      currentMode === "br" ||
+      currentMode === "rebel" ||
+      currentMode === "sith"
         ? "var(--tertiary-color)"
         : "";
     navLinks.forEach((link) => {

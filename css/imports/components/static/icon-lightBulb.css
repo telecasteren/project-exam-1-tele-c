@@ -4,6 +4,7 @@
 
 .fa-lightbulb {
   color: var(--lightbulb);
+  margin-right: 35px;
 }
 
 @keyframes heartbeat {
@@ -46,7 +47,6 @@ Media queries for colorMode toggle
   .lightBulb {
     position: absolute;
     cursor: pointer;
-    top: 30px;
     right: 2%;
   }
 }

@@ -45,3 +45,27 @@ body.br {
   --tertiary-color: #e24d28;
   --lightbulb: #e24d28;
 }
+
+/* rebellion */
+body.rebel {
+  --primary-background: #f0ece1;
+  --secondary-background: #3b444b;
+  --primary-text: #f0ece1;
+  --secondary-text: #080808;
+  --primary-color: #e5703d;
+  --secondary-color: ;
+  --tertiary-color: #e5703d;
+  --lightbulb: #dd4e1e;
+}
+
+/* darkSide */
+body.sith {
+  --primary-background: #080808;
+  --secondary-background: #2d2b3c;
+  --primary-text: #dfdfdf;
+  --secondary-text: #dfdfdf;
+  --primary-color: #2d2b3c;
+  --secondary-color: ;
+  --tertiary-color: #ff0000;
+  --lightbulb: #ff0000;
+}

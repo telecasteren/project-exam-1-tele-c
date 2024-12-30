@@ -1,5 +1,5 @@
 // Color modes
-export const colorModes = ["dark", "light", "rb", "br"];
+export const colorModes = ["dark", "light", "rb", "br", "rebel", "sith"];
 
 // General
 export const loader = document.querySelector(".loader");

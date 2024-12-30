@@ -8,7 +8,8 @@
 @import url("/css/imports/utils/alerts/errorWrapper.css");
 
 /*- COMPONENTS -*/
-@import url("/css/imports/components/static/lightBulb-icon.css");
+@import url("/css/imports/components/static/icon-lightBulb.css");
+@import url("/css/imports/components/static/icon-specific.css");
 @import url("/css/imports/components/static/navBar.css");
 @import url("/css/imports/components/static/footer.css");
 @import url("/css/imports/components/thumbnails/thumbnails.css");
