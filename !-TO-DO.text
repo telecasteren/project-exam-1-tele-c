@@ -4,15 +4,21 @@
 
 * WEBSITE STRUCTURE
 - VIEW MORE BTN disappear when filtering
-- Expand more ERROR HANDLING when no more posts in API
 - Colors of alert messages
+
+* GENERAL
+- Document work and write report
+- Clean up Figma design
+
+
+** ADDITIONAL
+- Logic for filtering by category
 
 
 * API CALLS
-- Logic for filtering by category
-
-* ADDITIONAL
-- Document work and write report
-- Clean up Figma design
 - Add / edit comment on posts
 - Store comments in wp
+
+
+
+
