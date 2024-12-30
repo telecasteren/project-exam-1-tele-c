@@ -14,7 +14,7 @@
   margin-right: 2%;
   cursor: pointer;
 
-  color: var(--primary-text);
+  color: var(--secondary-text);
   border: 2px solid var(--primary-background);
   background-color: var(--primary-color);
   transition: transform 0.2s ease-in-out, border 0.2s ease-in-out;

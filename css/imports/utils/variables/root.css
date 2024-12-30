@@ -23,6 +23,9 @@
   --alert-success: rgba(19, 72, 17, 0.367);
   --alert-warning: rgba(131, 100, 0, 0.523);
   --alert-error: rgba(139, 0, 0, 0.302);
+  --alert-text: #193039;
+  --alert-background: #ffffff;
+  --alert-close: #193039;
 
   /*- Error message -*/
   --error-red-front: rgb(159, 16, 17);

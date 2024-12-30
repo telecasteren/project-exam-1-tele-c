@@ -34,7 +34,8 @@
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--primary-text);
+  color: var(--alert-text);
+  background-color: var(--alert-background);
   padding: 50px;
   border-radius: 22px;
   box-shadow: 0 5px 20px var(--alert-box-shadow);
@@ -51,7 +52,7 @@
 }
 
 .close-alert {
-  color: var(--primary-background);
+  color: var(--alert-close);
   margin-left: 1%;
   float: right;
   font-size: 42px;

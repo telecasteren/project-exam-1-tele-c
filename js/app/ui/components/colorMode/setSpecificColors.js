@@ -5,7 +5,6 @@ export function setSpecificColors() {
   const submitBtn = document.querySelector("#submitBtn");
   const navLinks = document.querySelectorAll(".navLinks");
   const carouselTitle = document.querySelector(".carouselTitle");
-  const filterOptions = document.querySelectorAll(".options");
 
   if (carouselTitle) {
     switch (currentMode) {
@@ -45,14 +44,5 @@ export function setSpecificColors() {
       currentMode === "rb" || currentMode === "br"
         ? "var(--tertiary-color)"
         : "";
-  }
-
-  if (currentMode === "dark") {
-    const filterOptionColor =
-      currentMode === "dark" ? "var(--secondary-text)" : "";
-
-    filterOptions.forEach((option) => {
-      option.style.color = filterOptionColor;
-    });
   }
 }

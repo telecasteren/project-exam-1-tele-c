@@ -16,8 +16,8 @@ export function navBar() {
       color: "var(--color-btn-two)",
     },
     {
-      href: "/blog/stories/",
-      text: "Stories",
+      href: "/blog/writing/",
+      text: "Writing",
       id: "storiesBtn",
       color: "var(--color-btn-three)",
     },
