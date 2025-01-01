@@ -3,8 +3,6 @@
 ## TO DO LIST:
 
 * WEBSITE STRUCTURE
-- VIEW MORE BTN disappear when filtering
-- Colors of alert messages
 
 * GENERAL
 - Document work and write report
@@ -18,7 +16,3 @@
 * API CALLS
 - Add / edit comment on posts
 - Store comments in wp
-
-
-
-

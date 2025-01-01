@@ -3,6 +3,7 @@ import { ErrorWrapper } from "/js/utils/messages/errorWrapper.js";
 export async function onFilterChange(filterType) {
   const filtersContainer = document.querySelector(".filtersContainer");
   const container = document.querySelector(".blogListContent");
+  const expandMoreBtn = document.querySelector(".expandPosts");
 
   let errorMessage = filtersContainer.querySelector(".errorWrapper");
   if (!errorMessage) {
@@ -37,9 +38,10 @@ export async function onFilterChange(filterType) {
         container.appendChild(post);
       });
 
+      // Re-append the expandMoreBtn
+      container.appendChild(expandMoreBtn);
+
       errorMessage.innerHTML = "";
-    } else if (filterType === "filter_category") {
-      // Add logic for sorting on categories here
     }
   } catch (error) {
     console.error(`Error occurred while filtering by ${filterType}`);

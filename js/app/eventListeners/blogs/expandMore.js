@@ -35,10 +35,9 @@ export async function expandMorePosts() {
       blogListHtml(newPosts, true);
     } else if (Array.isArray(newPosts) && newPosts.length <= 0) {
       expandMoreBtn.style.display = "none";
-      console.log("No more posts to display");
     }
   } catch (error) {
-    alertMessage("No more posts to display now");
+    alertMessage("No more posts to display");
     throw new Error("Failed to fetch additional posts", error);
   } finally {
     loader.style.display = "none";

@@ -74,7 +74,6 @@ export async function fetchPostsWithInfo(
       return posts;
     }
   } catch (error) {
-    console.error("Error fetching posts with images:", error);
     throw new Error(`Error occurred in API call: ${error.message}`);
   }
 }
