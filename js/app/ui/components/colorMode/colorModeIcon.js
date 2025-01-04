@@ -28,12 +28,13 @@ function swapIcon(lightBulbDiv) {
 
   switch (currentMode) {
     case "rebel":
-      newIconElement.style.backgroundImage = "url(/IMAGES/rebel_allicance.png)";
+      newIconElement.style.backgroundImage =
+        "url(/resources/IMAGES/rebel_allicance.png)";
       newIconElement.style.color = "var(--tertiary-color)";
       break;
 
     case "sith":
-      newIconElement.style.backgroundImage = "url(/IMAGES/Sith.png)";
+      newIconElement.style.backgroundImage = "url(/resources/IMAGES/Sith.png)";
       newIconElement.style.color = "var(--tertiary-color)";
       break;
 

@@ -11,9 +11,9 @@ import { carouselHtml } from "/js/app/ui/carousel/carouselHtml.js";
 // BLOG IMPORTS
 import { createPostHtml } from "/js/app/ui/blogs/createPostHtml.js";
 import { initialiseBlogList } from "/js/app/ui/blogs/blogListHtml.js";
-import { setFilterOptions } from "/js/app/ui/components/search/options.js";
-import { onSortChange } from "/js/app/ui/components/search/onSortChange.js";
-import { onFilterChange } from "/js/app/ui/components/search/onFilterChange.js";
+import { setFilterOptions } from "/js/app/ui/components/filters/options.js";
+import { onSortChange } from "/js/app/ui/components/filters/onSortChange.js";
+import { onFilterChange } from "/js/app/ui/components/filters/onFilterChange.js";
 
 // ABOUT IMPORTS
 import { aboutHtml } from "/js/app/ui/about/aboutHtml.js";
