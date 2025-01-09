@@ -1,5 +1,5 @@
-import { handlePost } from "/js/utils/src/postHandler.js";
-import { baseUrl } from "/js/utils/src/api/baseUrl.js";
+import { handlePost } from "/js/utils/src/handlers/postHandler.js";
+import { baseUrl } from "/js/utils/src/helpers/endpoints.js";
 
 export async function fetchPostsWithInfo(
   id,

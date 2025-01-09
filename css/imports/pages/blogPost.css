@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   padding: 2% 5%;
+  padding-bottom: 10%;
 }
 
 .postContent {

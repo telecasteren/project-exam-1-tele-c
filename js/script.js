@@ -1,3 +1,4 @@
+// UTILS & COMPONENTS
 import { colorModeIcon } from "/js/app/ui/components/colorMode/colorModeIcon.js";
 import { setSpecificColors } from "/js/app/ui/components/colorMode/setSpecificColors.js";
 import { setUpColorModes } from "/js/app/ui/components/colorMode/colorModeEvents.js";
@@ -10,6 +11,7 @@ import { carouselHtml } from "/js/app/ui/carousel/carouselHtml.js";
 
 // BLOG IMPORTS
 import { createPostHtml } from "/js/app/ui/blogs/createPostHtml.js";
+import { createCommentsHtml } from "/js/app/ui/blogs/comments/createCommentsHtml.js";
 import { initialiseBlogList } from "/js/app/ui/blogs/blogListHtml.js";
 import { setFilterOptions } from "/js/app/ui/components/filters/options.js";
 import { onSortChange } from "/js/app/ui/components/filters/onSortChange.js";
@@ -43,19 +45,24 @@ document.addEventListener("DOMContentLoaded", function () {
   setUpColorModes();
   setSpecificColors();
 
+  async function loadPostAndComments() {
+    if (postContainer) {
+      await createPostHtml();
+      createCommentsHtml();
+    }
+  }
+  loadPostAndComments();
+
+  async function loadBlogListAndFilters() {
+    if (blogListContainer) {
+      await initialiseBlogList();
+      setFilterOptions(onSortChange, onFilterChange);
+    }
+  }
+  loadBlogListAndFilters();
+
   if (homeContainer) {
     carouselHtml();
-  }
-
-  if (blogListContainer) {
-    initialiseBlogList();
-    setTimeout(() => {
-      setFilterOptions(onSortChange, onFilterChange);
-    }, 200);
-  }
-
-  if (postContainer) {
-    createPostHtml();
   }
 
   if (aboutContainer) {

@@ -16,6 +16,7 @@
 @import url("/css/imports/components/modal/modal.css");
 @import url("/css/imports/components/carousel/carousel.css");
 @import url("/css/imports/components/search/options.css");
+@import url("/css/imports/components/comments/comments.css");
 
 /* PAGES */
 @import url("/css/imports/pages/landing.css");

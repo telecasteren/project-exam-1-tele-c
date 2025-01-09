@@ -1,0 +1,16 @@
+.commentDiv {
+  display: grid;
+  justify-content: center;
+  margin: 5%;
+}
+
+.commentForm {
+  width: 600px;
+  height: auto;
+  justify-self: center;
+  margin: 5%;
+}
+
+#commentToggle {
+  cursor: pointer;
+}

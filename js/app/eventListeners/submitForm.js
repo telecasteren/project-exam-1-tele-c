@@ -20,12 +20,13 @@ export function submitFormEvent() {
 
     if (formIsValid) {
       alertMessage(
-        "Thanks for your message! I'll get back to you soon :)",
+        `Thanks for your message!
+        I'll get back to you soon 👽`,
         "info"
       );
     } else {
       alertMessage(
-        "Please fill out the form correctly and try again.",
+        "Please fill out the form correctly and try again 🤭",
         "warning"
       );
     }

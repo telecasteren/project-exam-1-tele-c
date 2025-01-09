@@ -2,8 +2,6 @@
 
 ## TO DO LIST:
 
-* WEBSITE STRUCTURE
-
 * GENERAL
 - Document work and write report
 - Clean up Figma design
@@ -12,7 +10,5 @@
 ** ADDITIONAL
 - Logic for filtering by category
 
-
 * API CALLS
-- Add / edit comment on posts
-- Store comments in wp
+- edit comment on posts?
