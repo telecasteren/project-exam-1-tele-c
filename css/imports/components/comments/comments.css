@@ -12,5 +12,23 @@
 }
 
 #commentToggle {
+  border-radius: 4px;
+  padding: 4px;
+  width: fit-content;
   cursor: pointer;
+  color: var(--secondary-text);
+  text-decoration: underline;
+  background: linear-gradient(
+    to left,
+    var(--primary-background) 50%,
+    transparent 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  transition: background-position 0.5s ease-in-out;
+}
+
+#commentToggle:hover {
+  background-position: 0 0;
+  background-color: var(--tertiary-color);
 }

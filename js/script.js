@@ -5,6 +5,7 @@ import { setUpColorModes } from "/js/app/ui/components/colorMode/colorModeEvents
 import { navBar } from "/js/app/ui/components/navigation/navbar.js";
 import { footerOnScroll } from "/js/app/ui/components/footer/footer.js";
 import { setPageTitles } from "/js/utils/helpers/setPageTitles.js";
+import { setMetaDescriptions } from "/js/utils/helpers/setMetaDescriptions.js";
 
 // LANDING IMPORTS
 import { carouselHtml } from "/js/app/ui/carousel/carouselHtml.js";
@@ -40,6 +41,7 @@ document.addEventListener("scroll", () => {
 // RENDER REST OF CONTENT
 document.addEventListener("DOMContentLoaded", function () {
   setPageTitles();
+  setMetaDescriptions();
   navBar();
   colorModeIcon();
   setUpColorModes();
