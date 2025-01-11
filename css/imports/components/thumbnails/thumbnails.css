@@ -45,12 +45,15 @@
   color: var(--thumbnail-blob);
   background-color: var(--alert-info);
   position: absolute;
-  bottom: 5%;
-  left: 5%;
   font-size: 0.6rem;
-  padding: 4px 8px;
+  padding: 5px 8px;
   border-radius: 4px;
   pointer-events: none;
+
+  justify-self: center;
+  max-width: 150px;
+  text-align: center;
+  align-self: center;
 }
 
 .expandPosts {
@@ -59,10 +62,24 @@
   margin-left: 20%;
   align-self: center;
   cursor: pointer;
+  width: fit-content;
+  padding: 4px;
+  border-radius: 4px;
+  text-decoration: underline;
+  background: linear-gradient(
+    to right,
+    var(--primary-color) 50%,
+    transparent 50%
+  );
+  background-size: 200% 100%;
+  background-position: 0 0;
+  transition: background-position 0.5s ease-in-out;
 }
 
 .expandPosts:hover {
-  text-decoration: underline;
+  background-position: 100% 0;
+  background-color: var(--tertiary-color);
+  text-decoration: none;
 }
 
 @media screen and (max-width: 600px) {
@@ -77,13 +94,6 @@
     justify-self: center;
     align-self: center;
     margin: 5%;
-  }
-
-  .titleBlob {
-    font-size: 0.5rem;
-    padding: 3px 6px;
-    bottom: 10%;
-    left: 10%;
   }
 
   .thumbnails:hover {

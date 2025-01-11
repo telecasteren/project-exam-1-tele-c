@@ -9,6 +9,7 @@
 
 ** ADDITIONAL
 - Logic for filtering by category
+- Display comments underneath posts
 
 * API CALLS
 - edit comment on posts?

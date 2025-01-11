@@ -1,10 +1,10 @@
 :root {
   /*- Button color-map -*/
-  --button-color: ;
-  --color-btn-one: #1db56c;
+  --button-color: #1e7ea8;
+  --color-btn-one: #148550;
   --color-btn-two: #663399;
-  --color-btn-three: #dea32c;
-  --color-btn-four: #2ca6de;
+  --color-btn-three: #9f6500;
+  --color-btn-four: #1e7ea8;
 
   /*- alert messages -*/
   --alert-box-shadow: rgba(0, 0, 0, 0.3);

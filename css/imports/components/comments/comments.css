@@ -31,4 +31,5 @@
 #commentToggle:hover {
   background-position: 0 0;
   background-color: var(--tertiary-color);
+  text-decoration: none;
 }
