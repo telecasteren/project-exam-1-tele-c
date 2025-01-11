@@ -50,12 +50,12 @@ body.br {
 body.rebel {
   --primary-background: #f0ece1;
   --secondary-background: #3b444b;
-  --primary-text: #f0ece1;
+  --primary-text: #fcfaf8;
   --secondary-text: #080808;
   --primary-color: #e5703d;
   --secondary-color: ;
-  --tertiary-color: #e5703d;
-  --lightbulb: #dd4e1e;
+  --tertiary-color: #c05021;
+  --lightbulb: #c05021;
 }
 
 /* darkSide */
@@ -66,6 +66,6 @@ body.sith {
   --secondary-text: #dfdfdf;
   --primary-color: #2d2b3c;
   --secondary-color: ;
-  --tertiary-color: #ff0000;
-  --lightbulb: #ff0000;
+  --tertiary-color: #e60000;
+  --lightbulb: #e60000;
 }

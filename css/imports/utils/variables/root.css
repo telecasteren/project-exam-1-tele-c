@@ -32,7 +32,6 @@
   --error-red-back: rgba(255, 0, 0, 0.1);
 
   /*- footer -*/
-  --footer-text: #7c817d;
   --footer-grey: #2d332e;
 
   font-size: calc(1rem + 0.25vw);

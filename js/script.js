@@ -3,7 +3,10 @@ import { colorModeIcon } from "/js/app/ui/components/colorMode/colorModeIcon.js"
 import { setSpecificColors } from "/js/app/ui/components/colorMode/setSpecificColors.js";
 import { setUpColorModes } from "/js/app/ui/components/colorMode/colorModeEvents.js";
 import { navBar } from "/js/app/ui/components/navigation/navbar.js";
-import { footerOnScroll } from "/js/app/ui/components/footer/footer.js";
+import {
+  footerOnScroll,
+  footerHtml,
+} from "/js/app/ui/components/footer/footer.js";
 import { setPageTitles } from "/js/utils/helpers/setPageTitles.js";
 import { setMetaDescriptions } from "/js/utils/helpers/setMetaDescriptions.js";
 
@@ -34,9 +37,14 @@ import {
 } from "/js/utils/general/constants.js";
 
 // RENDER FOOTER
-document.addEventListener("scroll", () => {
-  footerOnScroll();
+let scrollTimeout;
+document.addEventListener("scroll", function () {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    footerOnScroll();
+  }, 100);
 });
+footerHtml();
 
 // RENDER REST OF CONTENT
 document.addEventListener("DOMContentLoaded", function () {
