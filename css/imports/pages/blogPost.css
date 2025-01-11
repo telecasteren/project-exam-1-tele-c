@@ -5,6 +5,10 @@
   padding-bottom: 10%;
 }
 
+.post-container {
+  margin-bottom: 20%;
+}
+
 .postContent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

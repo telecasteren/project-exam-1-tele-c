@@ -39,7 +39,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: var(--hover-color);
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
 }
 
 .form-container {

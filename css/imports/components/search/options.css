@@ -24,3 +24,9 @@
   transform: scale(1.01);
   border: 2px dashed var(--alert-success);
 }
+
+#optionText {
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+}

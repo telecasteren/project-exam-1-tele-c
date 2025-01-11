@@ -23,9 +23,7 @@ Media queries for colorMode toggle
 
 @media screen and (max-width: 375px) {
   .lightBulb {
-    top: 20px;
-    right: 10px;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
   }
 
   .lightBulb:hover {
@@ -37,9 +35,9 @@ Media queries for colorMode toggle
   .lightBulb {
     position: relative;
     cursor: pointer;
-    top: 2%;
-    left: 2%;
-    margin-bottom: 2%;
+    top: 20px;
+    left: 20px;
+    margin-bottom: 20px;
   }
 }
 
@@ -47,6 +45,6 @@ Media queries for colorMode toggle
   .lightBulb {
     position: absolute;
     cursor: pointer;
-    right: 2%;
+    right: 5%;
   }
 }

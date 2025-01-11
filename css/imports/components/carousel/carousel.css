@@ -92,27 +92,13 @@
   color: var(--lightbulb);
 }
 
-@media screen and (max-width: 400px) {
-  .slideShowDiv {
-    align-self: center;
-    position: absolute;
-    top: 25vw;
-  }
-
-  .slideLeft,
-  .slideRight {
-    font-size: 85px;
-  }
-}
-
 /*--
-Media queries for home page content
+Media queries for carousel
 ---------------------------------*/
 
-@media screen and (max-width: 375px) {
-  .slideLeft,
-  .slideRight {
-    font-size: 40px;
+@media screen and (max-width: 700px) {
+  .slideShowDiv {
+    display: none;
   }
 }
 

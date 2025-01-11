@@ -21,6 +21,7 @@ footer span {
   color: var(--secondary-text);
   text-align: center;
   justify-self: center;
+  margin-left: 10%;
 }
 
 footer span a {
@@ -40,6 +41,7 @@ footer ul {
   font-size: 14px;
   font-weight: 500;
   color: var(--secondary-text);
+  margin-right: 10%;
 }
 
 footer ul li {

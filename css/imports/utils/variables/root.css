@@ -1,19 +1,8 @@
-/*- DEFAULT COLOR MODE: DARK -*/
 :root {
-  /*- Default color mode: Dark -*/
-  /* --primary-background: #1c201b;
-  --secondary-background: #ffffff;
-  --primary-text: #ffffff;
-  --secondary-text: #1c201b;
-  --primary-color: #252d26;
-  --secondary-color: ;
-  --tertiary-color: #91fdc7;
-  --lightbulb: #02cd88; */
-
   /*- Button color-map -*/
   --button-color: ;
-  --color-btn-one: #2cde88;
-  --color-btn-two: #612cde; /*  CLEAR PURPLE: #663399; */
+  --color-btn-one: #1db56c;
+  --color-btn-two: #663399;
   --color-btn-three: #dea32c;
   --color-btn-four: #2ca6de;
 
@@ -30,6 +19,10 @@
   /*- Error message -*/
   --error-red-front: rgb(159, 16, 17);
   --error-red-back: rgba(255, 0, 0, 0.1);
+
+  /* Thumbnails */
+  --thumbnail-shadow: #000000;
+  --thumbnail-blob: #ffffff;
 
   /*- footer -*/
   --footer-grey: #2d332e;
