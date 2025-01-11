@@ -24,3 +24,14 @@ export const postContainer = document.querySelector(".post-container");
 export const blogListContainer = document.querySelector(".blogList-container");
 export const thumbnailContainer = document.querySelector(".thumb-container");
 export const contactContainer = document.querySelector(".contact-container");
+
+// Meta descriptions
+export const defaultPostDesc =
+  "Read more about everyday programming and dev topics on Unwired's blog";
+export const defaultDescFallback =
+  "Welcome to Unwired, your source for low key writing and average insights";
+export const defaultDescriptions = {
+  "/about/": "Learn about the story behind Unwired and its creator.",
+  "/stories/": "Explore Unwired's collection of non-selling stories.",
+  "/contact/": "Get in touch with us at Unwired for inquiries or feedback.",
+};

@@ -30,6 +30,9 @@ export function navBar() {
   ];
 
   links.forEach(({ href, text, id, color }) => {
+    const li = document.createElement("li");
+    li.classList.add("navLi");
+
     const link = document.createElement("a");
     link.href = href;
     link.id = id;
@@ -37,7 +40,8 @@ export function navBar() {
     link.classList.add("navLinks");
     link.style.setProperty("--button-color", color);
 
-    ul.appendChild(link);
+    li.appendChild(link);
+    ul.appendChild(li);
   });
 
   nav.appendChild(ul);

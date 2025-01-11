@@ -1,12 +1,17 @@
 import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
+import {
+  defaultPostDesc,
+  defaultDescFallback,
+  defaultDescriptions,
+} from "/js/utils/general/constants.js";
+
+function getPostId(param) {
+  const urlParams = new URLSearchParams(window.location.search);
+  return urlParams.get(param);
+}
 
 export async function setMetaDescriptions() {
   const path = window.location.pathname;
-  const defaultDescriptions = {
-    "/about/": "Learn about the story behind Unwired and its creator.",
-    "/stories/": "Explore Unwired's collection of non-selling stories.",
-    "/contact/": "Get in touch with us at Unwired for inquiries or feedback.",
-  };
 
   let metaDescription = Object.keys(defaultDescriptions).find((key) =>
     path.includes(key)
@@ -14,10 +19,10 @@ export async function setMetaDescriptions() {
     ? defaultDescriptions[
         Object.keys(defaultDescriptions).find((key) => path.includes(key))
       ]
-    : "Welcome to Unwired, your source for low key writing and average insights";
+    : defaultDescFallback;
 
   if (path.includes("/post/")) {
-    const postId = getQueryParams("postId");
+    const postId = getPostId("postId");
 
     if (postId) {
       const allPosts = await fetchPostsWithInfo();
@@ -25,9 +30,7 @@ export async function setMetaDescriptions() {
       const post = allPosts.find((p) => p.id === numericPostId);
 
       if (post) {
-        metaDescription = `${post.title} - ${
-          post.shortDescription || "Read more on Unwired's blog"
-        }`;
+        metaDescription = `${post.title} - ${defaultPostDesc}`;
       } else {
         metaDescription = "Discover the latest writing and stories on Unwired";
         console.warn(`Post with id: ${postId} not found`);
