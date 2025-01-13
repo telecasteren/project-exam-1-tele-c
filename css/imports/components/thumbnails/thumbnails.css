@@ -121,4 +121,9 @@
     align-self: center;
     margin-top: 10%;
   }
+
+  .thumbnails:hover {
+    transform: none;
+    filter: none;
+  }
 }
