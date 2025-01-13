@@ -16,6 +16,7 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       optionsContainer.classList.add("filtersContainer");
 
       const FilterOptions = document.createElement("select");
+      FilterOptions.id = "selectFilterElement";
       FilterOptions.classList.add("options", "filterOptions");
       FilterOptions.style.appearance = "none";
       FilterOptions.style.backgroundImage = selectArrow("var(--primary-text)");
@@ -29,6 +30,7 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       defaultFilterOption.selected = true;
 
       const SortOptions = document.createElement("select");
+      SortOptions.id = "selectSortElement";
       SortOptions.classList.add("options", "sortOptions");
       SortOptions.style.appearance = "none";
       SortOptions.style.backgroundImage = selectArrow("var(--primary-text)");
