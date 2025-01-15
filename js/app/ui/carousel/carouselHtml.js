@@ -19,7 +19,6 @@ export async function carouselHtml() {
     const container = document.createElement("div");
     container.classList.add("carousel-container");
     container.setAttribute("role", "region");
-    container.setAttribute("aria-labelledby", "carouselTitle");
 
     const carousel = document.createElement("div");
     carousel.classList.add("container", "carousel");
@@ -30,16 +29,14 @@ export async function carouselHtml() {
     const slideLeft = document.createElement("div");
     slideLeft.classList.add("slideLeft");
     slideLeft.setAttribute("role", "button");
-    slideLeft.setAttribute("aria-label", "Previous slide");
     slideLeft.innerText = "<";
 
     const slideRight = document.createElement("div");
     slideRight.classList.add("slideRight");
     slideRight.setAttribute("role", "button");
-    slideRight.setAttribute("aria-label", "Next slide");
     slideRight.innerText = ">";
 
-    // Display only the 6 latest posts
+    // Display only the 8 latest posts
     const latestPosts = posts
       .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
       .slice(0, 8);
