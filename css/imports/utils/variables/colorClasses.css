@@ -19,7 +19,7 @@ body.dark {
   --primary-color: #252d26;
   --secondary-color: ;
   --tertiary-color: #02cd88;
-  --lightbulb: #02cd88;
+  --lightbulb: #148550;
 }
 
 /*- RED & BLUE -*/
@@ -30,7 +30,7 @@ body.rb {
   --secondary-text: #ffffff;
   --primary-color: #193039;
   --secondary-color: ;
-  --tertiary-color: #e24d28;
+  --tertiary-color: #9d3115;
   --lightbulb: #193039;
 }
 
@@ -42,8 +42,8 @@ body.br {
   --secondary-text: #193039;
   --primary-color: #f9f1dc;
   --secondary-color: ;
-  --tertiary-color: #e24d28;
-  --lightbulb: #e24d28;
+  --tertiary-color: #9d3115;
+  --lightbulb: #9d3115;
 }
 
 /* rebellion */
