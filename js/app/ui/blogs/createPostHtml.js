@@ -53,8 +53,6 @@ export async function createPostHtml() {
 
     // If screen size <= 1100px, reorder container hierarchy
     function smallerScreens(changeEvent) {
-      contentContainer.setAttribute("aria-live", "polite");
-
       const smallScreens = changeEvent
         ? changeEvent.matches
         : window.matchMedia("(max-width: 1100px)").matches;
