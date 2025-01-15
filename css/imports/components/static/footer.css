@@ -21,7 +21,6 @@ footer span {
   color: var(--secondary-text);
   text-align: center;
   justify-self: center;
-  margin-left: 10%;
 }
 
 footer span a {
@@ -41,7 +40,6 @@ footer ul {
   font-size: 14px;
   font-weight: 500;
   color: var(--secondary-text);
-  margin-right: 10%;
 }
 
 footer ul li {
@@ -71,6 +69,14 @@ Media queries for FOOTER
 @media (min-width: 768px) {
   footer {
     flex-direction: row;
+  }
+
+  footer span {
+    margin-left: 10%;
+  }
+
+  footer ul {
+    margin-right: 10%;
   }
 }
 

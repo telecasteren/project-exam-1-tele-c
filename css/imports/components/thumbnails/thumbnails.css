@@ -28,6 +28,8 @@
   transition: 0.3s ease-in-out;
   filter: drop-shadow(0.5rem 0.5rem 1rem var(--thumbnail-shadow));
   overflow: hidden;
+
+  position: relative;
 }
 
 .thumbnails img {
@@ -44,11 +46,12 @@
   padding: 5px 8px;
   border-radius: 4px;
   pointer-events: none;
-
-  justify-self: center;
   max-width: 150px;
   text-align: center;
-  align-self: center;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .expandPosts {
@@ -100,6 +103,11 @@
     align-self: center;
     margin: 5%;
   }
+
+  .titleBlob {
+    font-size: 0.8rem;
+    max-width: 90%;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -110,11 +118,6 @@
     width: auto;
     height: auto;
     margin-bottom: 25%;
-  }
-
-  .titleBlob {
-    font-size: 0.9rem;
-    max-width: 115px;
   }
 
   .thumbnails {
