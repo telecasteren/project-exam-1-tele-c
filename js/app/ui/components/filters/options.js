@@ -15,6 +15,10 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       const optionsContainer = document.createElement("div");
       optionsContainer.classList.add("filtersContainer");
 
+      const FilterLabel = document.createElement("label");
+      FilterLabel.id = "FilterLabel";
+      FilterLabel.htmlFor = "selectFilterElement";
+
       const FilterOptions = document.createElement("select");
       FilterOptions.id = "selectFilterElement";
       FilterOptions.classList.add("options", "filterOptions");
@@ -28,6 +32,10 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       defaultFilterOption.innerText = "Filter by";
       defaultFilterOption.disabled = true;
       defaultFilterOption.selected = true;
+
+      const SortLabel = document.createElement("label");
+      SortLabel.id = "sortLabel";
+      SortLabel.htmlFor = "selectSortElement";
 
       const SortOptions = document.createElement("select");
       SortOptions.id = "selectSortElement";

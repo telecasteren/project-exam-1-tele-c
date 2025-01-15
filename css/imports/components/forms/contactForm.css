@@ -43,6 +43,10 @@ input[type="submit"]:hover {
   color: var(--tertiary-color);
 }
 
+.contactContent {
+  display: grid;
+}
+
 .form-container {
   position: relative;
   display: flex;
