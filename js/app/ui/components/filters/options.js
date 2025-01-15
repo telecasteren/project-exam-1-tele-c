@@ -18,6 +18,8 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       const FilterLabel = document.createElement("label");
       FilterLabel.id = "FilterLabel";
       FilterLabel.htmlFor = "selectFilterElement";
+      FilterLabel.className = "visually-hidden-labels";
+      FilterLabel.innerText = "Filter Options:";
 
       const FilterOptions = document.createElement("select");
       FilterOptions.id = "selectFilterElement";
@@ -33,9 +35,19 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       defaultFilterOption.disabled = true;
       defaultFilterOption.selected = true;
 
+      const filterByTitle = document.createElement("option");
+      filterByTitle.id = "filterByTitle";
+      filterByTitle.value = "filter_title";
+      filterByTitle.innerText = "Filter by title";
+
+      FilterOptions.appendChild(defaultFilterOption);
+      FilterOptions.appendChild(filterByTitle);
+
       const SortLabel = document.createElement("label");
-      SortLabel.id = "sortLabel";
+      SortLabel.id = "SortLabel";
       SortLabel.htmlFor = "selectSortElement";
+      SortLabel.className = "visually-hidden-labels";
+      SortLabel.innerText = "Sort Options:";
 
       const SortOptions = document.createElement("select");
       SortOptions.id = "selectSortElement";
@@ -61,19 +73,13 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       sortDescending.value = "desc";
       sortDescending.innerText = "Date descending";
 
-      const filterByTitle = document.createElement("option");
-      filterByTitle.id = "filterByTitle";
-      filterByTitle.value = "filter_title";
-      filterByTitle.innerText = "Filter by title";
-
       SortOptions.appendChild(defaultSortOption);
       SortOptions.appendChild(sortAscending);
       SortOptions.appendChild(sortDescending);
 
-      FilterOptions.appendChild(defaultFilterOption);
-      FilterOptions.appendChild(filterByTitle);
-
+      optionsContainer.appendChild(FilterLabel);
       optionsContainer.appendChild(FilterOptions);
+      optionsContainer.appendChild(SortLabel);
       optionsContainer.appendChild(SortOptions);
       filtersContainer.prepend(optionsContainer);
 
