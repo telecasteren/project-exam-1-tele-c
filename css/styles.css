@@ -39,6 +39,10 @@ body {
   background-color: var(--primary-background);
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
 main.main-section {
   display: grid;
   grid-template-rows: auto 1fr auto;

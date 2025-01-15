@@ -104,7 +104,8 @@ Media queries for carousel
 
 @media screen and (max-width: 1100px) {
   .carouselTitle {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
   }
 
   .carouselIMG {
