@@ -31,7 +31,7 @@ textarea:focus {
 
 input[type="submit"] {
   background-color: var(--lightbulb);
-  color: var(--primary-text);
+  color: #ffffff;
   padding: 12px 20px;
   border: none;
   border-radius: 6px;
