@@ -1,4 +1,4 @@
-/* .filtersContainer {
+.filtersContainer {
   display: inline-table;
   gap: 20px;
 }
@@ -29,7 +29,7 @@
   text-align: center;
   align-self: center;
   justify-self: center;
-} */
+}
 
 .visually-hidden-labels {
   position: absolute;
@@ -41,57 +41,4 @@
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-}
-
-.filtersContainer {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.options {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-  font-size: 0.9rem;
-  width: 230px;
-  height: 45px;
-  border-radius: 8px;
-  padding: 0;
-  margin-bottom: 2%;
-  margin-right: 2%;
-  cursor: pointer;
-
-  color: var(--secondary-text);
-  border: 2px solid var(--primary-background);
-  background-color: var(--primary-color);
-
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-
-  line-height: 45px;
-  transform: translateZ(0);
-}
-
-.options option {
-  text-align: center;
-  color: var(--secondary-text);
-  background-color: var(--primary-color);
-  line-height: 1.5;
-}
-
-/* Safari-specific fix */
-@media not all and (min-resolution: 0.001dpcm) and (min-resolution: 0.001dpcm) {
-  .options {
-    line-height: normal;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
-  .options option {
-    line-height: 1.5;
-  }
 }
