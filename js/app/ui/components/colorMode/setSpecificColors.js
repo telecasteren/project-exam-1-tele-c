@@ -5,6 +5,7 @@ export function setSpecificColors() {
   const submitBtn = document.querySelector("#submitBtn");
   const navLinks = document.querySelectorAll(".navLinks");
   const carouselTitle = document.querySelector(".carouselTitle");
+  const commentToggle = document.querySelector("#commentToggle");
 
   if (carouselTitle) {
     switch (currentMode) {
@@ -47,5 +48,11 @@ export function setSpecificColors() {
       currentMode === "rb" || currentMode === "br"
         ? "var(--tertiary-color)"
         : "";
+  }
+
+  if (commentToggle && (currentMode === "rb" || currentMode === "br")) {
+    commentToggle.style.color = "var(--primary-color)";
+  } else if (commentToggle) {
+    commentToggle.style.color = "var(--secondary-text)";
   }
 }

@@ -38,12 +38,12 @@ body {
   background-color: var(--primary-background);
 }
 
-main.main-section {
+/* main.main-section {
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 1fr;
   height: 100%;
-}
+} */
 
 /*---------
 COMMON STYLES

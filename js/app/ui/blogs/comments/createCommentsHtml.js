@@ -13,7 +13,6 @@ export function createCommentsHtml() {
   const commentToggle = document.createElement("h3");
   commentToggle.id = "commentToggle";
   commentToggle.innerText = "Comment on post";
-  commentToggle.style.color = "white";
 
   const commentForm = document.createElement("div");
   commentForm.className = "commentForm";
