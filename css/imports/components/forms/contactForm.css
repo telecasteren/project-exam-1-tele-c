@@ -1,5 +1,5 @@
 .contactFormTitle {
-  color: var(--secondary-text);
+  color: var(--title-text);
   font-size: 58px;
   font-weight: lighter;
   border-radius: 8px;
@@ -22,7 +22,7 @@ textarea {
   border-radius: 8px;
   border: 1px solid var(--alert-box-shadow);
   background-color: var(--secondary-background);
-  filter: brightness(0.8);
+  filter: brightness(0.9);
   color: var(--primary-text);
   cursor: pointer;
   transition: filter 0.3s ease-in-out;
@@ -52,6 +52,10 @@ input[type="submit"] {
 input[type="submit"]:hover {
   background-color: var(--primary-color);
   color: var(--tertiary-color);
+}
+
+.contact-container {
+  margin-bottom: 15%;
 }
 
 .contactContent {

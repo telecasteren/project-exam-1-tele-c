@@ -9,7 +9,7 @@
   grid-template-columns: repeat(2, 1fr);
   max-width: 1300px;
   min-height: 700px;
-  margin-bottom: 5%;
+  margin-bottom: 15%;
 }
 
 .aboutImg {
@@ -35,7 +35,6 @@
     grid-template-columns: 1fr;
     width: auto;
     height: auto;
-    margin-bottom: 25%;
   }
 
   .aboutImg {

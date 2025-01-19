@@ -1,13 +1,13 @@
 /*- LIGHT -*/
 body.light {
-  --primary-background: #f8ffe4;
-  --secondary-background: #cef5e1;
+  --primary-background: #eefbfc;
+  --secondary-background: #e2fdff;
   --primary-text: #222222;
   --secondary-text: #222222;
-  --primary-color: #cef5e1;
+  --primary-color: #bfd7ff;
   --secondary-color: ;
-  --tertiary-color: #2cde88;
-  --lightbulb: #016a50;
+  --tertiary-color: #5465ff;
+  --lightbulb: #5465ff;
   --title-text: #222222;
 }
 

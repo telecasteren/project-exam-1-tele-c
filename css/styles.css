@@ -38,13 +38,13 @@ body {
   background-color: var(--primary-background);
 }
 
-main.main-section {
-  height: 100%;
-}
-
 /*---------
 COMMON STYLES
 ---------------*/
+
+main {
+  overflow-x: hidden;
+}
 
 .container {
   background-color: var(--primary-color);
@@ -63,6 +63,15 @@ COMMON STYLES
 /*--
 Media queries for common
 ---------------------------------*/
+
+@media screen and (max-width: 768px) {
+  .contact-container,
+  .blogList-container,
+  .about-container,
+  .home-container {
+    margin-bottom: 30%;
+  }
+}
 
 @media screen and (max-width: 1100px) {
   .topContent {
