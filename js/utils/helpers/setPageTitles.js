@@ -7,9 +7,10 @@ function getQueryParams(param) {
 
 export async function setPageTitles() {
   const path = window.location.pathname;
+
   const pageTitles = {
     "/about/": "unwired | About",
-    "/stories/": "unwired | Stories",
+    "/writing/": "unwired | Writing",
     "/contact/": "unwired | Contact",
   };
 

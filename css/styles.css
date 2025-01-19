@@ -38,12 +38,9 @@ body {
   background-color: var(--primary-background);
 }
 
-/* main.main-section {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr;
+main.main-section {
   height: 100%;
-} */
+}
 
 /*---------
 COMMON STYLES
@@ -71,12 +68,6 @@ Media queries for common
   .topContent {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-  }
-
-  .expandPosts {
-    grid-column: 2;
-    margin-right: 10%;
-    justify-self: end;
   }
 }
 

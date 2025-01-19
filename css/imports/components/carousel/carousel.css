@@ -96,7 +96,7 @@
 Media queries for carousel
 ---------------------------------*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   .slideShowDiv {
     display: none;
   }

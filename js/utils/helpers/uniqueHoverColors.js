@@ -6,5 +6,5 @@ export function uniqueHoverColors(rgbColor) {
 
   const hoverColor = `rgb(${r}, ${g}, ${b})`;
 
-  return `rgb(${r}, ${g}, ${b})`;
+  return hoverColor;
 }

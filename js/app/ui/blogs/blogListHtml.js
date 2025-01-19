@@ -2,7 +2,10 @@ import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { blogListContainer, loader } from "/js/utils/general/constants.js";
 import { createThumbnails } from "/js/app/ui/thumbnails/thumbnails.js";
-import { thumbnailClicks } from "/js/app/eventListeners/blogs/thumbnailEvents.js";
+import {
+  thumbnailClicks,
+  displayTitleBlob,
+} from "/js/app/eventListeners/blogs/thumbnailEvents.js";
 import { expandMorePosts } from "/js/app/eventListeners/blogs/expandMore.js";
 
 // Initialise blogList
@@ -19,6 +22,14 @@ export async function blogListHtml(posts, append = false) {
   try {
     loader.style.display = "none";
 
+    const blogListSection = document.querySelector(".blogList-section");
+    if (!blogListSection.querySelector(".blogListTitle")) {
+      const blogListTitle = document.createElement("h1");
+      blogListTitle.className = "blogListTitle";
+      blogListTitle.innerText = "Articles";
+      blogListSection.prepend(blogListTitle);
+    }
+
     let container = blogListContainer.querySelector(".blogListContent");
     if (!container) {
       container = document.createElement("div");
@@ -32,8 +43,10 @@ export async function blogListHtml(posts, append = false) {
 
     posts.forEach((post) => {
       const thumbnails = createThumbnails(post);
+      displayTitleBlob(post);
 
       const thumbnailContainer = document.createElement("div");
+      thumbnailContainer.className = "thumb-container";
       thumbnailContainer.appendChild(thumbnails);
       container.appendChild(thumbnailContainer);
     });
@@ -53,7 +66,7 @@ export async function blogListHtml(posts, append = false) {
 
     thumbnailClicks();
   } catch (error) {
-    alertMessage("Couldn't fetch the list of blogs right now", "error");
+    alertMessage("Couldn't fetch the articles right now", "error");
     throw new Error(`Error occurred creating BlogList: ${error.message}`);
   }
 }

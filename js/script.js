@@ -26,6 +26,7 @@ import { aboutHtml } from "/js/app/ui/about/aboutHtml.js";
 
 // CONTACT IMPORTS
 import { contactForm } from "/js/app/ui/components/contactForm/contactForm.js";
+import { createContactFormTitle } from "/js/app/ui/components/contactForm/contactTitle.js";
 
 // CONSTANTS
 import {
@@ -80,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   if (contactContainer) {
+    createContactFormTitle();
     contactForm();
   }
 });

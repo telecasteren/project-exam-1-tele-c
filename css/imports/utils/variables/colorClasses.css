@@ -8,6 +8,7 @@ body.light {
   --secondary-color: ;
   --tertiary-color: #2cde88;
   --lightbulb: #016a50;
+  --title-text: #222222;
 }
 
 /*- DARK -*/
@@ -20,6 +21,7 @@ body.dark {
   --secondary-color: ;
   --tertiary-color: #02cd88;
   --lightbulb: #148550;
+  --title-text: #ffffff;
 }
 
 /*- RED & BLUE -*/
@@ -32,6 +34,7 @@ body.rb {
   --secondary-color: ;
   --tertiary-color: #9d3115;
   --lightbulb: #193039;
+  --title-text: #193039;
 }
 
 /*- BLUE & RED -*/
@@ -44,6 +47,7 @@ body.br {
   --secondary-color: ;
   --tertiary-color: #9d3115;
   --lightbulb: #9d3115;
+  --title-text: #f9f1dc;
 }
 
 /* rebellion */
@@ -56,6 +60,7 @@ body.rebel {
   --secondary-color: ;
   --tertiary-color: #c05021;
   --lightbulb: #c05021;
+  --title-text: #080808;
 }
 
 /* darkSide */
@@ -68,4 +73,5 @@ body.sith {
   --secondary-color: ;
   --tertiary-color: #e60000;
   --lightbulb: #e60000;
+  --title-text: #dfdfdf;
 }
