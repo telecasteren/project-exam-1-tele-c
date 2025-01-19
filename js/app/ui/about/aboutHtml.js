@@ -6,7 +6,6 @@ export function aboutHtml() {
   const container = document.createElement("div");
   container.classList.add("container", "aboutContent");
   container.setAttribute("role", "region");
-  container.setAttribute("aria-labelledby", "aboutTitle");
 
   const textContent = document.createElement("div");
   textContent.classList.add("textContent");
@@ -27,8 +26,7 @@ export function aboutHtml() {
   const aboutImg = document.createElement("img");
   aboutImg.classList.add("aboutImg");
   aboutImg.src = "/resources/IMAGES/T-bali-beach.jpeg";
-  aboutImg.alt =
-    "Image of the blog author Tele Caster Nilsen at a beach in Bali.";
+  aboutImg.alt = "Image of the author Tele Caster Nilsen at a beach in Bali.";
 
   container.appendChild(aboutImg);
   textContent.appendChild(textTitle);

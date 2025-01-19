@@ -28,9 +28,9 @@ export async function setPageTitles() {
       const post = posts.find((p) => p.id === numericPostId);
 
       if (post) {
-        pageTitle = `unwired | ${post.title}` || "unwired | Blog post";
+        pageTitle = `unwired | ${post.title}` || "unwired | Article";
       } else {
-        pageTitle = "unwired | Blog post";
+        pageTitle = "unwired | Article";
         console.warn(`Post with ID ${postId} not found`);
       }
     }
