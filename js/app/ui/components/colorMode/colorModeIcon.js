@@ -29,12 +29,13 @@ function swapIcon(lightBulbDiv) {
   switch (currentMode) {
     case "rebel":
       newIconElement.style.backgroundImage =
-        "url(/resources/IMAGES/rebel_allicance.png)";
+        "url(/resources/IMAGES/rebellion-small.png)";
       newIconElement.style.color = "var(--tertiary-color)";
       break;
 
     case "sith":
-      newIconElement.style.backgroundImage = "url(/resources/IMAGES/Sith.png)";
+      newIconElement.style.backgroundImage =
+        "url(/resources/IMAGES/Sith-small.png)";
       newIconElement.style.color = "var(--tertiary-color)";
       break;
 
@@ -51,7 +52,7 @@ function swapIcon(lightBulbDiv) {
       });
 
       if (!lightBulbDiv) {
-        alertMessage("Couldn't change colors right now :'(", "info");
+        alertMessage("Couldn't display colormode toggle. :'(", "info");
       }
       return;
   }

@@ -1,12 +1,18 @@
 .contactFormTitle {
   color: var(--title-text);
-  font-size: 58px;
+  font-size: 4rem;
   font-weight: lighter;
   border-radius: 8px;
-  padding-left: 20px;
-  width: 50%;
+  width: 100%;
   justify-self: center;
   text-align: center;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 778px) {
+  .contactFormTitle {
+    font-size: 3rem;
+  }
 }
 
 input[type="text"],

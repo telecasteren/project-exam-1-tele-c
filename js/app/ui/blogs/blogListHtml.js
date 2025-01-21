@@ -52,7 +52,7 @@ export async function blogListHtml(posts, append = false) {
     });
 
     if (!append && !document.querySelector(".expandPosts")) {
-      const expandPosts = document.createElement("h3");
+      const expandPosts = document.createElement("h2");
       expandPosts.classList.add("expandPosts");
       expandPosts.innerText = "View more";
 

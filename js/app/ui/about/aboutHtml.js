@@ -29,8 +29,8 @@ export function aboutHtml() {
   aboutImg.alt = "Image of the author Tele Caster Nilsen at a beach in Bali.";
 
   container.appendChild(aboutImg);
-  textContent.appendChild(textTitle);
   textContent.appendChild(textParagraph);
   container.appendChild(textContent);
+  aboutContainer.appendChild(textTitle);
   aboutContainer.appendChild(container);
 }

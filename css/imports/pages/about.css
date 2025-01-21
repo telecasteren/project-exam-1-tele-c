@@ -4,6 +4,17 @@
   padding: 2% 5%;
 }
 
+.aboutTitle {
+  color: var(--title-text);
+  font-size: 4rem;
+  font-weight: lighter;
+  border-radius: 8px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 5%;
+  margin-top: 0;
+}
+
 .aboutContent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -27,6 +38,16 @@
   justify-self: center;
   align-self: center;
   margin: 2%;
+}
+
+@media screen and (max-width: 778px) {
+  .aboutTitle {
+    font-size: 3rem;
+  }
+
+  .textContent {
+    align-self: none;
+  }
 }
 
 @media screen and (max-width: 1100px) {

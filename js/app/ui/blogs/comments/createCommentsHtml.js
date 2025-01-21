@@ -10,7 +10,7 @@ export function createCommentsHtml() {
   const commentDiv = document.createElement("div");
   commentDiv.id = "commentDiv";
 
-  const commentToggle = document.createElement("h3");
+  const commentToggle = document.createElement("h2");
   commentToggle.id = "commentToggle";
   commentToggle.innerText = "Comment on post";
 

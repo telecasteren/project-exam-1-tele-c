@@ -1,14 +1,14 @@
 /*- LIGHT -*/
 body.light {
-  --primary-background: #eefbfc;
-  --secondary-background: #e2fdff;
-  --primary-text: #222222;
-  --secondary-text: #222222;
-  --primary-color: #bfd7ff;
+  --primary-background: #ffffff;
+  --secondary-background: #2c2c2c;
+  --primary-text: #f5f5f5;
+  --secondary-text: #000000;
+  --primary-color: #f5f5f5;
   --secondary-color: ;
-  --tertiary-color: #5465ff;
-  --lightbulb: #5465ff;
-  --title-text: #222222;
+  --tertiary-color: #ffab00;
+  --lightbulb: #ffab00;
+  --title-text: #000000;
 }
 
 /*- DARK -*/
@@ -22,6 +22,19 @@ body.dark {
   --tertiary-color: #02cd88;
   --lightbulb: #148550;
   --title-text: #ffffff;
+}
+
+/* B&W with yellow accent */
+body.lightBlue {
+  --primary-background: #eefbfc;
+  --secondary-background: #e2fdff;
+  --primary-text: #222222;
+  --secondary-text: #222222;
+  --primary-color: #bfd7ff;
+  --secondary-color: ;
+  --tertiary-color: #5465ff;
+  --lightbulb: #5465ff;
+  --title-text: #222222;
 }
 
 /*- RED & BLUE -*/
