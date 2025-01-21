@@ -14,14 +14,12 @@
   margin: 15% auto;
   padding: 10px;
   border: 1px solid var(--alert-box-shadow);
-  width: 50%;
-  height: 1000px;
-  min-height: fit-content;
+  width: 60%;
+  height: fit-content;
   border-radius: 10px;
   z-index: 1100;
   position: relative;
   display: grid;
-  justify-content: center;
 }
 
 .modal-overlay {
@@ -37,9 +35,8 @@
 
 .close-modal {
   position: absolute;
-  margin: 4%;
+  margin: 2%;
   color: var(--tertiary-color);
-  float: right;
   max-width: 50px;
   justify-content: center;
   font-size: 38px;
@@ -63,7 +60,7 @@
 }
 
 .modalImg {
-  width: 150%;
+  width: 100%;
   height: auto;
   justify-self: center;
   align-items: center;
@@ -71,14 +68,14 @@
   opacity: 1;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 778px) {
   .modal-content {
     width: 80%;
     height: auto;
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1024px) {
   .modal-content {
     width: 80%;
     height: auto;

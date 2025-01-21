@@ -45,7 +45,7 @@
 }
 
 .blogImg {
-  max-width: 80%;
+  width: 80%;
   height: auto;
   border-radius: 8px;
   justify-self: center;
