@@ -33,3 +33,10 @@
   background-color: var(--tertiary-color);
   text-decoration: none;
 }
+
+@media screen and (max-width: 1024px) {
+  .commentForm {
+    width: auto;
+    height: auto;
+  }
+}
