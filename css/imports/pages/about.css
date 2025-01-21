@@ -21,6 +21,7 @@
   max-width: 1300px;
   min-height: 700px;
   margin-bottom: 15%;
+  justify-self: center;
 }
 
 .aboutImg {
