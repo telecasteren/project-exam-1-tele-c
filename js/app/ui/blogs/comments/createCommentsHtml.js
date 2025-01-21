@@ -1,4 +1,5 @@
 import { submitEvents } from "/js/app/eventListeners/blogs/commentEvents.js";
+import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import {
   emailValidation,
   MinLengthValidation,
@@ -52,10 +53,27 @@ export function createCommentsHtml() {
   MinLengthValidation(authorName, 3, "Name must be at least 3 characters.");
   MinLengthValidation(message, 10, "Message must be at least 10 characters.");
 
+  function isInputsValid() {
+    return (
+      authorEmail.checkValidity() &&
+      authorName.checkValidity() &&
+      message.checkValidity()
+    );
+  }
+
   // Calling events
   submitBtn.addEventListener("click", (event) => {
     event.preventDefault();
-    submitEvents();
+
+    if (isInputsValid()) {
+      submitEvents();
+    } else {
+      alertMessage(
+        `Please fill out the form correctly,
+        and try again 👻`,
+        "warning"
+      );
+    }
   });
 
   commentToggle.addEventListener("click", () => {

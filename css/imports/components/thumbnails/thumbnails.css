@@ -31,15 +31,14 @@
   padding: 5px 8px;
   border-radius: 4px;
   pointer-events: none;
-  /* width: 350px; */
+  width: 350px;
   text-align: center;
-
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  /* opacity: 0;
-  transition: opacity 0.3s ease-in-out; */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .thumb-container {
@@ -55,8 +54,6 @@
   flex: 1 1 calc(50% - 20px);
   box-sizing: border-box;
   display: flex;
-  /* flex-direction: column; */
-
   cursor: pointer;
   border-radius: 8px;
   transition: 0.3s ease-in-out;
@@ -114,12 +111,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-  .titleBlob {
-    width: 350px;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-
   .thumbnails:hover {
     transform: scale(1.02);
     filter: brightness(1.1);

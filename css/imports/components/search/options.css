@@ -24,12 +24,6 @@
   border: 2px dashed var(--alert-success);
 }
 
-/* #optionText {
-  text-align: center;
-  align-self: center;
-  justify-self: center;
-} */
-
 .visually-hidden-labels {
   position: absolute;
   width: 1px;
