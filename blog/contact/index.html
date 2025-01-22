@@ -8,7 +8,13 @@
       name="description"
       content="Get in touch with Unwired. Contact us for inquiries, collaborations, or feedback. We're here to help!"
     />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="preload"
+      href="/css/styles.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/css/styles.css" /></noscript>
 
     <link
       rel="apple-touch-icon"

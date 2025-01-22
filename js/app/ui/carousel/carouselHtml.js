@@ -51,7 +51,6 @@ export async function carouselHtml() {
       carouselIMG.className = "carouselIMG";
       carouselIMG.src = post.imgSrc || NO_IMAGE_FOUND_IMG;
       carouselIMG.alt = post.imgAlt || `Image ${index + 1}`;
-      carouselIMG.loading = "lazy";
       carouselIMG.dataset.index = index;
       carouselIMG.dataset.postId = post.id;
 

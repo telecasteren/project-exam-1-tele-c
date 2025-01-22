@@ -8,7 +8,13 @@
       name="description"
       content="Welcome to unwired, your source for inspiring stories and insights. Explore our blog for ideas, creativity, and more."
     />
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="preload"
+      href="/css/styles.css"
+      as="style"
+      onload="this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/css/styles.css" /></noscript>
 
     <link
       rel="apple-touch-icon"
