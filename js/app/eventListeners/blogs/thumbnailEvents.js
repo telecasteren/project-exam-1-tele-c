@@ -20,28 +20,33 @@ export function thumbnailClicks() {
 
 export function displayTitleBlob(post) {
   document.addEventListener("mouseover", (event) => {
-    const thumbnail = event.target.closest(".thumbnails");
+    if (window.matchMedia("(min-width: 1025px)").matches) {
+      const thumbnail = event.target.closest(".thumbnails");
 
-    if (thumbnail) {
-      let titleBlob = thumbnail.querySelector(".titleBlob");
+      if (thumbnail) {
+        let titleBlob = thumbnail.querySelector(".titleBlob");
 
-      if (!titleBlob) {
-        const titleBlob = document.createElement("p");
-        titleBlob.classList.add("titleBlob");
-        titleBlob.innerText = post.title;
+        if (!titleBlob) {
+          const titleBlob = document.createElement("p");
+          titleBlob.classList.add("titleBlob");
+          titleBlob.innerText = post.title;
+        }
+
+        titleBlob.style.opacity = "1";
       }
-      titleBlob.style.opacity = "1";
     }
   });
 
   document.addEventListener("mouseout", (event) => {
-    const thumbnail = event.target.closest(".thumbnails");
+    if (window.matchMedia("(min-width: 1025px)").matches) {
+      const thumbnail = event.target.closest(".thumbnails");
 
-    if (thumbnail) {
-      const titleBlob = thumbnail.querySelector(".titleBlob");
+      if (thumbnail) {
+        const titleBlob = thumbnail.querySelector(".titleBlob");
 
-      if (titleBlob) {
-        titleBlob.style.opacity = "0";
+        if (titleBlob) {
+          titleBlob.style.opacity = "0";
+        }
       }
     }
   });

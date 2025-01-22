@@ -25,7 +25,7 @@ export function aboutHtml() {
 
   const aboutImg = document.createElement("img");
   aboutImg.classList.add("aboutImg");
-  aboutImg.src = "/resources/IMAGES/T-bali-beach.jpeg";
+  aboutImg.src = "/resources/IMAGES/tele-bali-beach.jpeg";
   aboutImg.alt = "Image of the author Tele Caster Nilsen at a beach in Bali.";
 
   container.appendChild(aboutImg);

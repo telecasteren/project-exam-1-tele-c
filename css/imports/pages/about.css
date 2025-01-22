@@ -29,7 +29,7 @@
   align-self: center;
   width: 80%;
   height: auto;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 8px;
 }
 
@@ -38,7 +38,7 @@
   text-align: end;
   justify-self: center;
   align-self: center;
-  margin: 2%;
+  margin: 10%;
 }
 
 @media screen and (max-width: 778px) {
@@ -47,7 +47,8 @@
   }
 
   .textContent {
-    align-self: none;
+    align-self: start;
+    margin: 5%;
   }
 }
 
