@@ -2,10 +2,7 @@ import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { blogListContainer, loader } from "/js/utils/general/constants.js";
 import { createThumbnails } from "/js/app/ui/thumbnails/thumbnails.js";
-import {
-  thumbnailClicks,
-  // displayTitleBlob,
-} from "/js/app/eventListeners/blogs/thumbnailEvents.js";
+import { thumbnailClicks } from "/js/app/eventListeners/blogs/thumbnailEvents.js";
 import { expandMorePosts } from "/js/app/eventListeners/blogs/expandMore.js";
 
 // Initialise blogList
@@ -43,7 +40,6 @@ export async function blogListHtml(posts, append = false) {
 
     posts.forEach((post) => {
       const thumbnails = createThumbnails(post);
-      // displayTitleBlob(post);
 
       const thumbnailContainer = document.createElement("div");
       thumbnailContainer.className = "thumb-container";

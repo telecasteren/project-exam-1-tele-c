@@ -1,14 +1,24 @@
+import { createCheckboxes } from "/js/app/ui/components/filters/filterHtml/checkboxes.js";
+
 export function manageFilterEvents(
   onSortChange,
   onFilterChange,
   FilterOptions,
   SortOptions
 ) {
-  FilterOptions.addEventListener("change", (event) => {
+  FilterOptions.addEventListener("change", async (event) => {
     const selectedOption = event.target.value;
 
     if (selectedOption === "filter_title") {
       onFilterChange("filter_title");
+    }
+
+    if (selectedOption === "filter_category") {
+      try {
+        createCheckboxes();
+      } catch (error) {
+        throw error;
+      }
     }
 
     // Reset sortOption back to defaultSortOption

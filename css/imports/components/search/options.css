@@ -24,6 +24,12 @@
   border: 2px dashed var(--alert-success);
 }
 
+#categoryCheckboxList {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
 .visually-hidden-labels {
   position: absolute;
   width: 1px;
@@ -40,6 +46,14 @@
   .filtersContainer {
     margin: 0;
     text-align: center;
+    justify-self: center;
+  }
+
+  #categoryCheckboxList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: baseline;
     justify-self: center;
   }
 }

@@ -40,8 +40,14 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       filterByTitle.value = "filter_title";
       filterByTitle.innerText = "Filter by title";
 
+      const filterByCategory = document.createElement("option");
+      filterByCategory.id = "filterByCategory";
+      filterByCategory.value = "filter_category";
+      filterByCategory.innerText = "Filter by category";
+
       FilterOptions.appendChild(defaultFilterOption);
       FilterOptions.appendChild(filterByTitle);
+      FilterOptions.appendChild(filterByCategory);
 
       const SortLabel = document.createElement("label");
       SortLabel.id = "SortLabel";

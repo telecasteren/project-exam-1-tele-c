@@ -3,6 +3,7 @@ export function createThumbnails(post) {
   thumbnails.classList.add("thumbnails");
   thumbnails.dataset.postId = post.id;
   thumbnails.dataset.publishDate = post.publishDate;
+  thumbnails.dataset.category = post.postCategory;
 
   const titleBlob = document.createElement("p");
   titleBlob.classList.add("titleBlob");
