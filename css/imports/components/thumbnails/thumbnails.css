@@ -37,6 +37,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
   transition: opacity 0.3s ease-in-out;
+
+  opacity: 0;
 }
 
 .thumb-container {
@@ -101,13 +103,18 @@
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media (max-width: 1023px) {
   .titleBlob {
+    opacity: 1;
     width: 200px;
   }
 }
 
 @media screen and (min-width: 1024px) {
+  .thumbnails:hover .titleBlob {
+    opacity: 1;
+  }
+
   .thumbnails:hover {
     transform: scale(1.02);
     filter: brightness(1.1);

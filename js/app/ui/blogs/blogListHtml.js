@@ -4,7 +4,7 @@ import { blogListContainer, loader } from "/js/utils/general/constants.js";
 import { createThumbnails } from "/js/app/ui/thumbnails/thumbnails.js";
 import {
   thumbnailClicks,
-  displayTitleBlob,
+  // displayTitleBlob,
 } from "/js/app/eventListeners/blogs/thumbnailEvents.js";
 import { expandMorePosts } from "/js/app/eventListeners/blogs/expandMore.js";
 
@@ -43,7 +43,7 @@ export async function blogListHtml(posts, append = false) {
 
     posts.forEach((post) => {
       const thumbnails = createThumbnails(post);
-      displayTitleBlob(post);
+      // displayTitleBlob(post);
 
       const thumbnailContainer = document.createElement("div");
       thumbnailContainer.className = "thumb-container";
