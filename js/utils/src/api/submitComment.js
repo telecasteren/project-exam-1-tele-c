@@ -2,6 +2,7 @@ import { commentsUrl, proxyUrl } from "/js/utils/src/helpers/endpoints.js";
 import { commentsCredentials } from "/js/utils/src/helpers/secrets.js";
 import { returnComments } from "/js/app/ui/blogs/comments/returnComments.js";
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
+import { contactAuthorLink } from "/js/utils/general/constants.js";
 
 export function submitCommentPayload() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -49,14 +50,18 @@ export function submitCommentPayload() {
           errorText
         );
         alertMessage(
-          `Oops, that didn't work 😬
-        Please contact the author on author@email.com`,
+          "Unexpected error when submitting. Please try again.",
           "error"
         );
       }
     } catch (error) {
       console.error("Error submitting comment:", error);
-      alertMessage("Unexpected error. Please try again.", "error");
+      alertMessage(
+        `Oops, that didn't work 😬
+      Please contact the author ${contactAuthorLink}.`,
+        "error",
+        true
+      );
     }
   };
 

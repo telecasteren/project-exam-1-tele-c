@@ -17,6 +17,7 @@ export function footerHtml() {
 
   const portfolioLink = document.createElement("a");
   portfolioLink.href = "https://telecasternilsen.netlify.app/";
+  portfolioLink.target = "_blank";
   portfolioLink.textContent = "Tele Caster Nilsen";
 
   const ul = document.createElement("ul");

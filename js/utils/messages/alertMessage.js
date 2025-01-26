@@ -1,5 +1,5 @@
 // Alert message component:
-export function alertMessage(text, type = "info") {
+export function alertMessage(text, type = "info", isHtml = false) {
   const alertMessage = document.createElement("div");
   alertMessage.classList.add("alert-message", "alert", `alert-${type}`);
   alertMessage.setAttribute("role", "alert");
@@ -14,7 +14,12 @@ export function alertMessage(text, type = "info") {
 
   const messageContent = document.createElement("div");
   messageContent.classList.add("messageContent");
-  messageContent.innerText = text;
+
+  if (isHtml) {
+    messageContent.innerHTML = text;
+  } else {
+    messageContent.innerText = text;
+  }
 
   alertContent.appendChild(closeAlert);
   alertContent.appendChild(messageContent);

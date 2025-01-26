@@ -79,5 +79,8 @@ export function createCommentsHtml() {
   commentToggle.addEventListener("click", () => {
     commentForm.style.display = "block";
     commentToggle.style.display = "none";
+    document
+      .getElementById("commentDiv")
+      .scrollIntoView({ behavior: "smooth" });
   });
 }

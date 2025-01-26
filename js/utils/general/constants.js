@@ -19,6 +19,7 @@ export const selectArrow = (color) =>
   )}" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>')`;
 
 // Informative
+export const contactAuthorLink = `<a href="/blog/contact/" target="_blank" style="color: blue; text-decoration: underline;">HERE</a>`;
 export const NO_IMAGE_FOUND_IMG = "/IMAGES/no_image_found.jpg";
 export const POST_NOT_FOUND = "No blog post found";
 export const ALT_NOT_FOUND = "No alt text found";
