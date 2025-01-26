@@ -1,4 +1,4 @@
-import { submitCommentPayload } from "/js/utils/src/api/submitComment.js";
+import { submitCommentPayload } from "/js/utils/src/api/comments/submitComment.js";
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 
 export function submitEvents() {

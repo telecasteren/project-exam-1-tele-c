@@ -1,4 +1,4 @@
-// UTILS & COMPONENTS
+// TOP LAYOUT & COLORMODE
 import { topLayout } from "/js/app/ui/components/topContent/topLayout.js";
 import { colorModeIcon } from "/js/app/ui/components/topContent/colorMode/colorModeIcon.js";
 import { setSpecificColors } from "/js/app/ui/components/topContent/colorMode/setSpecificColors.js";
@@ -9,33 +9,29 @@ import {
   footerOnScroll,
   footerHtml,
 } from "/js/app/ui/components/footer/footer.js";
+
+// UTILS
 import { setPageTitles } from "/js/utils/helpers/setPageTitles.js";
 import { setMetaDescriptions } from "/js/utils/helpers/setMetaDescriptions.js";
+import {
+  loadBlogListAndFilters,
+  loadPostAndComments,
+} from "/js/utils/src/handlers/contentLoader.js";
 
-// LANDING IMPORTS
+// LANDING
 import { welcomeSection } from "/js/app/ui/landing/welcomeSection.js";
 import { carouselHtml } from "/js/app/ui/carousel/carouselHtml.js";
 
-// BLOG IMPORTS
-import { createPostHtml } from "/js/app/ui/blogs/createPostHtml.js";
-import { createCommentsHtml } from "/js/app/ui/blogs/comments/createCommentsHtml.js";
-import { initialiseBlogList } from "/js/app/ui/blogs/blogListHtml.js";
-import { setFilterOptions } from "/js/app/ui/components/filters/filterHtml/options.js";
-import { onSortChange } from "/js/app/ui/components/filters/onSortChange.js";
-import { onFilterChange } from "/js/app/ui/components/filters/onFilterChange.js";
-
-// ABOUT IMPORTS
+// ABOUT
 import { aboutHtml } from "/js/app/ui/about/aboutHtml.js";
 
-// CONTACT IMPORTS
+// CONTACT
 import { contactForm } from "/js/app/ui/components/contactForm/contactForm.js";
 import { createContactFormTitle } from "/js/app/ui/components/contactForm/contactTitle.js";
 
 // CONSTANTS
 import {
   homeContainer,
-  postContainer,
-  blogListContainer,
   aboutContainer,
   contactContainer,
 } from "/js/utils/general/constants.js";
@@ -61,22 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
   setUpColorModes();
   setSpecificColors();
 
-  async function loadPostAndComments() {
-    if (postContainer) {
-      await createPostHtml();
-      createCommentsHtml();
-    }
-  }
-  loadPostAndComments();
-
-  async function loadBlogListAndFilters() {
-    if (blogListContainer) {
-      await initialiseBlogList();
-      setFilterOptions(onSortChange, onFilterChange);
-    }
-  }
-  loadBlogListAndFilters();
-
   if (homeContainer) {
     welcomeSection();
     carouselHtml();
@@ -90,4 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
     createContactFormTitle();
     contactForm();
   }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const postId = urlParams.get("postId");
+  if (postId) {
+    loadPostAndComments(postId);
+  }
+  loadBlogListAndFilters();
 });

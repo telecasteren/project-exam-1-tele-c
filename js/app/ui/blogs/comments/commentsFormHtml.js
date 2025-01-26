@@ -5,7 +5,7 @@ import {
   MinLengthValidation,
 } from "/js/app/ui/components/contactForm/formValidation.js";
 
-export function createCommentsHtml() {
+export function commentsFormHtml() {
   const postContainer = document.querySelector(".post-container");
 
   const commentDiv = document.createElement("div");

@@ -34,6 +34,35 @@
   text-decoration: none;
 }
 
+.commentsContainer {
+  background-color: var(--primary-color);
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.commentContent {
+  background-color: var(--primary-background);
+  padding: 10px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.commentAuthor,
+.commentMessage {
+  color: var(--title-text);
+  margin-bottom: 5px;
+}
+
+.commentDate {
+  color: var(--published-comment);
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+/* Media queries */
+
 @media screen and (max-width: 1024px) {
   .commentForm {
     width: auto;

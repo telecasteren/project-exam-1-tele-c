@@ -7,11 +7,11 @@
   --color-btn-four: #1e7ea8;
 
   /*- alert messages -*/
-  --alert-box-shadow: rgba(0, 0, 0, 0.3);
-  --alert-info: rgba(0, 0, 0, 0.6);
-  --alert-success: rgba(19, 72, 17, 0.367);
-  --alert-warning: rgba(131, 100, 0, 0.523);
-  --alert-error: rgba(139, 0, 0, 0.302);
+  --alert-box-shadow: #0000004d;
+  --alert-info: #00000099;
+  --alert-success: #1348115e;
+  --alert-warning: #83640085;
+  --alert-error: #8b00004d;
   --alert-text: #193039;
   --alert-background: #ffffff;
   --alert-close: #193039;
@@ -25,7 +25,7 @@
   --thumbnail-blob: #ffffff;
 
   /*- footer -*/
-  --footer-grey: #2d332e;
+  --published-comment: #999;
 
   font-size: calc(1rem + 0.25vw);
 }
