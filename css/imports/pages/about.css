@@ -1,7 +1,7 @@
 .about-section {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 2% 5%;
+  padding: 0 5%;
 }
 
 .aboutTitle {

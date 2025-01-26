@@ -1,6 +1,16 @@
+.iconContainer {
+  cursor: pointer;
+  text-align: right;
+}
+
 .fa-lightbulb {
   color: var(--lightbulb);
   margin-right: 35px;
+}
+
+.lightBulb {
+  position: relative;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 375px) {
@@ -10,24 +20,6 @@
 
   .lightBulb:hover {
     animation: heartbeat 0.6s ease forwards;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .lightBulb {
-    position: relative;
-    cursor: pointer;
-    top: 20px;
-    left: 20px;
-    margin-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 601px) {
-  .lightBulb {
-    position: absolute;
-    cursor: pointer;
-    right: 5%;
   }
 }
 

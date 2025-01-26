@@ -1,17 +1,22 @@
-import { topContent } from "/js/utils/general/constants.js";
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
-import { setSpecificColors } from "/js/app/ui/components/colorMode/setSpecificColors.js";
+import { setSpecificColors } from "/js/app/ui/components/topContent/colorMode/setSpecificColors.js";
 import {
   setUpColorModes,
   toggleColorModes,
-} from "/js/app/ui/components/colorMode/colorModeEvents.js";
+} from "/js/app/ui/components/topContent/colorMode/colorModeEvents.js";
 
 export function colorModeIcon() {
+  const iconContainer = document.querySelector(".iconContainer");
+
   const lightBulbDiv = document.createElement("div");
   lightBulbDiv.classList.add("lightBulb");
   lightBulbDiv.setAttribute("tabindex", "0");
 
-  topContent.prepend(lightBulbDiv);
+  if (iconContainer) {
+    iconContainer.appendChild(lightBulbDiv);
+  } else {
+    console.log("No iconContainer found");
+  }
 
   setUpColorModes();
   swapIcon(lightBulbDiv);

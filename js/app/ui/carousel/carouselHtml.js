@@ -8,7 +8,7 @@ import { carouselClickEvents } from "/js/app/eventListeners/carousel/carouselCli
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { hoverFocusHandler } from "/js/app/eventListeners/carousel/hoverFocusHandler.js";
 import { scrollHandler } from "/js/app/ui/carousel/scrollHandler.js";
-import { setSpecificColors } from "/js/app/ui/components/colorMode/setSpecificColors.js";
+import { setSpecificColors } from "/js/app/ui/components/topContent/colorMode/setSpecificColors.js";
 
 export async function carouselHtml() {
   try {
@@ -41,7 +41,7 @@ export async function carouselHtml() {
       .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
       .slice(0, 8);
 
-    const blogTitle = document.createElement("h1");
+    const blogTitle = document.createElement("h4");
     blogTitle.classList.add("carouselTitle");
     blogTitle.id = "carouselTitle";
     blogTitle.innerText = latestPosts[0].title || "Unknown title";
@@ -61,8 +61,8 @@ export async function carouselHtml() {
     slideShowDiv.appendChild(slideRight);
     carousel.appendChild(slideShowDiv);
 
-    container.appendChild(blogTitle);
     container.appendChild(carousel);
+    container.appendChild(blogTitle);
     homeContainer.appendChild(container);
 
     // Handling hover and focus events here

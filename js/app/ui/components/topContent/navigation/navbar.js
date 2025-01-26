@@ -1,7 +1,8 @@
-import { topContent } from "/js/utils/general/constants.js";
 import { uniqueHoverColors } from "/js/utils/helpers/uniqueHoverColors.js";
 
 export function navBar() {
+  const navContainer = document.querySelector(".navContainer");
+
   const nav = document.createElement("nav");
   nav.classList.add("navBar");
 
@@ -45,7 +46,9 @@ export function navBar() {
   });
 
   nav.appendChild(ul);
-  topContent.prepend(nav);
+  if (navContainer) {
+    navContainer.appendChild(nav);
+  }
 
   // Brighten button color upon hover
   const root = document.documentElement;

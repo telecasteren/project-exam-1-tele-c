@@ -7,8 +7,9 @@
 @import url("/css/imports/utils/alerts/errorWrapper.css");
 
 /*- COMPONENTS -*/
-@import url("/css/imports/components/static/icon-lightBulb.css");
-@import url("/css/imports/components/static/icon-specific.css");
+@import url("/css/imports/components/static/colorModeIcons/icon-lightBulb.css");
+@import url("/css/imports/components/static/colorModeIcons/icon-specific.css");
+@import url("/css/imports/components/static/logo.css");
 @import url("/css/imports/components/static/navBar.css");
 @import url("/css/imports/components/static/footer.css");
 @import url("/css/imports/components/thumbnails/thumbnails.css");
@@ -51,38 +52,40 @@ main {
   border-radius: 8px;
 }
 
-.topContent {
-  position: relative;
-  display: grid;
-  grid-template-columns: 1fr auto;
+.topContainer {
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 2%;
+  padding: 10px;
+  width: 100%;
+}
+
+.topContent-rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-right: 70px;
 }
 
 /*--
 Media queries for common
 ---------------------------------*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 778px) {
   .contact-container,
   .blogList-container,
   .about-container,
   .home-container {
     margin-bottom: 30%;
   }
-}
 
-@media screen and (max-width: 1100px) {
-  .topContent {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
+  .topContainer {
+    flex-direction: column;
+    align-items: center;
   }
-}
 
-@media screen and (min-width: 1101px) {
-  .topContent {
-    grid-template-columns: 1fr auto;
-    padding: 1.5%;
+  .topContent-rightGroup {
+    margin: 10px 0;
+    gap: 10px;
   }
 }

@@ -11,12 +11,11 @@
 }
 
 .carouselTitle {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 16px;
   text-align: center;
   color: var(--secondary-text);
   cursor: pointer;
-
   background-color: var(--alert-info);
   padding: 10px;
   border-radius: 8px;
@@ -62,15 +61,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 0;
-  left: 0;
   z-index: 50;
+  top: 20%;
+  left: 0;
 }
 
 .slideLeft,
 .slideRight {
   font-size: 85px;
-  color: var(--tertiary-color);
+  color: white;
   cursor: pointer;
   pointer-events: auto;
   transition: background-color 0.3s, transform 0.3s;
@@ -96,7 +95,7 @@
 Media queries for carousel
 ---------------------------------*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 778px) {
   .slideShowDiv {
     display: none;
   }

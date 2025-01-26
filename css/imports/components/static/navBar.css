@@ -1,12 +1,16 @@
+.navContainer {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
 .navBar {
   display: grid;
   grid-column: 1 / -1;
   justify-self: start;
   align-self: start;
-  margin-top: 2%;
-  margin-left: 3%;
-  margin-bottom: 2%;
   gap: 20px;
+  padding-left: 55px;
+  margin: 0;
 }
 
 .navBar ul {
@@ -49,9 +53,15 @@ Media queries for nav menu
   }
 }
 
+@media screen and (max-width: 778px) {
+  .navBar {
+    padding-left: 0;
+    margin: 2% auto;
+  }
+}
+
 @media screen and (max-width: 460px) {
   .navBar {
-    margin: 2% auto;
     gap: 10px;
     width: 100%;
     justify-content: center;

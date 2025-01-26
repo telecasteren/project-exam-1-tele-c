@@ -1,4 +1,4 @@
-import { setSpecificColors } from "/js/app/ui/components/colorMode/setSpecificColors.js";
+import { setSpecificColors } from "/js/app/ui/components/topContent/colorMode/setSpecificColors.js";
 import { colorModes } from "/js/utils/general/constants.js";
 
 export function setUpColorModes() {
