@@ -1,4 +1,4 @@
-import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
+import { fetchPostsWithInfo, allPosts } from "/js/utils/src/api/fetchPosts.js";
 
 function getQueryParams(param) {
   const urlParams = new URLSearchParams(window.location.search);
@@ -22,16 +22,22 @@ export async function setPageTitles() {
     const postId = getQueryParams("postId");
 
     if (postId) {
-      const posts = await fetchPostsWithInfo();
-      const postId = getQueryParams("postId");
       const numericPostId = Number(postId);
-      const post = posts.find((p) => p.id === numericPostId);
+      let post = allPosts.find((p) => p.id === numericPostId);
+
+      if (!post) {
+        try {
+          post = await fetchPostsWithInfo(numericPostId);
+          if (post) allPosts.push(post);
+        } catch (error) {
+          console.warn(`Post with ID: ${postId} not found`);
+        }
+      }
 
       if (post) {
         pageTitle = `unwired | ${post.title}` || "unwired | Article";
       } else {
         pageTitle = "unwired | Article";
-        console.warn(`Post with ID ${postId} not found`);
       }
     }
   }

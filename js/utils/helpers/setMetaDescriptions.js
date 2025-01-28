@@ -1,4 +1,4 @@
-import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
+import { fetchPostsWithInfo, allPosts } from "/js/utils/src/api/fetchPosts.js";
 import {
   defaultPostDesc,
   defaultDescFallback,
@@ -25,9 +25,17 @@ export async function setMetaDescriptions() {
     const postId = getPostId("postId");
 
     if (postId) {
-      const allPosts = await fetchPostsWithInfo();
       const numericPostId = Number(postId);
-      const post = allPosts.find((p) => p.id === numericPostId);
+      let post = allPosts.find((p) => p.id === numericPostId);
+
+      if (!post) {
+        try {
+          post = await fetchPostsWithInfo(numericPostId);
+          if (post) allPosts.push(post);
+        } catch (error) {
+          console.warn(`Post with ID: ${postId} not found`);
+        }
+      }
 
       if (post) {
         metaDescription = `${post.title} - ${defaultPostDesc}`;
@@ -39,7 +47,6 @@ export async function setMetaDescriptions() {
   }
 
   let metaTag = document.querySelector("meta[name='description']");
-
   if (!metaTag) {
     metaTag = document.createElement("meta");
     metaTag.setAttribute("name", "description");

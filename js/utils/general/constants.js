@@ -40,6 +40,6 @@ export const defaultDescFallback =
   "Welcome to Unwired, your source for low key writing and average insights";
 export const defaultDescriptions = {
   "/about/": "Learn about the story behind Unwired and its creator.",
-  "/stories/": "Explore Unwired's collection of non-selling stories.",
+  "/writing/": "Explore Unwired's collection of non-selling stories.",
   "/contact/": "Get in touch with us at Unwired for inquiries or feedback.",
 };
