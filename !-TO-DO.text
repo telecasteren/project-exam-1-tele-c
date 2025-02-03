@@ -4,9 +4,7 @@
 
 * GENERAL
 - Document work and write report
-- Clean up ErrorWrapper usage
 - Separate carousel scroll logic from carouselHtml function
-- NOTE: some id error for "view more" posts
 
 
 ** ADDITIONAL

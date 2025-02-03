@@ -4,19 +4,15 @@ export function onSortChange(sortOrder) {
   const blogListContent = document.querySelector(".blogListContent");
   const filtersContainer = document.querySelector(".filtersContainer");
 
-  let errorMessage = filtersContainer.querySelector(".errorWrapper");
-  if (!errorMessage) {
-    errorMessage = ErrorWrapper();
-  }
+  const existingError = filtersContainer.querySelector(".errorWrapper");
+  if (existingError) existingError.remove();
 
   try {
     const posts = Array.from(blogListContent.children);
 
     if (posts.length === 0) {
-      errorMessage.innerHTML = `<div class="error">No posts to sort</div>`;
-      if (!filtersContainer.contains(errorMessage)) {
-        filtersContainer.appendChild(errorMessage);
-      }
+      const errorMessage = ErrorWrapper("No posts to filter");
+      filtersContainer.appendChild(errorMessage);
       return;
     }
 
@@ -43,13 +39,11 @@ export function onSortChange(sortOrder) {
     sortedPosts.forEach((post) => {
       blogListContent.appendChild(post);
     });
-
-    errorMessage.innerHTML = "";
   } catch (error) {
-    if (!filtersContainer.contains(errorMessage)) {
-      filtersContainer.appendChild(errorMessage);
-      errorMessage.innerHTML = `<div class="error">Couldn't sort the posts ${sortOrder}</div>`;
-    }
+    const errorMessage = ErrorWrapper(
+      `An error occurred when filtering by ${filterType}`
+    );
+    filtersContainer.appendChild(errorMessage);
 
     throw new Error(`Error occurred whilst sorting: ${error.message}`);
   }

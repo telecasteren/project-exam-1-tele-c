@@ -1,8 +1,9 @@
+import { ErrorWrapper } from "/js/utils/messages/errorWrapper.js";
+
 export function toggleCategoriesVisibility(
   filterByCategoryElement,
   checkboxList,
-  filtersContainer,
-  errorMessage
+  filtersContainer
 ) {
   if (filterByCategoryElement) {
     filterByCategoryElement.addEventListener("click", () => {
@@ -11,10 +12,13 @@ export function toggleCategoriesVisibility(
   } else {
     checkboxList.style.display = "none";
     console.log("#filterByCategory not found");
-    if (!filtersContainer.contains(errorMessage)) {
-      errorMessage.innerHTML = `<div class="error">Couldn't display category list</div>`;
-      filtersContainer.appendChild(errorMessage);
-    }
+
+    const existingError = filtersContainer.querySelector(".errorWrapper");
+    if (existingError) existingError.remove();
+
+    const errorMessage = ErrorWrapper("Couldn't display category list");
+    filtersContainer.appendChild(errorMessage);
+
     setTimeout(() => {
       errorMessage.remove();
     }, 5000);

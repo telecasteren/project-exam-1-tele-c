@@ -1,4 +1,3 @@
-import { ErrorWrapper } from "/js/utils/messages/errorWrapper.js";
 import { getCategories } from "/js/app/ui/components/filters/categories/getCategories.js";
 import {
   toggleCategoriesVisibility,
@@ -16,11 +15,6 @@ export async function createCheckboxes() {
   filtersContainer.appendChild(dropdownContainer);
 
   const filterByCategoryElement = document.querySelector("#filterByCategory");
-
-  let errorMessage = filtersContainer.querySelector(".errorWrapper");
-  if (!errorMessage) {
-    errorMessage = ErrorWrapper();
-  }
 
   const checkboxList = document.createElement("div");
   checkboxList.id = "categoryCheckboxList";
@@ -40,8 +34,7 @@ export async function createCheckboxes() {
   toggleCategoriesVisibility(
     filterByCategoryElement,
     checkboxList,
-    filtersContainer,
-    errorMessage
+    filtersContainer
   );
 
   closeCategoriesOnClickOutside(

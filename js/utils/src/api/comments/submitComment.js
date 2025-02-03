@@ -15,8 +15,9 @@ export function submitCommentPayload() {
     alertMessage(
       `Oops! Couldn't find which post to comment.
     Please try again later.`,
-      "info"
+      "warning"
     );
+    return null;
   }
 
   const commentData = returnComments();

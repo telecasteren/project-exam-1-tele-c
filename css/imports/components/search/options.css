@@ -30,6 +30,10 @@
   margin-bottom: 10px;
 }
 
+label {
+  color: var(--title-text);
+}
+
 .visually-hidden-labels {
   position: absolute;
   width: 1px;

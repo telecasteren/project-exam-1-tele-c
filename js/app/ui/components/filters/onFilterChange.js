@@ -5,10 +5,8 @@ export async function onFilterChange(filterType) {
   const container = document.querySelector(".blogListContent");
   const expandMoreBtn = document.querySelector(".expandPosts");
 
-  let errorMessage = filtersContainer.querySelector(".errorWrapper");
-  if (!errorMessage) {
-    errorMessage = ErrorWrapper();
-  }
+  const existingError = filtersContainer.querySelector(".errorWrapper");
+  if (existingError) existingError.remove();
 
   try {
     const posts = Array.from(container.children).filter((child) =>
@@ -17,10 +15,8 @@ export async function onFilterChange(filterType) {
 
     if (filterType === "filter_title") {
       if (posts.length === 0) {
-        errorMessage.innerHTML = `<div class="error">No titles to filter</div>`;
-        if (!filtersContainer.contains(errorMessage)) {
-          filtersContainer.appendChild(errorMessage);
-        }
+        const errorMessage = ErrorWrapper("No posts to filter");
+        filtersContainer.appendChild(errorMessage);
         return;
       }
 
@@ -40,12 +36,13 @@ export async function onFilterChange(filterType) {
 
       // Re-append the expandMoreBtn
       container.appendChild(expandMoreBtn);
-
-      errorMessage.innerHTML = "";
     }
   } catch (error) {
-    console.error(`Error occurred while filtering by ${filterType}`);
-    errorMessage.innerHTML = `<div class="error">An error occurred when filtering by ${filterType}</div>`;
+    const errorMessage = ErrorWrapper(
+      `An error occurred when filtering by ${filterType}`
+    );
+    filtersContainer.appendChild(errorMessage);
+
     throw new Error(`Error occurred whilst filtering: ${error.message}`);
   }
 }
