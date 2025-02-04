@@ -1,4 +1,5 @@
 import { aboutContainer, loader } from "/js/utils/general/constants.js";
+import { fetchAboutText } from "/js/app/ui/about/fetchAboutText.js";
 
 export function aboutHtml() {
   loader.style.display = "none";
@@ -15,22 +16,17 @@ export function aboutHtml() {
   textTitle.id = "aboutTitle";
   textTitle.innerText = `About`;
 
-  const textParagraph = document.createElement("p");
-  textParagraph.classList.add("aboutText");
-  textParagraph.innerText = `This is the blog of Tele Caster Nilsen, created during the first year
-  of his front end studies at Noroff School of Technology and Media.
-
-  It is a collection of stories and experiences from his life and
-  career, both on and off the screen.`;
-
   const aboutImg = document.createElement("img");
   aboutImg.classList.add("aboutImg");
   aboutImg.src = "/resources/IMAGES/tele-bali-beach.jpeg";
   aboutImg.alt = "Image of the author Tele Caster Nilsen at a beach in Bali.";
 
   container.appendChild(aboutImg);
-  textContent.appendChild(textParagraph);
   container.appendChild(textContent);
   aboutContainer.appendChild(textTitle);
   aboutContainer.appendChild(container);
+
+  if (textContent) {
+    fetchAboutText();
+  }
 }
