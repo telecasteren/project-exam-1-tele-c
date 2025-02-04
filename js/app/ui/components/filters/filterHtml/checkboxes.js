@@ -1,8 +1,9 @@
 import { getCategories } from "/js/app/ui/components/filters/categories/getCategories.js";
+import { filterByCategoryEvents } from "/js/app/eventListeners/filters/filterByCategoryEvents.js";
 import {
   toggleCategoriesVisibility,
   closeCategoriesOnClickOutside,
-} from "/js/app/eventListeners/filters/toggleCategories.js";
+} from "/js/app/eventListeners/filters/toggleCategoriesVisibility.js";
 
 export async function createCheckboxes() {
   const blogListContainer = document.querySelector(".blogList-container");
@@ -30,6 +31,8 @@ export async function createCheckboxes() {
     label.appendChild(document.createTextNode(option));
     checkboxList.appendChild(label);
   });
+
+  filterByCategoryEvents();
 
   toggleCategoriesVisibility(
     filterByCategoryElement,
