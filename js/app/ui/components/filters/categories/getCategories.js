@@ -8,7 +8,7 @@ export async function getCategories() {
       categoryList.split(",").forEach((category) => {
         const splittedCategory = category.trim();
         if (splittedCategory) {
-          options.add(category);
+          options.add(splittedCategory);
         }
       });
     }
