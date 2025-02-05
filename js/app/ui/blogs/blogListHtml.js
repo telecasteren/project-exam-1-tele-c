@@ -44,12 +44,10 @@ export async function blogListHtml(posts, append = false) {
       const thumbnailContainer = document.createElement("div");
       thumbnailContainer.className = "thumb-container";
 
-      // TEST
       const titleBlob = document.createElement("p");
       titleBlob.classList.add("titleBlob");
       titleBlob.innerText = post.title;
       thumbnailContainer.appendChild(titleBlob);
-      //TEST END
 
       thumbnailContainer.appendChild(thumbnails);
       container.appendChild(thumbnailContainer);

@@ -31,15 +31,9 @@
   padding: 5px 8px;
   border-radius: 4px;
   pointer-events: none;
-  /* width: 350px; */
   width: 250px;
   text-align: center;
-  /* top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
   transition: opacity 0.3s ease-in-out;
-  /* opacity: 0; */
-
   justify-self: center;
   align-self: center;
   z-index: 5;
@@ -115,19 +109,12 @@
 
 @media (max-width: 778px) {
   .titleBlob {
-    /* opacity: 1; */
-    /* max-width: 200px; */
     margin-bottom: -5px;
     position: relative;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  /* .thumb-container .titleBlob {
-    opacity: 1;
-    z-index: 5;
-  } */
-
   .titleBlob {
     width: 350px;
     opacity: 0;
