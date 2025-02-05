@@ -31,7 +31,13 @@
 }
 
 label {
+  display: flex;
   color: var(--title-text);
+  align-items: center;
+}
+
+label input {
+  margin: 10px;
 }
 
 .visually-hidden-labels {
@@ -51,13 +57,16 @@ label {
     margin: 0;
     text-align: center;
     justify-self: center;
+    display: grid;
+    justify-content: center;
   }
 
   #categoryCheckboxList {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
     justify-items: baseline;
     justify-self: center;
+    margin-left: 30px;
   }
 }
