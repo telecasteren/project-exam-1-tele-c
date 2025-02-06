@@ -1,4 +1,4 @@
-export function returnComments() {
+export function returnCommentsPayload() {
   const urlParams = new URLSearchParams(window.location.search);
   const postId = urlParams.get("postId");
 

@@ -23,6 +23,7 @@ export async function createCheckboxes() {
 
   options.forEach((option) => {
     const label = document.createElement("label");
+    label.className = "categoryLabels";
     const checkbox = document.createElement("input");
     checkbox.id = option;
     checkbox.type = "checkbox";

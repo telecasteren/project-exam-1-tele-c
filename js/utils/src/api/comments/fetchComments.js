@@ -1,14 +1,17 @@
 export async function fetchComments(postId) {
   try {
     const response = await fetch(
-      `https://unwired.telecasternilsen.com/wp-json/wp/v2/comments?post=${postId}`
+      `https://unwired.telecasternilsen.com/wp-json/wp/v2/comments?post=${postId}&orderby=date`
     );
 
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
 
-    const comments = await response.json();
+    let comments = await response.json();
+
+    comments.sort((a, b) => new Date(a.date) - new Date(b.date));
+
     return comments;
   } catch (error) {
     console.error(`Error fetching comments: ${error.message}`);

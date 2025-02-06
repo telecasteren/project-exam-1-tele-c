@@ -1,6 +1,6 @@
 import { commentsUrl, proxyUrl } from "/js/utils/src/helpers/endpoints.js";
 import { commentsCredentials } from "/js/utils/src/helpers/secrets.js";
-import { returnComments } from "/js/app/ui/blogs/comments/returnComments.js";
+import { returnCommentsPayload } from "/js/app/ui/blogs/comments/returnCommentsPayload.js";
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { contactAuthorLink } from "/js/utils/general/constants.js";
 
@@ -20,7 +20,7 @@ export function submitCommentPayload() {
     return null;
   }
 
-  const commentData = returnComments();
+  const commentData = returnCommentsPayload();
 
   const payload = {
     post: postID || "unknown",

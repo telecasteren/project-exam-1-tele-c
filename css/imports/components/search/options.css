@@ -30,13 +30,13 @@
   margin-bottom: 10px;
 }
 
-label {
+.categoryLabels {
   display: flex;
   color: var(--title-text);
   align-items: center;
 }
 
-label input {
+.categoryLabels input {
   margin: 10px;
 }
 
