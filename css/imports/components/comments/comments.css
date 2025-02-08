@@ -61,7 +61,9 @@
   margin-bottom: 5px;
 }
 
-/* Media queries */
+/*------------
+Media queries
+--------------*/
 
 @media screen and (max-width: 1024px) {
   .commentForm {

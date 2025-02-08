@@ -58,11 +58,11 @@
   cursor: pointer;
 }
 
-/*-----
-MEDIA SCREENS FOR POST CONTENT
---------------------------------*/
+/*------------
+Media queries
+--------------*/
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1024px) {
   .postContent {
     display: grid;
     grid-template-columns: 1fr;

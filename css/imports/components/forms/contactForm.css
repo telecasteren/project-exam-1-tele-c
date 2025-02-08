@@ -9,12 +9,6 @@
   margin-top: 0;
 }
 
-@media screen and (max-width: 778px) {
-  .contactFormTitle {
-    font-size: 3rem;
-  }
-}
-
 input[type="text"],
 input[type="email"],
 textarea {
@@ -79,7 +73,15 @@ input[type="submit"]:hover {
   border-radius: 4px;
 }
 
+/*------------
+Media queries
+--------------*/
+
 @media screen and (max-width: 778px) {
+  .contactFormTitle {
+    font-size: 3rem;
+  }
+
   .form-container {
     width: auto;
     height: auto;

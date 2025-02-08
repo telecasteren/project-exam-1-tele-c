@@ -67,9 +67,9 @@ main {
   margin-right: 70px;
 }
 
-/*--
-Media queries for common
----------------------------------*/
+/*------------
+Media queries
+--------------*/
 
 @media screen and (max-width: 778px) {
   .contact-container,

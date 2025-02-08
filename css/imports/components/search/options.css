@@ -52,7 +52,7 @@
   border: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 778px) {
   .filtersContainer {
     margin: 0;
     text-align: center;

@@ -63,10 +63,11 @@ footer.visible {
   transform: translateY(0);
 }
 
-/*--
-Media queries for FOOTER
----------------------------------*/
-@media (min-width: 768px) {
+/*------------
+Media queries
+--------------*/
+
+@media (min-width: 778px) {
   footer {
     flex-direction: row;
   }

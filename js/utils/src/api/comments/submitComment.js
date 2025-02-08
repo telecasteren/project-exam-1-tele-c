@@ -41,8 +41,7 @@ export function submitCommentPayload() {
       });
 
       if (response.ok) {
-        const data = await response.json();
-        console.log("Comment submitted successfully:", data);
+        await response.json();
         alertMessage("Thank you for your comment! 👾", "info");
       } else {
         const errorText = await response.text();

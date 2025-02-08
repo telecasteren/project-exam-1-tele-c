@@ -68,6 +68,10 @@
   opacity: 1;
 }
 
+/*------------
+Media queries
+--------------*/
+
 @media screen and (max-width: 778px) {
   .modal-content {
     width: 80%;
