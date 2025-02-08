@@ -1,0 +1,9 @@
+# PROXY
+CORS_URL=https://noroffcors.onrender.com/
+
+# CREDENTIALS
+API_KEY=submit-comments-user:vkhH\ zzk7\ UB2D\ WseG\ DkaA\ SJl0
+
+# URLS
+COMMENTS_API_URL=https://unwired.telecasternilsen.com/wp-json/wp/v2/comments
+POSTS_API_URL=https://unwired.telecasternilsen.com/wp-json/wp/v2/posts?_embed
