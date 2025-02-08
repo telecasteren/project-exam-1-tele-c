@@ -2,8 +2,11 @@ import { alertMessage } from "/js/utils/messages/alertMessage.js";
 
 export function ErrorWrapper(message, options = {}) {
   if (typeof message !== "string") {
-    console.error("Error message is not a string");
-    alertMessage("Something went wrong. Try again later.");
+    console.error("Error message is not a string", message);
+
+    if (options.showAlert !== false) {
+      alertMessage("Something went wrong. Try again later.");
+    }
     return null;
   }
 

@@ -1,3 +1,5 @@
+import { alertMessage } from "/js/utils/messages/alertMessage.js";
+
 export function setSpecificColors() {
   const currentMode = window.localStorage.getItem("colorMode");
 
@@ -27,7 +29,7 @@ export function setSpecificColors() {
   }
 
   if (!navLinks.length) {
-    console.warn("No navLinks found.");
+    alertMessage("Couldn't paint the menu buttons for you. :'(", "info");
   } else {
     // Set or reset color on nav buttons based on colorMode
     const navLinkColors =

@@ -11,7 +11,6 @@ export function toggleCategoriesVisibility(
     });
   } else {
     checkboxList.style.display = "none";
-    console.log("#filterByCategory not found");
 
     const existingError = filtersContainer.querySelector(".errorWrapper");
     if (existingError) existingError.remove();

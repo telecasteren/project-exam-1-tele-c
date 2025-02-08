@@ -1,10 +1,15 @@
 import { goToPost } from "/js/app/eventListeners/goToPost.js";
+import { ErrorWrapper } from "/js/utils/messages/errorWrapper.js";
+import { homeContainer } from "/js/utils/general/constants.js";
 
 export function carouselClickEvents() {
   const carouselContainer = document.querySelector(".carousel-container");
   const carousel = document.querySelector(".carousel");
   const slideLeft = document.querySelector(".slideLeft");
   const slideRight = document.querySelector(".slideRight");
+
+  const existingError = homeContainer.querySelector(".errorWrapper");
+  if (existingError) existingError.remove();
 
   const scrollLength = 300;
 
@@ -17,7 +22,10 @@ export function carouselClickEvents() {
   });
 
   if (!carouselContainer) {
-    console.error("carouselContainer not found.");
+    const errorMessage = ErrorWrapper(
+      "An error occurred whilst loading featured posts"
+    );
+    homeContainer.appendChild(errorMessage);
     return;
   }
 

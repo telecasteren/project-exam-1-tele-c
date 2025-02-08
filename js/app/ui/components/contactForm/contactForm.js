@@ -72,6 +72,7 @@ export function contactForm() {
   );
 
   const subjectLabel = createLabel("subject", "Subject");
+  const messageLabel = createLabel("message", "Message");
 
   const subjectInput = document.createElement("input");
   subjectInput.type = "text";
@@ -94,12 +95,11 @@ export function contactForm() {
   submitButton.id = "submitBtn";
   submitButton.value = "Send";
 
-  // Append everything in order
   form.appendChild(nameInput);
   form.appendChild(emailInput);
   form.appendChild(subjectLabel);
   form.appendChild(subjectInput);
-  form.appendChild(createLabel("message", "Message"));
+  form.appendChild(messageLabel);
   form.appendChild(messageTextarea);
   form.appendChild(submitButton);
 

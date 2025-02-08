@@ -9,12 +9,11 @@ export async function fetchComments(postId) {
     }
 
     let comments = await response.json();
-
-    comments.sort((a, b) => new Date(a.date) - new Date(b.date));
+    comments = comments.sort((a, b) => new Date(a.date) - new Date(b.date));
 
     return comments;
   } catch (error) {
-    console.error(`Error fetching comments: ${error.message}`);
+    console.error(`fetchComments(): Error fetching comments: ${error.message}`);
     return [];
   }
 }

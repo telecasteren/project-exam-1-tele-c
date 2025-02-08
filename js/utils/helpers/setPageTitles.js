@@ -30,7 +30,10 @@ export async function setPageTitles() {
           post = await fetchPostsWithInfo(numericPostId);
           if (post) allPosts.push(post);
         } catch (error) {
-          console.warn(`Post with ID: ${postId} not found`);
+          console.error(
+            `setPageTitles(): Error fetching post with ID ${postId}.`,
+            error
+          );
         }
       }
 
@@ -38,6 +41,9 @@ export async function setPageTitles() {
         pageTitle = `unwired | ${post.title}` || "unwired | Article";
       } else {
         pageTitle = "unwired | Article";
+        console.warn(
+          `setPageTitles(): Failed to fetch post with ID ${postId}. Fallback initiated.`
+        );
       }
     }
   }

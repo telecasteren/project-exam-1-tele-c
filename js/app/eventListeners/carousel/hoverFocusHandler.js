@@ -30,13 +30,13 @@ export function hoverFocusHandler(blogTitle, allItems) {
         blogTitle.innerText = allItems[focusedIndex]?.title || "Title unknown";
         blogTitle.dataset.postId = allItems[focusedIndex]?.id || "";
       } else {
-        // Return the focus to the first post in the carousel
+        // Return the focus to the latest post in the carousel. First post on the left side
         const firstPost = carouselImgs[0];
         if (firstPost) {
           firstPost.classList.add("focusedPost");
           currentFocusedPost = firstPost;
 
-          // Update the blog title to match the first post above
+          // Update the blog title to match it
           blogTitle.innerText = allItems[0]?.title || "Title unknown";
           blogTitle.dataset.postId = allItems[0]?.id || "";
         }

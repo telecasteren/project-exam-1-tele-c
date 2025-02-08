@@ -1,5 +1,6 @@
 import { fetchComments } from "/js/utils/src/api/comments/fetchComments.js";
 import { postContainer } from "/js/utils/general/constants.js";
+import { ErrorWrapper } from "/js/utils/messages/errorWrapper.js";
 
 export async function displayComments(postId) {
   try {
@@ -11,6 +12,9 @@ export async function displayComments(postId) {
       commentsContainer.className = "commentsContainer";
       postContainer.appendChild(commentsContainer);
     }
+
+    const existingError = commentsContainer.querySelector(".errorWrapper");
+    if (existingError) existingError.remove();
 
     if (commentData.length === 0) {
       commentsContainer.style.display = "none";
@@ -42,7 +46,15 @@ export async function displayComments(postId) {
       });
     }
   } catch (error) {
-    console.error("Error displaying comments:", error);
+    let commentsContainer = document.querySelector(".commentsContainer");
+    if (!commentsContainer) {
+      commentsContainer = document.createElement("div");
+      commentsContainer.className = "commentsContainer";
+      postContainer.appendChild(commentsContainer);
+    }
+
+    const errorMessage = ErrorWrapper("Error occurred when fetching comments.");
+    commentsContainer.appendChild(errorMessage);
     throw error;
   }
 }

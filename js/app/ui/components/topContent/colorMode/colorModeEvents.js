@@ -17,7 +17,7 @@ export function setUpColorModes() {
   }
 }
 
-// Instead of toggling between dark and light, we cycle through all colorModes here
+// We cycle through all colorModes here
 export function toggleColorModes() {
   const currentColor = colorModes.find((mode) =>
     document.body.classList.contains(mode)

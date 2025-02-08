@@ -9,12 +9,10 @@ export function emailValidation(emailInput) {
     const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!pattern.test(emailInput.value)) {
-      emailInput.setCustomValidity(
-        `Please enter a valid email address. Must contain "@" and "."`
-      );
+      emailInput.setCustomValidity("Please enter a valid email address.");
       displayFormErrorMessage(
         emailInput,
-        "Please enter a valid email address."
+        `Please enter a valid email address. Must contain "@" and "."`
       );
     } else {
       emailInput.setCustomValidity("");

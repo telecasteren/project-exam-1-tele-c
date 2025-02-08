@@ -33,7 +33,10 @@ export async function setMetaDescriptions() {
           post = await fetchPostsWithInfo(numericPostId);
           if (post) allPosts.push(post);
         } catch (error) {
-          console.warn(`Post with ID: ${postId} not found`);
+          console.error(
+            `setMetaDescriptions(): Error fetching post with ID ${postId}.`,
+            error
+          );
         }
       }
 
@@ -41,7 +44,9 @@ export async function setMetaDescriptions() {
         metaDescription = `${post.title} - ${defaultPostDesc}`;
       } else {
         metaDescription = "Discover the latest writing and stories on Unwired";
-        console.warn(`Post with id: ${postId} not found`);
+        console.warn(
+          `setMetaDescriptions(): Failed to fetch post with ID ${postId}. Fallback initiated.`
+        );
       }
     }
   }

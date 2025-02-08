@@ -21,8 +21,6 @@ export async function fetchAboutText() {
 
     textContent.appendChild(textParagraph);
   } catch (error) {
-    console.error("Error when loading JSON:", error);
-
     const errorMessage = ErrorWrapper(
       `An error occurred when fetching text content.`
     );

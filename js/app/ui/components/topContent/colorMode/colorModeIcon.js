@@ -15,7 +15,7 @@ export function colorModeIcon() {
   if (iconContainer) {
     iconContainer.appendChild(lightBulbDiv);
   } else {
-    console.log("No iconContainer found");
+    alertMessage("Color mode toggle is unavailable. :'(", "warning");
   }
 
   setUpColorModes();
@@ -57,7 +57,7 @@ function swapIcon(lightBulbDiv) {
       });
 
       if (!lightBulbDiv) {
-        alertMessage("Couldn't display colormode toggle. :'(", "info");
+        alertMessage("Couldn't display color mode icon. :'(", "info");
       }
       return;
   }

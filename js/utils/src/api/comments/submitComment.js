@@ -4,65 +4,76 @@ import { returnCommentsPayload } from "/js/app/ui/blogs/comments/returnCommentsP
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { contactAuthorLink } from "/js/utils/general/constants.js";
 
-export function submitCommentPayload() {
+function getPostId() {
   const urlParams = new URLSearchParams(window.location.search);
-  const postID = urlParams.get("postId");
+  return urlParams.get("postId");
+}
 
+async function submitComment(payload) {
   const proxiedCommentsUrl = proxyUrl + commentsUrl;
+  if (!proxiedCommentsUrl) {
+    console.error("submitComment(): Invalid API URL.");
+    return;
+  }
 
-  if (!postID) {
-    console.warn("No postId found in the URL. Defaulting to 'unknown'.");
+  try {
+    const response = await fetch(proxiedCommentsUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Basic ${commentsCredentials}`,
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (response.ok) {
+      await response.json();
+      alertMessage("Thank you for your comment! 👾", "info");
+    } else {
+      const errorText = await response.text();
+      console.error(
+        `submitComment(): Error submitting comment: ${response.status}`,
+        errorText
+      );
+      alertMessage(
+        "Unexpected error when submitting comment. Please try again.",
+        "error"
+      );
+    }
+  } catch (error) {
+    console.error("submitComment(): Error submitting comment", error);
     alertMessage(
-      `Oops! Couldn't find which post to comment.
-    Please try again later.`,
-      "warning"
+      `Oops, that didn't work 😬\nPlease contact the author ${contactAuthorLink}.`,
+      "error",
+      true
     );
-    return null;
+  }
+}
+
+export function submitCommentPayload() {
+  const postID = getPostId();
+  if (!postID) {
+    console.warn("submitCommentPayload: No postID found in the URL.");
+    alertMessage("Oops! Couldn't find which post to comment on.", "warning");
+    return;
   }
 
   const commentData = returnCommentsPayload();
 
+  if (
+    !commentData.authorName ||
+    !commentData.authorEmail ||
+    !commentData.content
+  ) {
+    alertMessage("Please fill out all the fields.", "warning");
+    return;
+  }
+
   const payload = {
-    post: postID || "unknown",
-    author_name: commentData.authorName,
-    author_email: commentData.authorEmail,
-    content: commentData.content,
-  };
-
-  const submitComment = async (payload) => {
-    try {
-      const response = await fetch(proxiedCommentsUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Basic ${commentsCredentials}`,
-        },
-        body: JSON.stringify(payload),
-      });
-
-      if (response.ok) {
-        await response.json();
-        alertMessage("Thank you for your comment! 👾", "info");
-      } else {
-        const errorText = await response.text();
-        console.error(
-          `Error submitting comment: ${response.status}`,
-          errorText
-        );
-        alertMessage(
-          "Unexpected error when submitting. Please try again.",
-          "error"
-        );
-      }
-    } catch (error) {
-      console.error("Error submitting comment:", error);
-      alertMessage(
-        `Oops, that didn't work 😬
-      Please contact the author ${contactAuthorLink}.`,
-        "error",
-        true
-      );
-    }
+    post: postID,
+    author_name: commentData.authorName.trim(),
+    author_email: commentData.authorEmail.trim(),
+    content: commentData.content.trim(),
   };
 
   submitComment(payload);
