@@ -8,6 +8,7 @@ import { carouselClickEvents } from "/js/app/eventListeners/carousel/carouselCli
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { hoverFocusHandler } from "/js/app/eventListeners/carousel/hoverFocusHandler.js";
 import { scrollHandler } from "/js/app/ui/carousel/scrollHandler.js";
+import { initialFocusedPost } from "/js/app/ui/carousel/initialFocusedPost.js";
 import { setSpecificColors } from "/js/app/ui/components/topContent/colorMode/setSpecificColors.js";
 
 export async function carouselHtml() {
@@ -68,7 +69,7 @@ export async function carouselHtml() {
     // Handling hover and focus events here
     hoverFocusHandler(blogTitle, latestPosts);
 
-    // Handling scroll events here
+    // Handling focused posts and scroll events here
     let scrollTimeout;
     // Bounce back to start
     carousel.addEventListener("scroll", () => {
@@ -76,50 +77,15 @@ export async function carouselHtml() {
       scrollTimeout = setTimeout(() => {
         scrollHandler();
       }, 1000);
-    });
 
-    // // Track the focused post
-    function initialFocusedPost() {
-      const carouselImgs = Array.from(
-        carousel.querySelectorAll(".carouselIMG")
+      setTimeout(
+        () => initialFocusedPost(carousel, blogTitle, latestPosts),
+        100
       );
-      const carouselRect = carousel.getBoundingClientRect();
-
-      // Find the post in focus
-      const focusedPost = carouselImgs.find((img) => {
-        const imgRect = img.getBoundingClientRect();
-        const imgCenter = imgRect.left + imgRect.width / 2;
-        return (
-          imgCenter >= carouselRect.left && imgCenter <= carouselRect.right
-        );
-      });
-
-      // Display the correct title
-      // Show user what post is in focus by adding a style class
-      if (focusedPost) {
-        const focusedIndex = focusedPost.dataset.index;
-        blogTitle.innerText =
-          latestPosts[focusedIndex].title || "Title unknown";
-        blogTitle.dataset.postId = latestPosts[focusedIndex].id;
-
-        focusedPost.classList.add("focusedPost");
-
-        carouselImgs.forEach((img) => {
-          if (img !== focusedPost) {
-            img.classList.remove("focusedPost");
-          }
-        });
-      } else {
-        carouselImgs.forEach((img) => img.classList.remove("focusedPost"));
-      }
-    }
-
-    carousel.addEventListener("scroll", () => {
-      setTimeout(initialFocusedPost, 100);
     });
 
     setSpecificColors();
-    initialFocusedPost();
+    initialFocusedPost(carousel, blogTitle, latestPosts);
     carouselClickEvents();
   } catch (error) {
     alertMessage("Woops! Couldn't load carousel right now 😬");
