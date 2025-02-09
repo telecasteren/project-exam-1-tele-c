@@ -1,6 +1,12 @@
+.blogList-section {
+  display: grid;
+  justify-content: center;
+}
+
 .blogList-container {
   display: grid;
   margin-bottom: 15%;
+  justify-content: center;
 }
 
 .blogListContent {
