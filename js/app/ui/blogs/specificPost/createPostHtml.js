@@ -2,7 +2,7 @@ import { loader, postContainer } from "/js/utils/general/constants.js";
 import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { displayPostImageInModal } from "/js/app/eventListeners/blogs/blogModalEvents.js";
-import { swapElementPositions } from "/js/app/ui/blogs/swapElementPositions.js";
+import { swapElementPositions } from "/js/app/ui/blogs/specificPost/swapElementPositions.js";
 
 export async function createPostHtml() {
   try {
@@ -52,7 +52,7 @@ export async function createPostHtml() {
     contentContainer.appendChild(textContainer);
     postContainer.appendChild(contentContainer);
 
-    // User may alter the appended positions here
+    // User may alter the appended positions here in desktop view
     if (contentContainer) {
       swapElementPositions();
     }

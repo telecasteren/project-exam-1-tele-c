@@ -1,5 +1,5 @@
 // BLOG IMPORTS
-import { createPostHtml } from "/js/app/ui/blogs/createPostHtml.js";
+import { createPostHtml } from "/js/app/ui/blogs/specificPost/createPostHtml.js";
 import { commentsFormHtml } from "/js/app/ui/blogs/comments/commentsFormHtml.js";
 import { displayComments } from "/js/app/ui/blogs/comments/displayComments.js";
 import { initialiseBlogList } from "/js/app/ui/blogs/blogListHtml.js";
