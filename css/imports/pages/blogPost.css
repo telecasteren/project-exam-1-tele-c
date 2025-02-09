@@ -71,6 +71,7 @@
 
 .textContainer {
   margin: 5%;
+  justify-self: center;
 }
 
 .postFooter {
