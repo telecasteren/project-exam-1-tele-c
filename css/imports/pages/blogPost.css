@@ -11,7 +11,7 @@
 }
 
 .alterButton {
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   font-weight: lighter;
   text-decoration: underline;
   color: var(--secondary-text);
