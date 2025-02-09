@@ -65,6 +65,12 @@
 Media queries
 --------------*/
 
+@media screen and (max-width: 778px) {
+  #commentToggle {
+    justify-self: center;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .commentForm {
     width: auto;

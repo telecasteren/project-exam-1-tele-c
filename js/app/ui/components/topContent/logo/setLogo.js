@@ -9,7 +9,7 @@ export function setLogo() {
   logoElement.innerText = "unwired";
 
   logoElement.addEventListener("click", () => {
-    window.location.href = "/index.html";
+    window.location.href = "/";
   });
 
   logoDiv.appendChild(logoElement);

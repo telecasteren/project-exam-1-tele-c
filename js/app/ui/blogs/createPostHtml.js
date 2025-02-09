@@ -2,6 +2,7 @@ import { loader, postContainer } from "/js/utils/general/constants.js";
 import { fetchPostsWithInfo } from "/js/utils/src/api/fetchPosts.js";
 import { alertMessage } from "/js/utils/messages/alertMessage.js";
 import { displayPostImageInModal } from "/js/app/eventListeners/blogs/blogModalEvents.js";
+import { swapElementPositions } from "/js/app/ui/blogs/swapElementPositions.js";
 
 export async function createPostHtml() {
   try {
@@ -47,35 +48,15 @@ export async function createPostHtml() {
     textContainer.appendChild(contentText);
     textContainer.appendChild(postFooter);
 
-    contentContainer.appendChild(textContainer);
     contentContainer.appendChild(blogImg);
+    contentContainer.appendChild(textContainer);
     postContainer.appendChild(contentContainer);
 
-    // If screen size <= 1100px, reorder container hierarchy
-    function smallerScreens(changeEvent) {
-      const smallScreens = changeEvent
-        ? changeEvent.matches
-        : window.matchMedia("(max-width: 1100px)").matches;
-
-      contentContainer.innerHTML = "";
-
-      if (smallScreens) {
-        contentContainer.appendChild(blogImg);
-        contentContainer.appendChild(contentTitle);
-        contentContainer.appendChild(textContainer);
-      } else {
-        textContainer.appendChild(contentTitle);
-        textContainer.appendChild(contentText);
-        textContainer.appendChild(postFooter);
-        contentContainer.appendChild(textContainer);
-        contentContainer.appendChild(blogImg);
-      }
+    // User may alter the appended positions here
+    if (contentContainer) {
+      swapElementPositions();
     }
 
-    const screenSizeChanges = window.matchMedia("(max-width: 1100px)");
-    screenSizeChanges.addEventListener("change", smallerScreens);
-
-    smallerScreens();
     displayPostImageInModal();
   } catch (error) {
     alertMessage("Woops! Can't show post. Try again later", "warning");
