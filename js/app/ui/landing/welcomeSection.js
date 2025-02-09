@@ -17,7 +17,7 @@ export function welcomeSection() {
   const description = document.createElement("p");
   description.id = "welcomeDescription";
   description.innerText = `
-  I write a mix of low-key tech insights from a personal perspective, crafted for the less curious type. Exploring the latest in tech all too late,
+  I write a mix of low-key tech insights from a personal perspective, crafted for you, the Reader. Exploring the latest in tech all too late,
   throwing in some real-life moments, I connect the dots between innovation and everyday bullshit.
 `;
 
