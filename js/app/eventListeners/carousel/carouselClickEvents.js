@@ -21,6 +21,14 @@ export function carouselClickEvents() {
     carousel.scrollBy({ left: scrollLength, behavior: "smooth" });
   });
 
+  carousel.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      slideLeft.click();
+    } else if (event.key === "ArrowRight") {
+      slideRight.click();
+    }
+  });
+
   if (!carouselContainer) {
     const errorMessage = ErrorWrapper(
       "An error occurred whilst loading featured posts"

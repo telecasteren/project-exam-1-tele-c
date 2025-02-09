@@ -6,6 +6,7 @@ export function aboutHtml() {
 
   const container = document.createElement("div");
   container.classList.add("container", "aboutContent");
+  container.setAttribute("aria-labelledby", "aboutTitle");
   container.setAttribute("role", "region");
 
   const textContent = document.createElement("div");

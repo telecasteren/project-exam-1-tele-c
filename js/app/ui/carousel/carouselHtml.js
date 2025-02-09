@@ -19,10 +19,12 @@ export async function carouselHtml() {
 
     const container = document.createElement("div");
     container.classList.add("carousel-container");
-    container.setAttribute("role", "region");
 
     const carousel = document.createElement("div");
     carousel.classList.add("container", "carousel");
+    carousel.setAttribute("role", "region");
+    carousel.setAttribute("aria-labelledby", "carouselTitle");
+    carousel.setAttribute("tabindex", "0");
 
     const slideShowDiv = document.createElement("div");
     slideShowDiv.classList.add("slideShowDiv");

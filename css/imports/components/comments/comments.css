@@ -57,7 +57,7 @@
 
 .commentDate {
   color: var(--published-comment);
-  font-size: 0.9em;
+  font-size: 0.9rem;
   margin-bottom: 5px;
 }
 

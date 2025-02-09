@@ -30,7 +30,7 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       FilterOptions.style.backgroundPosition = "right 10px center";
 
       const defaultFilterOption = document.createElement("option");
-      defaultFilterOption.id = "optionText";
+      defaultFilterOption.id = "defaultFilterOptionText";
       defaultFilterOption.innerText = "Filter by";
       defaultFilterOption.disabled = true;
       defaultFilterOption.selected = true;
@@ -64,7 +64,7 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       SortOptions.style.backgroundPosition = "right 10px center";
 
       const defaultSortOption = document.createElement("option");
-      defaultSortOption.id = "optionText";
+      defaultSortOption.id = "defaultSortOptionText";
       defaultSortOption.innerText = "Sort by";
       defaultSortOption.disabled = true;
       defaultSortOption.selected = true;

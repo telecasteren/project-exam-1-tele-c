@@ -10,7 +10,9 @@ export function colorModeIcon() {
 
   const lightBulbDiv = document.createElement("div");
   lightBulbDiv.classList.add("lightBulb");
+  lightBulbDiv.setAttribute("aria-label", "Toggle color-modes");
   lightBulbDiv.setAttribute("tabindex", "0");
+  lightBulbDiv.setAttribute("role", "button");
 
   if (iconContainer) {
     iconContainer.appendChild(lightBulbDiv);
