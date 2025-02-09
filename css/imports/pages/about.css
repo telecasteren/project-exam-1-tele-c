@@ -35,7 +35,7 @@
 
 .textContent {
   color: var(--secondary-text);
-  text-align: end;
+  text-align: justify;
   justify-self: center;
   align-self: center;
   margin: 10%;
