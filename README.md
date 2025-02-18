@@ -1,67 +1,69 @@
-## Project Exam 1
+# UNWIRED
 
-## Goal
+![image](resources/IMAGES/unwired-screenshot.png)
 
-To put into practice the skills learned over your first year of studies.
+**Deployed website:** [unwired](https://unwired.netlify.app/)<br/>
+A low-key tech blog website created as my exam during 1st year at Noroff School of Technology.
 
-## Brief
-You have been tasked with creating a blog site. You can choose the design and topics covered on the blog, but it should have at least the following pages:
--	Home page
--	About page
--	List of blog posts
--	Blog post specific pages
--	Contact page.
+## Description
 
-### Home Page
-The home page should have a ‘Latest Posts’ section which uses a carousel (slider) for users to click to view more posts. For example, by default the user can see four posts, then they can click an arrow on the right to view the next four posts, and click it again to view the next four posts. The user can also click back to view results they had previously seen. This must be implemented for desktop at least, but if you want a simpler layout for mobile, you can change it from being in a carousel.
+The design started off as a basic website blog, following the [brief](BRIEF.md) for creating a home, about, contact, blog-list and post page. The project grew organically to include some additional features as listed below. Blog posts and comments are dynamically fetched from a Wordpress instance, utilising the Wordpress REST API with GET and POST calls.
 
-### Blog Page
+**Additional features:**
 
-The blog posts page should show the first 10 blogs, and the user should click to view more results which then show underneath the first 10 blogs.
+- Color mode toggle where users can choose between multiple color themes
+- Filters for titles, categories + sorting asc/desc in the blog-list page
+- User can alter how the view of the post pages
 
-### Blog Specific Page
+## Built With
 
-The content of the blog specific page should be dynamically built using a query string parameter based on whatever link the user clicked. The title of the blog specific page should change based on the blog that has been clicked on e.g. “My Blog | An Article I Wrote”.
+- [One.com](https://www.one.com/en/) / Hosting the Wordpress instance
+- [Wordpress](https://wordpress.org/) / For the Wordpress instance
+- [Netlify](https://app.netlify.com/) / Deploying the website
+- [IBMEqualAccess](https://github.com/IBMa/equal-access) / Accessibility Checker with browser integration
+- Javascript, HTML, CSS
+- node.js
+- **IDE:** Visual Studio Code
 
-If images on the blog post page are clicked, a modal should appear giving the user a bigger view of that image. Clicking outside the image should hide the modal.
+## Installing and running
 
-### Contact page
+1. Clone the repo:
 
-Create a contact us page, there should be 4 textboxes on this page.
--	Name (Should be more than 5 characters long)
--	Email address (Must be a valid email address)
--	Subject (Should be more than 15 characters long)
--	Message content (Should be more than 25 characters long)
+```bash
+git clone git@github.com:telecasteren/project-exam-1-tele-c.git
+```
 
-Please use JavaScript for validation, show error messages if the values in the textboxes do not meet the requirements.
+2. Run with Live server locally.<br/>
+   You may play around with it on your machine as you like, and if you want to contribute, read more in the section [Contributing](#contributing).
 
-### WordPress
+## Contributing
 
-The content for your website will be stored on a WordPress installation used as a Headless CMS. It’s important to note that we are only using WordPress to provide an API and add content for the blog. You should not submit a link to a WordPress site, but build your website using HTML, CSS and JavaScript and making a call to the WordPress REST API to fetch the data. 
+If you want to contribute to this project, you are welcome to do so.<br/>
+The only requirements is that you keep the intention of the website, that it being a blog, and make sure to open a pull request (PR) so code can be reviewed before it's implemented.<br/>
 
-The project has two aspects:
--	API from your WordPress installation
--	Your website built with HTML, CSS and JavaScript
+**To keep the project stable and maintainable, please follow these general guidelines:**
 
-You will need to add at least 12 blogs for your website. You can use lorem ipsum for paragraphs if you need, but headings, images etc. should all make sense.
+1. **Fork & Clone** – Fork the repository and clone it to your local machine.
+2. **Create a Branch** – Use a descriptive branch name (feature-new-component or fix-bug-123).
+3. **Keep Site Integrity** – Ensure your changes do not break existing functionality or design consistency.
+4. **Write Clean Code** – Follow the project’s coding style and best practices.
+5. **Test Your Changes** – If applicable, test your changes before submitting.
+6. **Submit a Pull Request** (PR) – Open a PR with a clear description of your changes. The maintainers will review it and provide feedback if needed.
 
-Note that this is an exam, and therefore tutor support will be limited as per the study plan.
+**Known areas for improvements:**
 
-## Level 1 Process
+- Ability to edit comments through user login
+- Admin user abilities to edit posts
+- Landing page performance
+- Blog-list page performance
 
-1.	Decide on the theme for the blog you’re going to make
-2.	Create a prototype of the website
-3.	Install WordPress on your web host and add the blogs on the admin panel. 
-4.	Use the GitHub repo created by GitHub Classroom for your files and deploy to Netlify
-5.	Build your website using HTML, CSS and JavaScript making a call to the WordPress REST API to fetch your data.
-6.	Install Hotjar on your website.
-7.	Ask users to test your website, and adjust based on their feedback and any insights from Hotjar.
-8.	Write a report documenting your project (template provided in this repository).
-9.	Submit your report as a PDF and a link to both your Netlify deployment and your GitHub repo.
- 
-## Level 2 Process (optional)
+## Contact
 
-1.	You can try adding a sort, filter, or search to the blog posts page allowing users to find the blog post more easily that they’re looking for. 
-2.	Post the data from the contact form to WordPress so you have the details saved.
-3.	Allow users to submit comments on a blog post, and post this data to WordPress
+- [My website - telecasternilsen](https://telecasternilsen.netlify.app/)
+- [GitHub profile](https://github.com/telecasteren)
+- [LinkedIn profile](https://www.linkedin.com/in/tele-caster-nilsen-7002b9249/)
 
+## Acknowledgments
+
+- ChatGPT for his help in generating most of the blog-posts text content and images.
+- My fiancé for testing and providing me constructive criticism on design and interaction.
