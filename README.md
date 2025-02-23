@@ -1,6 +1,6 @@
 # UNWIRED
 
-![image](resources/IMAGES/unwired-screenshot.png)
+![image](resources/IMAGES/unwired-screenshot.webp)
 
 **Deployed website:** [unwired](https://unwired.netlify.app/)<br/>
 A low-key tech blog website created as my exam during 1st year at Noroff School of Technology.
