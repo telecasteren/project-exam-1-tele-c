@@ -64,6 +64,7 @@ export function setFilterOptions(onSortChange, onFilterChange) {
       SortOptions.style.backgroundPosition = "right 10px center";
 
       const defaultSortOption = document.createElement("option");
+
       defaultSortOption.id = "defaultSortOptionText";
       defaultSortOption.innerText = "Sort by";
       defaultSortOption.disabled = true;

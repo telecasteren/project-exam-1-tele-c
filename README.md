@@ -59,7 +59,7 @@ The only requirements is that you keep the intention of the website, that it bei
 
 ## Contact
 
-- [My website - telecasternilsen](https://telecasternilsen.netlify.app/)
+- My portfolio: [telecasternilsen](https://telecasteren.github.io/)
 - [GitHub profile](https://github.com/telecasteren)
 - [LinkedIn profile](https://www.linkedin.com/in/tele-caster-nilsen-7002b9249/)
 

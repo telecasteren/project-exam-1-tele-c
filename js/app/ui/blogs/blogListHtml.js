@@ -21,7 +21,7 @@ export async function blogListHtml(posts, append = false) {
 
     const blogListSection = document.querySelector(".blogList-section");
     if (!blogListSection.querySelector(".blogListTitle")) {
-      const blogListTitle = document.createElement("h1");
+      const blogListTitle = document.createElement("h2");
       blogListTitle.className = "blogListTitle";
       blogListTitle.innerText = "Articles";
       blogListSection.prepend(blogListTitle);
@@ -44,7 +44,7 @@ export async function blogListHtml(posts, append = false) {
       const thumbnailContainer = document.createElement("div");
       thumbnailContainer.className = "thumb-container";
 
-      const titleBlob = document.createElement("p");
+      const titleBlob = document.createElement("h3");
       titleBlob.classList.add("titleBlob");
       titleBlob.innerText = post.title;
       thumbnailContainer.appendChild(titleBlob);
@@ -54,7 +54,7 @@ export async function blogListHtml(posts, append = false) {
     });
 
     if (!append && !document.querySelector(".expandPosts")) {
-      const expandPosts = document.createElement("h2");
+      const expandPosts = document.createElement("h4");
       expandPosts.classList.add("expandPosts");
       expandPosts.innerText = "View more";
 
