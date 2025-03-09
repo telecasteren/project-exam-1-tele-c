@@ -31,4 +31,6 @@ export function submitFormEvent() {
       );
     }
   });
+
+  form.reset();
 }

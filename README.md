@@ -17,13 +17,11 @@ The design started off as a basic website blog, following the [brief](BRIEF.md) 
 
 ## Built With
 
+- Javascript, HTML, CSS
 - [One.com](https://www.one.com/en/) / Hosting the Wordpress instance
-- [Wordpress](https://wordpress.org/) / For the Wordpress instance
+- [Wordpress](https://wordpress.org/) / Utilising Wordpress REST API
 - [Netlify](https://app.netlify.com/) / Deploying the website
 - [IBMEqualAccess](https://github.com/IBMa/equal-access) / Accessibility Checker with browser integration
-- Javascript, HTML, CSS
-- node.js
-- **IDE:** Visual Studio Code
 
 ## Installing and running
 
@@ -52,7 +50,8 @@ The only requirements is that you keep the intention of the website, that it bei
 
 **Known areas for improvements:**
 
-- Ability to edit comments through user login
+- User login
+- User abilities to edit comments
 - Admin user abilities to edit posts
 - Landing page performance
 - Blog-list page performance
